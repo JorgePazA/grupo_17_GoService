@@ -1,2 +1,2 @@
 # ecommerceGr17
-Ecommerce enfocado en la 
+Ecommerce enfocado e 
