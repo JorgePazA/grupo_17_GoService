@@ -4,6 +4,6 @@ El comercio electrónico está revolucionado la manera cómo compramos y nos rel
 
 Un e-commerce se puede definir como la venta, compra, distribución y suministro de algún producto, servicio o información a través de internet, así nace "nombre_proyecto", e-commerce enfocado en la prestación de servicios y trabajos de oficio como carpinteria, pintura, jardineria, servico eléctrico, plomeria y trabajo doméstico.
 
-Este e-commerce se orienta hacia el publico en general que tenga algun tipo de inconveniente en su hogar u oficina y requiera del servicio de una persona especialisada en alguna labor u oficio.
+Este e-commerce se orienta hacia el publico en general que tenga algun tipo de inconveniente en su hogar u oficina y requiera del servicio de una persona especializada en alguna labor u oficio.
 
 Desde una basta base de datos verificada, los clientes podrán adquirir el servicio que requieran de manera rápida y podrán valorar la calidad del servicio adquirido 
