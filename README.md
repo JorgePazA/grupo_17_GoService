@@ -8,7 +8,18 @@ Este e-commerce se orienta hacia el publico en general que tenga algun tipo de i
 
 Desde una basta base de datos verificada, los clientes podrán adquirir el servicio que requieran de manera rápida y podrán valorar la calidad del servicio adquirido 
 
-...
+## Integrantes
+- Nicolas Garcia:
+      
+    - Me gusta mucho la tecnologia, creo que la tecnologia es el mejor invento de la historia y hay que aprovecharla al macimo creando y haciendo cosas funcionales e                 innovadoras,     y junto a Jorge y Juan Camilo pensamos hacer una gran pagina web. 
+   
+- Jorge Enrique Paz:
+    
+    - 
+- Juan Camilo:
+    
+    -
+
 ## Páginas Inspiradoras
 
 1. https://www.timbrit.com.co/
