@@ -22,13 +22,21 @@ Desde una basta base de datos verificada, los clientes podrán adquirir el servi
 
 ## Páginas Inspiradoras
 
-1. https://www.timbrit.com.co/
-    Por las funcionalidades implementadas y concepto de
+1. https://www.timbrit.com.co/:
+    Por las funcionalidades implementadas y por la buena optimizacion, que hace que sea una pagina sencilla de utilizar.
 
-2. https://www.hogaru.com/hogares
-4. https://chepeypepe.com/
-5. https://easyfix.ec/
-6. https://misaliados.com.co/
+2. https://www.hogaru.com/hogares:
+    Por la manera en que se especifica el funcionamiento de sus servicios, lo que incluye y como es intuitivo su uso.
+    
+3. https://chepeypepe.com/:
+    Por la optimizacion y efectividad del sitio a la hora de adquirir un servicio y el publico al que se dirige que es similar.
+    
+4. https://easyfix.ec/:
+    EasyFix es principalmente una app movil, en su pagina web se explica la manera de usar su App y esto en un futuro seria una gran ventaja para GoService.  
+
+5. https://misaliados.com.co/:
+    El perfil y la descripcion que maneja para sus prestadores de servicios es de gran ayuda a la hora de elegir quien se encargara de tu necesidad.  
+
 
 
 
