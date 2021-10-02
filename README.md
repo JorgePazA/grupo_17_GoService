@@ -2,11 +2,11 @@
 
 El comercio electrónico está revolucionado la manera cómo compramos y nos relacionamos con las marcas gracias a sus beneficios como el ahorro de tiempo, acceso a promociones exclusivas y pagos automáticos. Por su  parte las empresas encuentran en él una alternativa muy efectiva para lograr una mayor fidelización de sus usuarios. 
 
-Un e-commerce se puede definir como la venta, compra, distribución y suministro de algún producto, servicio o información a través de internet, así nace GoService, e-commerce enfocado en la prestación de servicios y trabajos de oficio como carpinteria, pintura, jardineria, servico eléctrico, plomeria y trabajo doméstico.
+Un e-commerce se puede definir como la venta, compra, distribución y suministro de algún producto, servicio o información a través de internet, así nace GoService, e-commerce enfocado en la prestación de servicios y trabajos de oficio como servicio eléctrico, plomería y trabajo doméstico.
 
-Este e-commerce se orienta hacia el publico en general que tenga algun tipo de inconveniente en su hogar u oficina y requiera del servicio de una persona especializada en alguna labor u oficio.
+Este e-commerce se orienta hacia el público en general que tenga algún tipo de inconveniente en su hogar u oficina y requiera del servicio de una persona especializada en alguna labor u oficio.
 
-Desde una basta base de datos verificada, los clientes podrán adquirir el servicio que requieran de manera rápida y podrán valorar la calidad del servicio adquirido 
+Desde una basta base de datos verificada, los clientes podrán adquirir el servicio que requieran de manera rápida y podrán valorar la calidad del servicio adquirido.
 
 ## Integrantes
 - Nicolas Garcia:
@@ -35,7 +35,10 @@ Desde una basta base de datos verificada, los clientes podrán adquirir el servi
     EasyFix es principalmente una app movil, en su pagina web se explica la manera de usar su App y esto en un futuro seria una gran ventaja para GoService.  
 
 5. https://misaliados.com.co/:
-    El perfil y la descripcion que maneja para sus prestadores de servicios es de gran ayuda a la hora de elegir quien se encargara de tu necesidad.  
+    El perfil y la descripcion que maneja para sus prestadores de servicios es de gran ayuda a la hora de elegir quien se encargara de tu necesidad.
+    
+6. https://www.jelpit.com/
+    Las funcionalidades que presenta, la estructura de la página, y, principalmente, el portal de pagos.
 
 
 
