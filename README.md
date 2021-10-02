@@ -16,9 +16,9 @@ Desde una basta base de datos verificada, los clientes podrán adquirir el servi
 - Jorge Enrique Paz:
     
     - 
-- Juan Camilo:
+- Juan Camilo Ladino:
     
-    -
+    - Apasionado por la tecnología, interesado en desarrollar soluciones basadas en tecnología que resulten útiles para la sociedad. Ingeniero Geólogo de profesión, encontré en ProTalento la puerta de entrada al mundo de la tecnología.
 
 ## Páginas Inspiradoras
 
