@@ -41,6 +41,12 @@ Desde una basta base de datos verificada, los clientes podrán adquirir el servi
 6. https://www.jelpit.com/
     Las funcionalidades que presenta, la estructura de la página, y, principalmente, el portal de pagos.
 
+## Paleta de colores.
 
+https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
+
+## Elección de Font.
+
+https://fonts.google.com/specimen/Mulish#standard-styles
 
 
