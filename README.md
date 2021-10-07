@@ -11,11 +11,12 @@ Desde una basta base de datos verificada, los clientes podrán adquirir el servi
 ## Integrantes
 - Nicolas Garcia:
       
-    - Me gusta mucho la tecnologia, creo que la tecnologia es el mejor invento de la historia y hay que aprovecharla al macimo creando y haciendo cosas funcionales e                 innovadoras,     y junto a Jorge y Juan Camilo pensamos hacer una gran pagina web. 
+    - Me gusta mucho la tecnologia, creo que la tecnologia es el mejor invento de la historia y hay que aprovecharla al máximo creando y haciendo cosas funcionales e                 innovadoras,     y junto a Jorge y Juan Camilo pensamos hacer una gran pagina web. 
    
 - Jorge Enrique Paz:
     
-    - 
+    - Motivado e ingenioso. Disfruto especialmente trabajando como parte de un equipo y en un entorno dinámico. Me considero bueno construyendo soluciones, soy creativo y resuelvo problemas facilmente, se cuándo pedir ayuda y no me quedo callado si la necesito. Me apasiona la técnologia y todo lo que se puede construir con ella.
+    
 - Juan Camilo Ladino:
     
     - Apasionado por la tecnología, interesado en desarrollar soluciones basadas en tecnología que resulten útiles para la sociedad. Ingeniero Geólogo de profesión, encontré en ProTalento la puerta de entrada al mundo de la tecnología.
