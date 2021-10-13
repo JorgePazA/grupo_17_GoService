@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+header .arriba{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #14213D;
+    height: 50px;
+}
+header .arriba .logo {
+  width: 35vw;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+header .arriba .burger {
+    border: solid black 1px;
+    width: 40px;
+    color: white;
+    font-size: 22px;
+    padding: 5px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+
+
+
+header .abajo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FCA311;
+    height: 40px;
+}
+
+header .abajo .input-buscar {
+    width: 180px;
+    height: 25px;
+    background: #000000;
+    opacity: .7;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+header .abajo .carrito {
+    font-size: 20px;
+    color: white;
+}
+
+footer .final{
+    background-color: #FCA311;
+    height: 50px;
+}
+
+footer .final .redes img{
+    width: 5px;
+}
