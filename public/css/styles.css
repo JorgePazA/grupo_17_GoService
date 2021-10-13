@@ -7,6 +7,17 @@
   font-family: 'Mulish', sans-serif;
 }
 
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    color:#FCA311;
+    text-align: center;
+    margin: 20px;
+}
+
 header .arriba{
     display: flex;
     justify-content: space-between;
@@ -15,7 +26,8 @@ header .arriba{
     height: 50px;
 }
 header .arriba .logo {
-  width: 35vw;
+  max-width: 35vw;
+  max-height: 20vh;
   padding: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -25,15 +37,11 @@ header .arriba .logo {
 header .arriba .burger {
     border: solid black 1px;
     width: 40px;
-    color: white;
     font-size: 22px;
     padding: 5px;
     margin-right: 10px;
     text-align: center;
   }
-
-
-
 
 header .abajo{
     display: flex;
@@ -56,14 +64,62 @@ header .abajo .input-buscar {
 
 header .abajo .carrito {
     font-size: 20px;
+}
+
+.banner {
+    display: flex;
+    height: 113px;
+    background:#14213D;
+    border: solid 3px black;
+}
+
+.banner-izq{
     color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-right: solid 3px black;
+    width: 40px;
+    font-size: 25px;
+
+    
+}
+
+.banner-center {
+    flex-grow: 1;
+    overflow: hidden;
+
+}
+
+.banner-center img{
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-der{
+    font-size: 25px;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-left: solid 3px black;
+    width: 40px;
 }
 
 footer .final{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     background-color: #FCA311;
-    height: 50px;
+    height: 27px;
+    color: white;
+    font-size: 12px;
+    padding-right: 5px;
+    padding-bottom: 2px;
 }
 
 footer .final .redes img{
-    width: 5px;
+    width: 15px;
 }
