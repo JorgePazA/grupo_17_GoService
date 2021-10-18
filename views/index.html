@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,10 +18,27 @@
             <div class="burger">
                 <a href=""><i class="fas fa-bars"></i></a>
             </div>
+            <nav class="main-nav-bar">
+                <div class=izq>
+                    <ul class="left-navbar">
+                        <li><a href="#">Cómo Funciona</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Servicios<i class="fas fa-caret-down"></i></a></li>
+                    </ul>
+                </div>
+                <div class="der">
+                    <ul class="right-navbar">
+                        <li><a href="/register">REGISTRO<i class="fas fa-id-card"></i></a></li>
+                        <li><a href="/login">Inicio sesión<i class="fas fa-sign-in-alt"></i></a></li>
+                        <li class="carro"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
         <div class="abajo">
             <div class="buscador">
-            <i class="fas fa-search"></i><input class="input-buscar" type="text"  placeholder="Buscar en GoService...">
+                <i class="fas fa-search"></i><input class="input-buscar" type="text"
+                    placeholder="Buscar en GoService...">
             </div>
             <div class="carrito">
                 <a href="#"><i class="fas fa-shopping-cart"></i></a>
@@ -30,42 +48,152 @@
     <main>
         <section>
             <article class="banner">
-                <div class= "banner-izq">
+                <div class="banner-izq">
                     <i class="fas fa-chevron-left"></i>
                 </div>
                 <div class="banner-center">
-                    <img src="/images/plomeria.jpg" alt=""> 
+                    <img src="/images/banner.jpg" alt="">
                 </div>
                 <div class="banner-der">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </article>
-        </section> 
-        <section>
-            <h1>Nuestros Servicios</h1>
-            <article class="plomero">
-                <!-- Imagen de plomeria-->
-                <p>Plomero</p>
+        </section>
+        <h1>Nuestros Servicios</h1>
+        <section class="HowtoOrder">
+            <div class="step1">
+                <p class="numbers">1</p>
+                <i class="far fa-hand-pointer"></i>
+                <p class="text-how-to-order">Elige tu servicio</p>
+            </div>
+            <p class="puntos">....................................</p>
+            <div class="step2">
+                <p class="numbers">2</p>
+                <i class="fas fa-calendar-week"></i>
+                <p class="text-how-to-order">Agenda y paga online</p>
+            </div>
+            <p class="puntos">....................................</p>
+            <div class="step3">
+                <p class="numbers">3</p>
+                <i class="fas fa-clipboard-check"></i>
+                <p class="text-how-to-order">Confirmanos tu servicio</p>
+            </div>
+            <p class="puntos">....................................</p>
+            <div class="step4">
+                <p class="numbers">4</p>
+                <i class="fas fa-hands-helping"></i>
+                <p class="text-how-to-order">Disfuta tu servicio</p>
+            </div>
+        </section>
+        <section class="lista">
+            <article class="servicios">
+                <i class="fas fa-faucet"></i>
+                <p>Plomería</p>
             </article>
-            <article class="electricista">
-                <!-- Imagen de electricista-->
-                <p>Electricista</p>
+            <article class="servicios">
+                <i class="fas fa-plug"></i>
+                <p>Electricidad</p>
             </article>
-            <article class="limpieza">
-                <!-- Imagen de limpieza-->
+            <article class="servicios">
+                <i class="fas fa-hand-sparkles"></i>
                 <p>Limpieza</p>
             </article>
-
         </section>
+        <h2 class="lo-que-dicen">Lo que dicen nuestros clientes</h2>
+        <section class="clientes">
+            <article class="opiniones">
+                <div class="user-completo">
+                    <div class="user">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="nombre-y-servicio">
+                        <div class="user-name">
+                            <p>Juan Camilo</p>
+                        </div>
+                        <div class="servicio-contratado">
+                            <p>Aseo</p>
+                        </div>
+                        <div class="puntaje">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>    
+                        </div>
+                    </div>
+                </div>
+                <div class="comentario">
+                    <p>Excelente servicio, me gusto mucho el servicio ♥</p>
+                </div>
+            </article>
+            <article class="opiniones">
+                <div class="user-completo">
+                    <div class="user">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="nombre-y-servicio">
+                        <div class="user-name">
+                            <p>Jorge</p>
+                        </div>
+                        <div class="servicio-contratado">
+                            <p>Plomería</p>
+                        </div>
+                        <div class="puntaje">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>    
+                        </div>
+                    </div>
+                </div>
+                <div class="comentario">
+                    <p>Soy fan #1 de GoService, estoy contratando todo ¡Gracias!</p>
+                </div>
+            </article>
+            <article class="opiniones">
+                <div class="user-completo">
+                    <div class="user">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="nombre-y-servicio">
+                        <div class="user-name">
+                            <p>Nicolás</p>
+                        </div>
+                        <div class="servicio-contratado">
+                            <p>Electricista</p>
+                        </div>
+                        <div class="puntaje">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>  
+                        </div>
+                    </div>
+                </div>
+                <div class="comentario">
+                    <p>Extraordinario, fueron personas muy laboriosas y cuidadosas de hacer un gran trabajo!
+                        Especialmente Marisol. Mil gracias.</p>
+                </div>
+            </article>
+        </section>
+
     </main>
     <footer>
-        <div class="final">
+        <div class="footer-left">
+            <img class="logofooter" src="/images/blanco.png">
             <p>Todos los derechos reservados</p>
-            <div class="redes">
-                <a href="https://github.com/JorgePazA"><img src="/images/gitLogo.png" /></a>
-                <a href="https://instagram.com"><img src="/images/instagramLogo.png"/></a>
-                <a href="https://twiter.com"><img src="/images/twiterLogo.png" /></a>
-            </div>
+        </div>
+        <div class="footer-center">
+            <p>¿Necesitas ayuda?</p>
+            <p>Comunícate desde tu celular con nuestra</p>
+            <p>mesa de soporte al 123 444 54678</p>
+        </div>
+        <div class="footer-right">
+            <a href="https://github.com/JorgePazA"><img src="/images/gitLogo.png" /></a>
+            <a href="https://instagram.com"><img src="/images/instagramLogo.png" /></a>
+            <a href="https://twiter.com"><img src="/images/twiterLogo.png" /></a>
         </div>
     </footer>
 

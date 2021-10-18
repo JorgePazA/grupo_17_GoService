@@ -16,6 +16,7 @@ h1{
     color:#FCA311;
     text-align: center;
     margin: 20px;
+    font-size: 18px;
 }
 
 header .arriba{
@@ -26,8 +27,8 @@ header .arriba{
     height: 50px;
 }
 header .arriba .logo {
-  max-width: 35vw;
-  max-height: 20vh;
+  max-width: 100%;
+  max-height: 100%;
   padding: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -108,7 +109,44 @@ header .abajo .carrito {
     width: 40px;
 }
 
-footer .final{
+.servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main section article p{
+    color: #FCA311;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.lista article i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #14213D;
+    border: solid #14213D 1px;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: #FCA311;
+    box-shadow: -webkit-box-shadow: 5px 5px 20px -6px rgba(20,33,61,0.76);
+    -moz-box-shadow: 5px 5px 20px -6px rgba(20,33,61,0.76);
+    box-shadow: 5px 5px 20px -6px rgba(20,33,61,0.76);
+}
+
+.lista article{
+    margin: 15px;
+} 
+ 
+
+
+
+
+footer{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -119,7 +157,220 @@ footer .final{
     padding-right: 5px;
     padding-bottom: 2px;
 }
-
-footer .final .redes img{
+footer .logofooter{
+    display: none;
+}
+footer img{
     width: 15px;
+}
+footer .footer-center{
+    display: none;
+}
+
+
+.main-nav-bar{
+    display:none;   
+} 
+.HowtoOrder{
+    display: none;
+}
+
+.clientes {
+    display: none;
+}
+
+.lo-que-dicen {
+    display: none;
+}
+
+/*------------------------------------ Version Tablet ---------------------------------------- */
+@media (min-width: 769px){
+ 
+.carrito {
+    display: none;
+}
+
+    .burger{
+        display: none;
+    }
+    .main-nav-bar{
+        display: flex; 
+        text-decoration: none; 
+        width: 70%; 
+        }  
+
+    .main-nav-bar ul {
+        list-style: none;
+        font-size: 14px;
+    }
+    .main-nav-bar .izq{
+        width: 50%;
+        font-size: 12px;
+    } 
+    .main-nav-bar .der{
+        width: 50%;
+        font-size: 12px;
+    }  
+
+    .right-navbar i {
+        margin-left: 5px;
+    }
+
+    .main-nav-bar .right-navbar, .left-navbar{
+        display: flex;
+        justify-content: space-around;
+        margin-left: 25px;
+    }
+
+    .lista {
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+
+    .HowtoOrder {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+    }
+    .text-how-to-order{
+        font-size: 12px;
+        width: 85px;
+        margin: auto;
+    }
+    .HowtoOrder i{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #14213D; 
+        color: white;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .HowtoOrder div{
+        text-align: center;
+        width: 25%;
+    }
+    .HowtoOrder div .numbers{
+        width: 30px;
+        height: 30px;
+        background-color: #FCA311;
+        border-radius: 50%;
+        margin: auto;
+        padding-top: 5px;
+        position: relative;
+        top: 8px;
+    }
+
+    .puntos {
+        color: #FCA311;
+        margin: auto;
+        position: static;
+        bottom: 15px;
+    }
+
+    .lo-que-dicen {
+        display: block;
+        color: #FCA311;
+        padding-left: 20px; 
+        font-size: 18px;
+    }
+
+    main .clientes {
+        display: flex;
+        justify-content: center;
+    }
+    .user-name {
+        font-size: 30px;
+    }
+    main section .opiniones {
+        display: flex;
+        flex-direction: column;
+        border: 1px #c5c5c5 solid;
+        width: 350px;
+        height: 200px;
+        margin: 20px 30px;
+    }
+    .user-completo{
+        display:flex;
+    }
+    .nombre-y-servicio{
+        display: flex;
+        flex-direction: column;
+    }
+    main section .user-name p {
+        color: #000000;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+    main section .servicio-contratado p {
+        color: #000000;
+        font-size: 12px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    main section .opiniones .user i {
+        color: #FCA311;
+        font-size: 60px;
+        padding: 10px;
+    }
+    main section .opiniones .puntaje{
+        padding-left: 10px;
+    }
+    main section .opiniones .puntaje i {
+        color: #FCA311;
+        font-size: 15px;
+    }
+    main section .comentario{
+        margin-top: 5px;
+    }
+    main section .comentario p{
+        font-size: 12px;
+        color: black;
+        text-align: justify;
+    }
+
+
+
+    footer{
+        height: 15vh;   
+    }
+    footer div{
+        width: 33%;
+    }
+    footer .logofooter{
+        display: flex;
+        width: 35%;
+    }
+    footer .footer-left{
+        height: 100%;
+        text-align: center;
+        padding-top: 25px;
+    }    
+    footer .footer-left img{
+        margin: auto;
+    }
+    footer .footer-center{
+        display: block;
+        height: 100%;
+        text-align: center;
+        padding-top: 25px;
+    }
+    footer .footer-right{
+        height: 100%;
+        text-align: center;
+        padding-top: 25px;
+    }
+    footer .footer-right img{
+        width: 10%;
+        margin: 10px;
+    }
 }
