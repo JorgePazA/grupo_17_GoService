@@ -23,13 +23,13 @@
                     <ul class="left-navbar">
                         <li><a href="#">Cómo Funciona</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Servicios<i class="fas fa-caret-down"></i></a></li>
+                        <li><a href="#">Servicios <i class="fas fa-caret-down"></i></a></li>
                     </ul>
                 </div>
                 <div class="der">
                     <ul class="right-navbar">
-                        <li><a href="/register">REGISTRO<i class="fas fa-id-card"></i></a></li>
-                        <li><a href="/login">Inicio sesión<i class="fas fa-sign-in-alt"></i></a></li>
+                        <li><a href="/register">REGISTRO <i class="fas fa-id-card"></i></a></li>
+                        <li><a href="/login">Inicio sesión <i class="fas fa-sign-in-alt"></i></a></li>
                         <li class="carro"><a href="/productCar.html"><i class="fas fa-shopping-cart"></i></a></li>
                     </ul>
                 </div>
@@ -49,7 +49,7 @@
         <h1 id="servicios-añadidos">Servicios añadidos</h1>
         <section class="resumen-carrito">
             <article class="carrito-superior">
-                <p class="horas">X horas</p>
+                <input type="text" class="horas" placeholder="Horas a contratar" required>
                 <div class="valor-servicio-con-iva">
                     <p class="valor-servicio">$XX,XXX</p>
                     <p class="iva">IVA incluido</p>
@@ -70,15 +70,16 @@
                     <button type="submit">APLICAR</button>
                 </div>
                 <div class="total-carrito">
-                    <p class="total-a-pagar">Total a pagar</p>
+                    <p class="total-a-pagar">Total a pagar:</p>
                     <div class="valor-servicio-con-iva-abajo">
                         <p class="valor-servicio">$XX,XXX</p>
                         <p class="iva">IVA incluido</p>
                     </div>
                 </div>
                 <div class="inputs-ii-carrito">
-                    <button type="submit">CONTINUAR CON EL PAGO</button>
-                    <button type="submit">SEGUIR COMPRANDO</button>
+                    <button type="submit" id="continuar-pago">CONTINUAR CON EL PAGO</button>
+                    <button type="submit" id="seguir-comprando">SEGUIR COMPRANDO</button>
+                    <button type="submit" id="eliminar">ELIMINAR</button>
                 </div>
             </article>
         </section>
@@ -86,7 +87,7 @@
     <footer>
         <div class="footer-left">
             <img class="logofooter" src="/images/blanco.png">
-            <p>Todos los derechos reservados</p>
+            <p id="copy">Todos los derechos reservados</p>
         </div>
         <div class="footer-center">
             <p>¿Necesitas ayuda?</p>
