@@ -69,7 +69,7 @@ header .abajo .input-buscar {
     font-size: 13px;
 }
 header .abajo .carrito {
-    font-size: 20px;
+    font-size: 23px;
 }
 .banner {
     display: flex;
@@ -89,7 +89,6 @@ header .abajo .carrito {
 .banner-center {
     flex-grow: 1;
     overflow: hidden;
-
 }
 .banner-center img{
     display: flex;
@@ -130,13 +129,95 @@ main section article p{
     height: 70px;
     border-radius: 5px;
     background-color: #FCA311;
-    box-shadow: -webkit-box-shadow: 5px 5px 20px -6px rgba(20,33,61,0.76);
-    -moz-box-shadow: 5px 5px 20px -6px rgba(20,33,61,0.76);
     box-shadow: 5px 5px 20px -6px rgba(20,33,61,0.76);
 }
 .lista article{
     margin: 15px;
 }
+/* Estilos Carrito de Compras------------------------------------------------------- */
+#servicios-añadidos{
+    font-size: 20px;
+}
+.resumen-carrito{
+    border: solid 0.5px rgb(218, 218, 218);
+    margin: auto;
+    width: 80vw;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 28px -14px rgba(0,0,0,0.75);
+    padding: 10px;
+}
+.carrito-superior{
+    position: relative;
+    border-bottom: solid 0.5px rgb(218, 218, 218);
+    padding-bottom: 10px;
+}
+.horas{
+    color:black;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.valor-servicio-con-iva{
+    position: absolute;
+    right: 0;
+    top: -20px;
+}
+.valor-servicio{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.iva{
+    color:rgb(153, 153, 153);
+    margin-top: 0;
+}
+.titulo-arriba-carrito{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.texto-arriba-carrito, .hmm{
+    color:rgb(83, 83, 83);
+    font-size: 14px;
+    margin-top: 0;
+}
+.caja-fecha{
+    display:flex;
+}
+.hmm{
+    padding-left: 20px;;
+}
+.carrito-inferior{
+    position: relative;
+    padding-top: 20px;
+}
+.inputs-is-carrito{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 12px;
+}
+.inputs-is-carrito button{
+    font-size: 8px;
+    font-weight: 800;
+    color: #14213D;
+    background-color: rgb(221, 221, 221);
+    width: 60px;
+    height: 27px;
+    padding-bottom: 2px;
+    border: solid 2px #14213D;
+    border-top-left-radius: 25% 50%;
+    border-bottom-left-radius: 25% 50%;
+    border-top-right-radius: 25% 50%;
+    border-bottom-right-radius: 25% 50%;
+}
+.inputs-is-carrito input{
+    width: 140px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 5px;
+    border: solid 2px rgb(190, 190, 190);;
+    font-size: 12px;
+    padding-left: 5px;
+    margin-right: 5%;
+}
+/* Fin Estilos Carrito de Compras--------------------------------------------------- */
 /* Footer--------------------------------------------------------------------------- */ 
 footer{
     display: flex;
