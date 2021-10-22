@@ -6,19 +6,16 @@
   box-sizing: border-box;
   font-family: 'Mulish', sans-serif;
 }
-
 a:link, a:visited, a:hover, a:active{
     text-decoration: none;
     color: white;
 }
-
 h1{
     color:#FCA311;
     text-align: center;
     margin: 20px;
     font-size: 18px;
 }
-
 header .arriba{
     display: flex;
     justify-content: space-between;
@@ -34,7 +31,6 @@ header .arriba .logo {
   margin-bottom: 5px;
   margin-left: 10px;
 }
-
 header .arriba .burger {
     border: solid black 1px;
     width: 40px;
@@ -43,7 +39,6 @@ header .arriba .burger {
     margin-right: 10px;
     text-align: center;
   }
-
 header .abajo{
     display: flex;
     align-items: center;
@@ -51,7 +46,6 @@ header .abajo{
     background-color: #FCA311;
     height: 40px;
 }
-
 header .abajo .input-buscar {
     width: 180px;
     height: 25px;
@@ -60,20 +54,29 @@ header .abajo .input-buscar {
     border-radius: 5px;
     border: none;
     font-size: 12px;
-    padding-left: 5px;
+    padding-left: 15%;
 }
-
+.buscador{
+    position: relative;
+}
+.buscador i{
+    position: absolute;
+    left: 4%;
+    top: 25%;
+    z-index: 100;
+    opacity: 0.3;
+    color: #FCA311;
+    font-size: 13px;
+}
 header .abajo .carrito {
     font-size: 20px;
 }
-
 .banner {
     display: flex;
     height: 113px;
     background:#14213D;
     border: solid 3px black;
 }
-
 .banner-izq{
     color: white;
     display:flex;
@@ -81,24 +84,19 @@ header .abajo .carrito {
     justify-content: center;
     border-right: solid 3px black;
     width: 40px;
-    font-size: 25px;
-
-    
+    font-size: 25px;   
 }
-
 .banner-center {
     flex-grow: 1;
     overflow: hidden;
 
 }
-
 .banner-center img{
     display: flex;
     flex-grow: 1;
     width: 100%;
     height: 100%;
 }
-
 .banner-der{
     font-size: 25px;
     color: white;
@@ -108,7 +106,7 @@ header .abajo .carrito {
     border-left: solid 3px black;
     width: 40px;
 }
-
+/* Main--------------------------------------------------------------------------- */
 .servicios {
     display: flex;
     flex-direction: column;
@@ -121,7 +119,6 @@ main section article p{
     font-size: 16px;
     margin: 10px;
 }
-
 .lista article i{
     display: flex;
     align-items: center;
@@ -137,15 +134,10 @@ main section article p{
     -moz-box-shadow: 5px 5px 20px -6px rgba(20,33,61,0.76);
     box-shadow: 5px 5px 20px -6px rgba(20,33,61,0.76);
 }
-
 .lista article{
     margin: 15px;
-} 
- 
-
-
-
-
+}
+/* Footer--------------------------------------------------------------------------- */ 
 footer{
     display: flex;
     align-items: flex-end;
@@ -166,23 +158,18 @@ footer img{
 footer .footer-center{
     display: none;
 }
-
-
 .main-nav-bar{
     display:none;   
 } 
 .HowtoOrder{
     display: none;
 }
-
 .clientes {
     display: none;
 }
-
 .lo-que-dicen {
     display: none;
 }
-
 /*------------------------------------ Version Tablet ---------------------------------------- */
 @media (min-width: 769px){
  
