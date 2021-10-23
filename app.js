@@ -11,6 +11,9 @@ app.get("/", (req, res) => {
 app.get("/productCar.html", (req, res) => {
   res.sendFile(path.resolve(__dirname,"./views/productCar.html"));
 });
+app.get("/login.html", (req, res) => {
+  res.sendFile(path.resolve(__dirname,"./views/login.html"));
+});
 
 app.listen(3000, () => {
   console.log("Servidor Corriendo");
