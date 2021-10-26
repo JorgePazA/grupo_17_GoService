@@ -25,6 +25,6 @@ app.get("/register.html", (req, res) => {
   res.sendFile(path.resolve(__dirname,"./views/register.html"));
 });
 
-app.listen(3000, () => {
-  console.log("Servidor Corriendo");
+app.listen(process.env.PORT || 3000, function(){
+  console.log('Servidor funcionando');
 });
