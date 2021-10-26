@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Detalle del producto</title>
+</head>
+
+<body>
+    <header>
+        <div class="arriba">
+            <img class="logo" src="/images/combinado.png">
+            <!-- Hamburguesa -->
+            <div class="burger">
+                <a href=""><i class="fas fa-bars"></i></a>
+            </div>
+            <nav class="main-nav-bar">
+                <div class=izq>
+                    <ul class="left-navbar">
+                        <li><a href="#">Cómo Funciona</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="/productDetail.html">Servicios <i class="fas fa-caret-down"></i></a></li>
+                    </ul>
+                </div>
+                <div class="der">
+                    <ul class="right-navbar">
+                        <li><a href="/register">REGISTRO <i class="fas fa-id-card"></i></a></li>
+                        <li><a href="/login">Inicio sesión <i class="fas fa-sign-in-alt"></i></a></li>
+                        <li class="carro"><a href="/productCar.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="abajo">
+            <div class="buscador">
+                <i class="fas fa-search"></i><input class="input-buscar" type="text"
+                    placeholder="Buscar en GoService...">
+            </div>
+            <div class="carrito">
+                <a href="/productCar.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <article class="banner">
+                <div class="banner-izq">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="banner-center">
+                    <img src="/images/banner.jpg" alt="">
+                </div>
+                <div class="banner-der">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </article>
+        </section>
+        <h1>SERVICIO</h1>
+        <section class="form-section">
+            <form action="" method="">
+                <h5 class="service-desc">¿Cuándo necesitas el servicio 4 horas?</h5>
+                <div class="time">
+                    <fieldset class="horario">
+                        <legend>Selecciona una fecha</legend>
+                        <input type="date" name="service-date" class="service-day">
+                    </fieldset>
+                    <fieldset class="horario">
+                        <legend>Selecciona una hora</legend>
+                        <select name="service-hour" class="service-hour">
+                            <option value="7:00am-11:00am">7:00 am - 11:00 am</option>
+                            <option value="8:00am-12:00pm">8:00 am - 12:00 pm</option>
+                            <option value="1:00pm-5:00pm">1:00 pm - 5:00 pm</option>
+                            <option value="2:00pm-6:00pm">2:00 pm - 6:00 pm</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <textarea name="recomendacion" placeholder="¿Tienes alguna recomendación?"
+                    class="suggestion"></textarea>
+                <p class="covid-title">¿Recientemente has tenido síntomas o sospechas de Covid en tu hogar?</p>
+                <input id="covid-no" type="checkbox" name="sospecha-covid" value="no">
+                <label for="covid-no" class="covid"></label>
+                <div class="susc-service">
+                    <p>¿Deseas adquirir este servicio por suscripción?</p>
+                    <input id="susc-no" type="checkbox" name="servicio-suscripcion" value="no">
+                    <label for="susc-no" class="subscription"></label>
+                </div>
+                <div class="for-you-div">
+                    <p>¿El servicio que estás solicitando es para ti?</p>
+                    <input id="service-no" type="checkbox" name="servicio-para-ti" value="no">
+                    <label for="service-no" class="for-you"></label>
+                </div>
+            </form>
+        </section>
+        <section class="includes">
+            <article>
+                <h3>¿Qué incluye?</h3>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>¿Qué no incluye?</h3>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dol</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </article>
+            <article class="product-image">
+                <img src="/images/aseo.jpg" alt="Imagen del producto">
+            </article>
+        </section>
+        <section class="button-add">
+            <button type="submit" class="add">AGREGAR AL CARRITO</button>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <img class="logofooter" src="/images/blanco.png">
+            <p>Todos los derechos reservados</p>
+        </div>
+        <div class="footer-center">
+            <p>¿Necesitas ayuda?</p>
+            <p>Comunícate desde tu celular con nuestra</p>
+            <p>mesa de soporte al 123 444 54678</p>
+        </div>
+        <div class="footer-right">
+            <a href="https://github.com/JorgePazA"><img src="/images/gitLogo.png" /></a>
+            <a href="https://instagram.com"><img src="/images/instagramLogo.png" /></a>
+            <a href="https://twiter.com"><img src="/images/twiterLogo.png" /></a>
+        </div>
+    </footer>
+</body>
+
+</html>
