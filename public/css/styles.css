@@ -541,12 +541,11 @@ p#copy{
 }
 .main-right-login .logo{
     margin-top: 15px;
-    width: 100%;
     height: 15vh;
-    margin-left: 55%;
+    margin-left: 58%;
 }
 .main-right-login .logo a, img{
-    width: 35%;
+    width: 75%;
 }
   .login-container {
     width: 100%;
@@ -555,14 +554,20 @@ p#copy{
     flex-direction: column;
   }
   .form-btn {
-    margin: 8px;
     margin-top: 15px;
     padding: 5px;
-    border: 1px solid #1259c3;
+    border: none;
     color: #fff;
-    background: #1259c3;
+    background: rgb(252,163,17);
+    background: linear-gradient(180deg, rgba(252,163,17,1) 0%, rgba(220,186,39,1) 100%);
     border-radius: 5px;
     transition: all 0.3s ease;
+    height: 35px;
+  } 
+  .form-btn:hover {
+    background: #E5E5E5;
+    border: solid black 1px;
+    color: black;
   } 
   .login-section {
     width: 80%;
@@ -570,46 +575,85 @@ p#copy{
     display: flex;
     align-items: center;
     margin: auto;
+    margin-top: 35px;
   }
   .login-container input {
     padding: 10px;
     border: none;
     border-radius: 5px;
+    width: 78vw;
+    background: #555d6d9c;
+    margin-bottom: 20px;
   }
 .main-right-login .login-section .login-container label, p{
     width: 100%;
     color: white;
     font-size: calc(14px + 0.5vw);
+    margin-bottom: 3px;
+}
+.password{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.password .linkpassrecuperation a{
+    font-size: 9px;
 }
 .title{
     font-weight: bold;
     margin: 90px 0px 0px 33px; 
     color: white;
+    width: 200px;
 }
 .foot{
-    height: 40%;
+    height: 25%;
+    margin-top: 45px;
+}
+.foot, a{
+    font-size: small;
+    text-align: center;
 }
 .main-left-login{
     display: none;
 }
 
 @media (min-width: 769px){
+    
     .main-login{
         display: flex;
     }
-
     .main-left-login{
         display: block;
-        width: 50%;
+        width: 100%;
         height: 100vh;
     }
     .main-left-login img{
         width: 100%;
         height: 100%;
     }
-
-    .main-right{
-        width: 50%;
+    .main-right-login{
+        width: 100%;
         height: 100vh;
     }
+    .main-right-login .logo{
+        margin-left: 45%;
+    }
+    .title{
+        margin: 90px 0px 0px 40px; 
+    }
+    .login-container input {
+        width: 95%;
+        height: 25px;
+    }
+    .password{
+        width: 95%;
+    }
+    .form-btn {
+        width: 95%;
+        height: 25px;
+    }
+    .foot, a{
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+    } 
 }
