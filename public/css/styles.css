@@ -31,6 +31,21 @@ header .arriba .logo {
   margin-bottom: 5px;
   margin-left: 10px;
 }
+header .arriba #liga{
+    display: flex;
+    text-align: left;
+    margin-left: 10px;
+    height: 50px;
+    width: 200px;
+  }
+header .arriba #liga .logo-otras {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+  }
 header .arriba .burger {
     border: solid black 1px;
     width: 40px;
@@ -80,8 +95,8 @@ header .abajo .input-buscar {
     color: #FCA311;
     font-size: 13px;
 }
-header .abajo .carrito {
-    font-size: 23px;
+header .abajo .carrito i {
+    font-size: 24px;
 }
 .banner {
     display: flex;
@@ -303,7 +318,6 @@ input.horas{
 /* Fin Estilos Carrito de Compras--------------------------------------------------- */
 /* Footer--------------------------------------------------------------------------- */ 
 footer{
-    position: absolute;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -330,6 +344,9 @@ p#copy{
 }
 .footer-right{
     padding-right: 5px;
+}
+#footer-pc{
+    position: absolute;
 }
 /*------------------------------------ Version Tablet ---------------------------------------- */
 @media (min-width: 769px){
@@ -378,6 +395,10 @@ p#copy{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+    }
+    header .abajo .input-buscar {
+        width: 50vw;
+        padding-left: 10%;
     }
     .HowtoOrder {
         width: 50%;
@@ -544,7 +565,7 @@ p#copy{
     height: 15vh;
     margin-left: 58%;
 }
-.main-right-login .logo a, img{
+.main-right-login .logo #logo-login{
     width: 75%;
 }
   .login-container {
@@ -585,7 +606,7 @@ p#copy{
     background: #555d6d9c;
     margin-bottom: 20px;
   }
-.main-right-login .login-section .login-container label, p{
+.main-right-login .login-section .login-container label, #p-login{
     width: 100%;
     color: white;
     font-size: calc(14px + 0.5vw);
