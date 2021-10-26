@@ -49,4 +49,7 @@ https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
 
 https://fonts.google.com/specimen/Mulish#standard-styles
 
+## Tablero de SPRINT.
+
+https://proyectointegrador-gr17.atlassian.net/jira/software/projects/EC/boards/1
 
