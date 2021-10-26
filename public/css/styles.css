@@ -909,10 +909,6 @@ main .includes ul li {
   font-size: 16px;
 }
 
-main .includes .product-image {
-  display: none;
-}
-
 main .button-add {
     text-align: center;
     margin: 10px;
@@ -928,20 +924,11 @@ main .button-add .add {
 @media (min-width: 950px) {
 
   main .includes {
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   main .includes article {
-    width: 25%;
-  }
-
-  main .includes .product-image {
-    display: block;
-  }
-
-  main .includes .product-image img {
-    width: 350px;
-    height: 250px;
+    width: 45%;
   }
 
   main .button-add {
