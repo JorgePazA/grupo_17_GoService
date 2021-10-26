@@ -21,6 +21,10 @@ app.get("/productDetail.html", (req, res) => {
   res.sendFile(path.resolve(__dirname,"./views/productDetail.html"));
 });
 
+app.get("/register.html", (req, res) => {
+  res.sendFile(path.resolve(__dirname,"./views/register.html"));
+});
+
 app.listen(3000, () => {
   console.log("Servidor Corriendo");
 });

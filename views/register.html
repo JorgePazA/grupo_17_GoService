@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Regístrate aquí</title>
+</head>
+
+<body class="body-register">
+    <header class="header-register">
+        <div class="arriba">
+            <a href="/" id="liga"><img class="logo-otras" src="/images/combinado.png"></a>
+            <!-- Hamburguesa -->
+            <div class="burger">
+                <a href=""><i class="fas fa-bars"></i></a>
+            </div>
+            <nav class="main-nav-bar">
+                <div class=izq>
+                    <ul class="left-navbar">
+                        <li><a href="#">Cómo Funciona</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="/productDetail.html">Servicios <i class="fas fa-caret-down"></i></a></li>
+                    </ul>
+                </div>
+                <div class="der">
+                    <ul class="right-navbar">
+                        <li><a href="/register.html">REGISTRO <i class="fas fa-id-card"></i></a></li>
+                        <li><a href="/login.html">Inicio sesión <i class="fas fa-sign-in-alt"></i></a></li>
+                        <li class="carro"><a href="/productCar.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="abajo">
+            <div class="buscador">
+                <i class="fas fa-search"></i><input class="input-buscar" type="text"
+                    placeholder="Buscar en GoService...">
+            </div>
+            <div class="carrito">
+                <a href="/productCar.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+    <main class="main-register">
+        <section class="registerform">
+            <div class="logo-register">
+                <a href="/"><img id="logo-register" src="/images/blanco.png"></a>
+            </div>
+            <h2 class="title-register">¿No tienes cuenta? Regístrate aquí</h2>
+            <form action="/" class="form-container-register">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" min="1" placeholder="Ingresa tu nombre" required/>
+
+                <label for="tipoid">Tipo de identificación</label>
+                <select name=tipoid>
+                    <option value="1">Cédula de ciudadania</option>
+                    <option value="2">Pasaporte</option>
+                    <option value="3">Cédula de extranjeria</option>
+                </select>
+
+                <label for="Noid">identificación</label>
+                <input type="text" name="Noid" id="Noid" min="1" placeholder="Ingresa tu número de identificación" required/>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" min="1" placeholder="Ingresa tu email" required/>
+
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="contraseña" id="contraseña" placeholder="Crea una contraseña" required />
+        
+                <label for="contraseña-val">Confirmar contraseña</label>
+                <input type="password"name="contraseña-val"id="contraseña-val" placeholder="Confirma tu contraseña" required/>
+
+                <button type="submit" class="form-btn-register">¡Regístrate gratis!</button>
+                <button type="reset" class="form-btn-register">Borrar</button>
+            </form>
+            <h2 class="title-register">Al crear una cuenta aceptas los términos y condiciones de las
+                políticas de manejo de datos personales de GoServise
+            </h2>
+          </section>
+    </main>
+    <footer class="footer-register">
+        <div class="footer-left">
+            <img class="logofooter" src="/images/blanco.png">
+            <p id="copy">Todos los derechos reservados</p>
+        </div>
+        <div class="footer-center">
+            <p>¿Necesitas ayuda?</p>
+            <p>Comunícate desde tu celular con nuestra</p>
+            <p>mesa de soporte al 123 444 54678</p>
+        </div>
+        <div class="footer-right">
+            <a href="https://github.com/JorgePazA"><img src="/images/gitLogo.png" /></a>
+            <a href="https://instagram.com"><img src="/images/instagramLogo.png" /></a>
+            <a href="https://twiter.com"><img src="/images/twiterLogo.png" /></a>
+        </div>
+    </footer>
+</body>
+
+</html>
