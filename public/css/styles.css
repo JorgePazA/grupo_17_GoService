@@ -1004,6 +1004,10 @@ main .button-add .add {
   } 
 
 @media (min-width: 769px){
+    #footer-pc{
+        position:static;
+    }
+    
     .body-register{
         background: white;
     }
