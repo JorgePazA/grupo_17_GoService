@@ -35,6 +35,8 @@ header .arriba #liga{
     display: flex;
     text-align: left;
     margin-left: 10px;
+    width: 200px;
+    height: 50px;
   }
 header .arriba #liga .logo-otras {
     height: 45px;
