@@ -118,8 +118,7 @@ header .abajo .carrito i {
     overflow: hidden;
 }
 .banner-center img{
-    display: flex;
-    flex-grow: 1;
+    object-fit:cover;
     width: 100%;
     height: 100%;
 }
@@ -444,7 +443,7 @@ p#copy{
     .lo-que-dicen {
         display: block;
         color: #FCA311;
-        padding-left: 20px; 
+        text-align: center;
         font-size: 18px;
     }
     main .clientes {
@@ -510,8 +509,6 @@ p#copy{
         max-width: 400px;
     /* Fin carrito de compras------------------------------------------------- */
     }
-
-
     footer{
         height: 100px;
         position: static;
@@ -522,7 +519,8 @@ p#copy{
     }
     footer .logofooter{
         display: flex;
-        width: 35%;
+        height: 40px;
+        width: 160px;
     }
     footer .footer-left{
         height: 100%;
@@ -531,6 +529,8 @@ p#copy{
     }    
     footer .footer-left img{
         margin: auto;
+        max-width: 100%;
+        max-height: 100%;
     }
     footer .footer-center{
         display: block;
@@ -618,6 +618,7 @@ p#copy{
 }
 .password .linkpassrecuperation a{
     font-size: 9px;
+    font-weight: lighter;
 }
 .title{
     font-weight: bold;
@@ -632,10 +633,14 @@ p#copy{
 .foot, a{
     font-size: small;
     text-align: center;
+    color: white;
 }
 .main-left-login{
     display: none;
 }
+.linkregister{
+    font-weight: bold;
+} 
 
 @media (min-width: 769px){
     
@@ -659,18 +664,21 @@ p#copy{
         margin-left: 45%;
     }
     .title{
-        margin: 90px 0px 0px 40px; 
+        margin: 90px 0px 0px 60px;
+        font-size: 26px;
+        font-weight: bold; 
+        width: 500px;
     }
     .login-container input {
         width: 95%;
-        height: 25px;
+        height: 40px;
     }
     .password{
         width: 95%;
     }
     .form-btn {
         width: 95%;
-        height: 25px;
+        height: 40px;
     }
     .foot, a{
         font-size: 12px;
@@ -968,9 +976,12 @@ main .button-add .add {
     display: flex;
     flex-direction: column;
 }
-.form-container-register input, select{
+.form-container-register input, .form-container-register select{
+    border: solid 1px rgb(185, 185, 185);
     margin-bottom: 8px;
     border-radius: 5px;
+    height: 30px;
+    padding-left: 5px;
 }
 .title-register{
     font-size: calc(12px + 0.5vw);
@@ -1005,9 +1016,9 @@ main .button-add .add {
 
 @media (min-width: 769px){
     #footer-pc{
-        position:static;
+        position:fixed;
+        bottom: 0;
     }
-    
     .body-register{
         background: white;
     }
@@ -1026,6 +1037,8 @@ main .button-add .add {
     }
     .form-btn-register {
         background:#FCA311; 
-      } 
-
+      }
+    .title-register{
+        font-size: 14px;
+    }
 }
