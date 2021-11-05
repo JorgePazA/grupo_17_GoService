@@ -1,11 +1,11 @@
 {
-  "name": "grupo_17_GoService",
+  "name": "grupo_17_goservice",
   "version": "0.1.0",
   "description": "El comercio electrónico está revolucionado la manera cómo compramos y nos relacionamos con las marcas gracias a sus beneficios como el ahorro de tiempo, acceso a promociones exclusivas y pagos automáticos. Por su  parte las empresas encuentran en él una alternativa muy efectiva para lograr una mayor fidelización de sus usuarios.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/JorgePazA/grupo_17_GoService#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   },
   "devDependencies": {
