@@ -1,0 +1,35 @@
+<section class="form-section">
+    <form action="" method="">
+        <h5 class="service-desc">¿Cuándo necesitas el servicio 4 horas?</h5>
+        <div class="time">
+            <fieldset class="horario">
+                <legend>Selecciona una fecha</legend>
+                <input type="date" name="service-date" class="service-day">
+            </fieldset>
+            <fieldset class="horario">
+                <legend>Selecciona una hora</legend>
+                <select name="service-hour" class="service-hour">
+                    <option value="7:00am-11:00am">7:00 am - 11:00 am</option>
+                    <option value="8:00am-12:00pm">8:00 am - 12:00 pm</option>
+                    <option value="1:00pm-5:00pm">1:00 pm - 5:00 pm</option>
+                    <option value="2:00pm-6:00pm">2:00 pm - 6:00 pm</option>
+                </select>
+            </fieldset>
+        </div>
+        <textarea name="recomendacion" placeholder="¿Tienes alguna recomendación?"
+            class="suggestion"></textarea>
+        <p class="covid-title">¿Recientemente has tenido síntomas o sospechas de Covid en tu hogar?</p>
+        <input id="covid-no" type="checkbox" name="sospecha-covid" value="no">
+        <label for="covid-no" class="covid"></label>
+        <div class="susc-service">
+            <p>¿Deseas adquirir este servicio por suscripción?</p>
+            <input id="susc-no" type="checkbox" name="servicio-suscripcion" value="no">
+            <label for="susc-no" class="subscription"></label>
+        </div>
+        <div class="for-you-div">
+            <p>¿El servicio que estás solicitando es para ti?</p>
+            <input id="service-no" type="checkbox" name="servicio-para-ti" value="no">
+            <label for="service-no" class="for-you"></label>
+        </div>
+    </form>
+</section>

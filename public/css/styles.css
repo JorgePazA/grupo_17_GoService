@@ -683,7 +683,6 @@ p#copy{
     }
     .foot, a{
         font-size: 12px;
-        width: 100%;
         text-align: center;
     } 
 }
@@ -890,32 +889,43 @@ form .for-you::after {
 main .includes {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  background: #dddddd;
+  justify-content: center;
   margin-top: 20px;
 }
 
 main .includes article {
-  width: 100%;
+  max-width: 378px;
+  text-align: center;
   background: #14213d;
-  margin: 10px;
+  margin: 10px 30px;
   padding: 8px;
   border: outset #fca311 2px;
 }
 
 main .includes article h3 {
   color: #fca311;
-  text-align: center;
 }
 
-main .includes ul {
-  list-style: none;
+main .includes img {
+    width: 150px;
+    margin: 15px 0 5px 0;
+    border-radius: 10px;
 }
 
-main .includes ul li {
-  color: #ffffff;
-  margin: 15px;
-  font-size: 16px;
+main .includes .valor {
+    font-size: 18px;
+    background: #142344 ;
+    padding: 5px;
+}
+
+main .includes button {
+    padding: 10px;
+    background-color: #fca311;
+    border: none;
+    border-radius: 25px;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 main .button-add {
@@ -1043,3 +1053,9 @@ main .button-add .add {
         font-size: 14px;
     }
 }
+
+/* Estilos ADMINISTRADOR------------------------------------------------------- */
+
+.mainAdmin{
+    background: #FCA311;
+  } 

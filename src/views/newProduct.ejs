@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Crear nuevo Producto</title>
+</head>
+<body>
+    <%- include('./partials/header')%>
+    <main class="main-register">
+        <section class="registerform">
+            <div class="logo-register">
+                <a href="/"><img id="logo-register" src="/images/blanco.png"></a>
+            </div>
+            <h1>Crea un producto</h1>
+            <form action="/" class="form-container-register">
+
+                <label for="tipoServicio">Tipo de Servicio</label>
+                <select name=tipoServicio>
+                    <option value="1">Eléctricidad</option>
+                    <option value="2">Plomería</option>
+                    <option value="3">Aseo</option>
+                </select>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" min="1" placeholder="Nombre del prestador" required/>
+                <label for="descripcion">Descripción</label>
+                <textarea placeholder="Agrega una descripción..."></textarea>
+                <label for="precio">Precio/hora</label>
+                <input type="number" name="precio" id="precio" min="1" required/>
+                <p>
+                    Carga Foto:
+                    <input type="file" name="fotoPrestador">
+                </p>
+                <button type="submit" class="form-btn-register">Agregar entrada</button>
+                <button type="reset" class="form-btn-register">Borrar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
