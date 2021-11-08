@@ -567,7 +567,15 @@ p#copy{
 }
 .main-right-login .logo #logo-login{
     width: 75%;
+    transition: 200ms all;
 }
+
+.main-right-login .logo #logo-login:hover{
+    background: #101e3f;
+    border-radius: 10px;
+    padding: 2px;
+}
+
   .login-container {
     width: 100%;
     height: 100%;
@@ -908,6 +916,7 @@ main .includes article h3 {
 
 main .includes img {
     width: 150px;
+    height: 150px;
     margin: 15px 0 5px 0;
     border-radius: 10px;
 }
