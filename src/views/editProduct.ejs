@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Crear nuevo Producto</title>
 </head>
-<body>
+<body class="body-register">
     <%- include('./partials/header')%>
     <main class="main-register">
         <section class="registerform">
-            <div class="logo-register">
-                <a href="/"><img id="logo-register" src="/images/blanco.png"></a>
-            </div>
-            <h1>Crea un producto</h1>
+            <h2 class="title-register">Crea un producto</h2>
+
             <form action="/" class="form-container-register">
 
                 <label for="tipoServicio">Tipo de Servicio</label>
@@ -22,20 +22,21 @@
                     <option value="2">Plomería</option>
                     <option value="3">Aseo</option>
                 </select>
-                <label for="nombre">Nombre</label>
+                <label for="nombre">Cambiar nombre</label>
                 <input type="text" name="nombre" id="nombre" min="1" placeholder="Nombre del prestador" required/>
-                <label for="descripcion">Descripción</label>
+                <label for="descripcion">Cambiar Descripción</label>
                 <textarea placeholder="Agrega una descripción..."></textarea>
-                <label for="precio">Precio/hora</label>
+                <label for="precio">Modificar Precio/hora</label>
                 <input type="number" name="precio" id="precio" min="1" required/>
                 <p>
-                    Carga Foto:
+                    Carga Nueva foto:
                     <input type="file" name="fotoPrestador">
                 </p>
-                <button type="submit" class="form-btn-register">Agregar entrada</button>
+                <button type="submit" class="form-btn-register">Modificar Tarjeta</button>
                 <button type="reset" class="form-btn-register">Borrar</button>
             </form>
         </section>
     </main>
+    <%- include('./partials/footer')%>
 </body>
 </html>

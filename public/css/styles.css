@@ -328,6 +328,7 @@ footer{
     font-size: 12px;
     padding-right: 5px;
     padding-bottom: 2px;
+    margin-top: 10%;
 }
 footer .logofooter{
     display: none;
@@ -1068,3 +1069,20 @@ main .button-add .add {
 .mainAdmin{
     background: #FCA311;
   } 
+  table {
+    width: 100%;
+    margin-bottom: 10px;
+ }
+ th, td {
+    width: 25%;
+    text-align: center;
+    border: 3px solid #14213D;
+    background-color: #c5c5c5;
+ }
+ .title-caption{
+     font-weight: bold;
+     font-size: calc(12px + 0.5vw);
+ }
+ .adm-body{
+     background: #FCA311;
+ }

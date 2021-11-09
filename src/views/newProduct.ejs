@@ -8,14 +8,12 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>Crear nuevo Producto</title>
 </head>
-<body>
+<body class="body-register">
     <%- include('./partials/header')%>
     <main class="main-register">
         <section class="registerform">
-            <div class="logo-register">
-                <a href="/"><img id="logo-register" src="/images/blanco.png"></a>
-            </div>
-            <h1>Crea un producto</h1>
+            <h2 class="title-register">Crea un producto</h2>
+
             <form action="/" class="form-container-register">
 
                 <label for="tipoServicio">Tipo de Servicio</label>
@@ -39,5 +37,6 @@
             </form>
         </section>
     </main>
+    <%- include('./partials/footer')%>
 </body>
 </html>

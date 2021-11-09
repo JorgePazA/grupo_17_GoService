@@ -8,53 +8,95 @@
     <link rel="stylesheet" href="../../css/styles.css">
     <title>GoService-Admini</title>
 </head>
-<body>
+<body class="adm-body">
     <%- include('./partials/header')%>
     <main class="mainAdmin">
-        <h1>Administrador de productos</h1>
-        <a class="addProduct" href="/newProduct"><i class="fas fa-folder-plus"></i> Agregar nuevo Producto</a></p>
-        <a class="editProduct" href="/editProduct"><i class="fas fa-user-edit"></i> Editar Producto</a></p>
+        <h2>Administrador de productos</h2>
+        <a class="addProduct" href="/newProduct"><i class="fas fa-folder-plus"></i> Agregar nuevo Producto</a>
        
-       
-        <table class="AdminProducts-plomeria">
-            <caption>Servicios de Plomería</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Borrar</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-        <table class="AdminProducts-electricidad">
-            <caption>Servicios Eléctricos</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Borrar</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-        <table class="AdminProducts-electricidad">
-            <caption>Servicios de Aseo</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Borrar</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
+        <div class="administrationTable">
+            <table class="AdminProducts-plomeria">
+                <caption class="title-caption">Servicios de Plomería</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Pepito Perez</th>
+                        <th><a class="editProduct" href="/editProduct"><i class="fas fa-user-edit"></i></a></th>
+                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
+                    </tr>
+                    <tr>
+                        <th>Themixtocles Valencia</th>
+                        <th><a class="editProduct" href="/editProduct"><i class="fas fa-user-edit"></i></a></th>
+                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
+                    </tr>
+                    <tr>
+                        <th>Casimiro Torres</th>
+                        <th><a class="editProduct" href="/editProduct"><i class="fas fa-user-edit"></i></a></th>
+                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="AdminProducts-electricidad">
+                <caption class="title-caption">Servicios Eléctricos</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Pepito Perez</th>
+                        <th><a class="editProduct" href="/editProduct"><i class="fas fa-user-edit"></i></a></th>
+                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
+                    </tr>
+                    <tr>
+                        <th>Themixtocles Valencia</th>
+                        <th><a class="editProduct" href="/editProduct"><i class="fas fa-user-edit"></i></a></th>
+                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
+                    </tr>
+                    <tr>
+                        <th>Casimiro Torres</th>
+                        <th><a class="editProduct" href="/editProduct"><i class="fas fa-user-edit"></i></a></th>
+                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="AdminProducts-electricidad">
+                <caption class="title-caption">Servicios de Aseo</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Pepito Perez</th>
+                        <th><a class="editProduct" href="/editProduct"><i class="fas fa-user-edit"></i></a></th>
+                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
+                    </tr>
+                    <tr>
+                        <th>Themixtocles Valencia</th>
+                        <th><a class="editProduct" href="/editProduct"><i class="fas fa-user-edit"></i></a></th>
+                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
+                    </tr>
+                    <tr>
+                        <th>Casimiro Torres</th>
+                        <th><a class="editProduct" href="/editProduct"><i class="fas fa-user-edit"></i></a></th>
+                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
     <%- include('./partials/footer')%>
 </body>
