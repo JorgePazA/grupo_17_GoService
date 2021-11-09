@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/styles.css">
-    <title>Como Funciona</title>
+    <title>Cómo funciona</title>
 </head>
+
 <body>
+
     <%- include('./partials/header')%>
-    <main class="mainBlog">
-        <h1>Esto es Como Funciona</h1>
+    <main class="mainComoFunciona">
+            <h1>Cómo Funciona</h1>
+            <section class =containercf>
+                <section class="HowtoOrder">
+                    <div class="step">
+                        <p class="numbers">1</p>
+                        <i class="far fa-hand-pointer"></i>
+                        <p class="text-how-to-order"><b>Elige tu servicio:</b> Escoge el servicio que necesitas dentro de nuestras tres categorías: plomería, electricidad y limpieza.</p>
+                    </div>
+                    <div class="step">
+                        <p class="numbers">2</p>
+                        <i class="fas fa-calendar-week"></i>
+                        <p class="text-how-to-order"><b>Agenda y paga online:</b> Tenemos diferentes formas de pago. Puedes cancelar el valor directamente en la plataforma o en efectivo una vez hayas disfrutado del servicio.</p>
+                    </div>
+                    <div class="step">
+                        <p class="numbers">3</p>
+                        <i class="fas fa-clipboard-check"></i>
+                        <p class="text-how-to-order"><b>Confírmanos tu servicio:</b> Ve el detalle de tu compra y si todo está en orden confirma el servicio. También puedes corrigir los detalles que necesites.</p>
+                    </div>
+                    <div class="step">
+                        <p class="numbers">4</p>
+                        <i class="fas fa-hands-helping"></i>
+                        <p class="text-how-to-order"><b>Disfruta tu servicio:</b> Según el horario que que hayas definido disfruta del excelente servicio de nuestros colaboradores.</p>
+                    </div>
+                </section>
+                <section class = "imgcf">
+                    <img src="/images/comofunciona.jpg" alt="ComoFunciona">
+                </section>
+            </section>
+            
     </main>
+
     <%- include('./partials/footer')%>
+
 </body>
+
 </html>

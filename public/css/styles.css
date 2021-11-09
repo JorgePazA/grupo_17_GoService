@@ -132,6 +132,10 @@ header .abajo .carrito i {
     width: 40px;
 }
 /* Main--------------------------------------------------------------------------- */
+main {
+    min-height: calc(100vh - 27px - 90px);
+}
+
 .servicios {
     display: flex;
     flex-direction: column;
@@ -161,10 +165,13 @@ main section article p{
     margin: 15px;
 }
 /* Estilos Carrito de Compras------------------------------------------------------- */
-#servicios-añadidos{
+main #servicios-añadidos{
     font-size: 20px;
     text-align: left;
     padding-left: 8vw;
+    margin-bottom: 0;
+    padding-top: 20px;
+    margin-top: 0px;
 }
 .resumen-carrito{
     border: solid 0.5px rgb(218, 218, 218);
@@ -328,7 +335,7 @@ footer{
     font-size: 12px;
     padding-right: 5px;
     padding-bottom: 2px;
-    margin-top: 10%;
+    /* margin-top: 10%; */
 }
 footer .logofooter{
     display: none;
@@ -351,7 +358,11 @@ p#copy{
 /*------------------------------------ Version Tablet ---------------------------------------- */
 @media (min-width: 769px){
  
-.carrito {
+h1{
+    padding-top: 20px;
+    margin-top: 0px;
+}
+    .carrito {
     display: none;
 }
     .burger{
@@ -399,6 +410,9 @@ p#copy{
     header .abajo .input-buscar {
         width: 50vw;
         padding-left: 10%;
+    }
+    main {
+        min-height: calc(100vh - 100px - 90px);
     }
     .HowtoOrder {
         width: 50%;
@@ -502,18 +516,19 @@ p#copy{
         text-align: justify;
     }
     /* Carrito de compras------------------------------------------------- */
-    #servicios-añadidos{
+    main #servicios-añadidos{
         text-align: center;
         padding-right: 280px;
     }
     .resumen-carrito{
         max-width: 400px;
+        margin-bottom: 40px;
     /* Fin carrito de compras------------------------------------------------- */
     }
     footer{
         height: 100px;
         position: static;
-        margin-top: 50px;   
+        /* margin-top: 50px;    */
     }
     footer div{
         width: 33%;
@@ -1086,3 +1101,96 @@ main .button-add .add {
  .adm-body{
      background: #FCA311;
  }
+
+/* Estilos Cómo Funciona ---------------------------------*/
+.mainComoFunciona h1{
+    margin-top: 0;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+.mainComoFunciona .containercf{
+    display: flex;
+}
+.mainComoFunciona .HowtoOrder {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    margin-bottom: 40px;
+}
+.mainComoFunciona .step{
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+}
+/* .mainComoFunciona .HowtoOrder {
+    width: 50%;
+    margin: auto;
+    display: block;
+    justify-content: space-around;
+    margin-bottom: 40px;
+} */
+.mainComoFunciona .text-how-to-order{
+    font-size: 12px;
+    width: 90%;
+    text-align: justify;
+    padding-left: 30px;
+}
+.mainComoFunciona .HowtoOrder i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #14213D; 
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+}
+/* .mainComoFunciona .HowtoOrder div{
+    text-align: center;
+    width: 25%;
+} */
+.mainComoFunciona .HowtoOrder .step .numbers{
+    width: 30px;
+    height: 30px;
+    background-color: #FCA311;
+    border-radius: 50%;
+    margin: auto;
+    padding-top: 5px;
+    position: absolute;
+    text-align: center;
+    left: 10px;
+    top: -18px
+}
+.mainComoFunciona .imgcf{
+    display: none;
+}
+@media (min-width: 769px){
+    .mainComoFunciona .text-how-to-order{
+        margin-left: 0;
+        width: 100%;
+    }
+    .mainComoFunciona .HowtoOrder {
+        width: 45%;
+    }
+    .mainComoFunciona .imgcf{
+        display: block;
+        max-width: 40%;
+        margin: auto;
+        margin-top: 0;
+    }
+    .imgcf img{
+        width: 100%;
+    }
+    .mainComoFunciona .HowtoOrder i{
+        width: 58px;
+    }
+}
+/* Estilos blog de GoService ------------- */
+.mainBlog h1{
+    margin-top: 0;
+    padding-top: 20px;
+}
+.mainBlog p{
+    margin: 20px;
+    text-align: justify;
+}
