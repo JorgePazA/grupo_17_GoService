@@ -1,0 +1,29 @@
+ [
+  {
+    "id": 1,
+    "fullName": "Erina Titcomb",
+    "description": "Fontanero en la ciudad de Medellin, Pongo mi experiencia y conocimiento al servicio de la plomeria, Cuento con experiencia en baños, duchas y cocinas, hago cualquier tipo de trabajo relacionado con la fontaneria",
+    "price": 54154,
+    "category": "plomeria",
+    "image": "plomero1.png",
+    "experiencia": 2
+  },
+  {
+    "id": 2,
+    "fullName": "Cordey Judron",
+    "description": "Fontanero en la ciudad de Medellin, Pongo mi experiencia y conocimiento al servicio de la plomeria, Cuento con experiencia en baños, duchas y cocinas, hago cualquier tipo de trabajo relacionado con la fontaneria",
+    "price": 54224,
+    "category": "plomeria",
+    "image": "plomera2.jpg",
+    "experiencia": 3
+  },
+  {
+    "id": 3,
+    "fullName": "Carree Pymar",
+    "description": "Fontanero en la ciudad de Medellin, Pongo mi experiencia y conocimiento al servicio de la plomeria, Cuento con experiencia en baños, duchas y cocinas, hago cualquier tipo de trabajo relacionado con la fontaneria",
+    "price": 45082,
+    "category": "plomeria",
+    "image": "plomero3.jpg",
+    "experiencia": 0
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "fullName": "Kathi Hembling",
+    "description": "Electricista en la ciudad de Medellin, Pongo mi experiencia y conocimiento como electricista, cuento con experiencia en todo tipo de arreglos en unidades de vivienda o construcciones de escala mayor, como pueden ser oficinas empresariales. Hago cualquier tipo de trabajo relacionado con la electrónica",
+    "price": 38495,
+    "category": "electricidad",
+    "image": "electricista1.jpg",
+    "experiencia": 3
+  },
+  {
+    "id": 2,
+    "fullName": "Marj Stickland",
+    "description": "Electricista en la ciudad de Medellin, Pongo mi experiencia y conocimiento como electricista, cuento con experiencia en todo tipo de arreglos en unidades de vivienda o construcciones de escala mayor, como pueden ser oficinas empresariales. Hago cualquier tipo de trabajo relacionado con la electrónica",
+    "price": 50631,
+    "category": "electricidad",
+    "image": "electricista2.jpg",
+    "experiencia": 5
+  },
+  {
+    "id": 3,
+    "fullName": "Hazel Maffia",
+    "description": "Electricista en la ciudad de Medellin, Pongo mi experiencia y conocimiento como electricista, cuento con experiencia en todo tipo de arreglos en unidades de vivienda o construcciones de escala mayor, como pueden ser oficinas empresariales. Hago cualquier tipo de trabajo relacionado con la electrónica",
+    "price": 48901,
+    "category": "electricidad",
+    "image": "electricista3.jpg",
+    "experiencia": 2
+  }
+]

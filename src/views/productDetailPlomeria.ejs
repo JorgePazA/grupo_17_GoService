@@ -15,32 +15,20 @@
     <main>
         <%- include('./partials/banner')%>
         <h1>PLOMERIA</h1>
-        <%- include('./partials/productDetailSection')%>
         <section class="includes">
-            <article>
-                <h3>Persona 1</h3>
-                <img src="/img/fontanero1.png" alt="Fontanero">
-                <p>Fontanero en la ciudad de Medellin, Pongo mi experiencia y conocimiento al servicio de la plomeria, Cuento con experiencia en baños, duchas y cocinas, hago cualquier tipo de trabajo relacionado con la fontaneria</p>
-                <p>Valor por hora : $60.000</p>
-                <button type="submit">Cotizar Servicio</button>
-            </article>
-            <article>
-                <h3>Persona 2</h3>
-                <img src="/img/plomera2.jpg" alt="Fontanero">
-                <p>Fontanero en la ciudad de Medellin, Pongo mi experiencia y conocimiento al servicio de la plomeria, Cuento con experiencia en baños, duchas y cocinas, hago cualquier tipo de trabajo relacionado con la fontaneria</p>
-                <p>Valor por hora : $45.000</p>
-                <button type="submit">Cotizar Servicio</button>
-            </article>
-            <article>
-                <h3>Persona 3</h3>
-                <img src="/img/plomero3.jpg" alt="Fontanero">
-                <p>Fontanero en la ciudad de Medellin, Pongo mi experiencia y conocimiento al servicio de la plomeria, Cuento con experiencia en baños, duchas y cocinas, hago cualquier tipo de trabajo relacionado con la fontaneria</p>
-                <p>Valor por hora : $50.000</p>
-                <button type="submit">Cotizar Servicio</button>
-            </article>
-        </section>
-        <section class="button-add">
-            <button type="submit" class="add">Agregar al carrito</button>
+              <% for(let i= 0; i < plomeria.length; i++){ %>   
+                <article>
+                  <h3> <%= plomeria[i].fullName %></h3>
+                  <figure>
+                    <img  src="img/<%= plomeria[i].image%> " alt="plomero1">
+                  </figure>
+                  <section class="detalle">
+                    <h5 class="valor"> Valor/Hora: $<%= plomeria[i].price%> </h5>
+                    <p class="expDetail">Experiencia: <%= plomeria[i].experiencia%> años</p>
+                    <a href="/productDetailPlomeria/:plomeria[i]" class="buttonDetail">Ver detalle</a>
+                  </section>              
+                </article>                      
+            <% } %>
         </section>
     </main>
     <%- include('./partials/footer')%>

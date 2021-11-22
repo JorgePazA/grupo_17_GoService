@@ -167,7 +167,7 @@ main section article p{
 /* Estilos Carrito de Compras------------------------------------------------------- */
 main #servicios-añadidos{
     font-size: 20px;
-    text-align: left;
+    text-align: center;
     padding-left: 8vw;
     margin-bottom: 0;
     padding-top: 20px;
@@ -213,59 +213,36 @@ input.horas{
     font-size: 14px;
     margin-bottom: 0;
 }
+
+.input-direction {
+    width: 140px;
+    border: #fca311 solid 2px;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 1px 0;
+}
+
 .texto-arriba-carrito, .hmm{
     color:rgb(83, 83, 83);
     font-size: 14px;
     margin-top: 0;
 }
-.caja-fecha{
-    display:flex;
-}
 .hmm{
-    padding-left: 20px;;
+    padding-left: 20px;
 }
 .carrito-inferior{
     position: relative;
     padding-top: 20px;
 }
-.inputs-is-carrito{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 12px;
-}
-.inputs-is-carrito button{
-    font-size: 8px;
-    font-weight: 700;
-    color: #14213D;
-    background-color: rgb(221, 221, 221);
-    width: 60px;
-    height: 27px;
-    padding-bottom: 2px;
-    border: solid 2px #14213D;
-    border-top-left-radius: 25% 50%;
-    border-bottom-left-radius: 25% 50%;
-    border-top-right-radius: 25% 50%;
-    border-bottom-right-radius: 25% 50%;
-}
-.inputs-is-carrito input{
-    width: 140px;
-    height: 25px;
-    background: #ffffff;
-    border-radius: 5px;
-    border: solid 2px rgb(190, 190, 190);;
-    font-size: 12px;
-    padding-left: 5px;
-    margin-right: 5%;
-}
+
 .total-a-pagar{
-    margin-top: 20px;
     margin-bottom: 35px;
     font-size: 18px;
     font-weight: bold;
 }
 .valor-servicio-con-iva-abajo{
    position: absolute;
-   top: 57px;
+   top: 20px;
    right: 0; 
 }
 .valor-servicio-con-iva-abajo .valor-servicio{
@@ -518,7 +495,7 @@ h1{
     /* Carrito de compras------------------------------------------------- */
     main #servicios-añadidos{
         text-align: center;
-        padding-right: 280px;
+        padding-right: 400px;
     }
     .resumen-carrito{
         max-width: 400px;
@@ -721,7 +698,7 @@ h1 {
 
 .form-section {
   width: 80%;
-  margin: auto;
+  margin: 40px auto;
   display: flex;
   justify-content: center;
 }
@@ -922,7 +899,7 @@ main .includes article {
   text-align: center;
   background: #14213d;
   margin: 10px 30px;
-  padding: 8px;
+  padding: 20px 0;
   border: outset #fca311 2px;
 }
 
@@ -938,17 +915,22 @@ main .includes img {
 }
 
 main .includes .valor {
-    font-size: 18px;
+    font-size: 15px;
     background: #142344 ;
     padding: 5px;
+    color: #fca311;
 }
 
-main .includes button {
+main .includes .expDetail {
+    margin: 15px 0 20px 0;
+}
+
+main .includes .buttonDetail {
     padding: 10px;
     background-color: #fca311;
+    color: #000000;
     border: none;
     border-radius: 25px;
-    margin: 10px 0;
     font-size: 14px;
     font-weight: bold;
 }
@@ -1194,3 +1176,4 @@ main .button-add .add {
     margin: 20px;
     text-align: justify;
 }
+

@@ -15,32 +15,20 @@
     <main>
         <%- include('./partials/banner')%>
         <h1>ELECTRICIDAD</h1>
-        <%- include('./partials/productDetailSection')%>
         <section class="includes">
-            <article>
-                <h3>Persona 1</h3>
-                <img src="/img/electricista1.jpg" alt="Fontanero">
-                <p>Electricista en la ciudad de Medellin, Pongo mi experiencia y conocimiento como electricista, cuento con experiencia en todo tipo de arreglos en unidades de vivienda o construcciones de escala mayor, como pueden ser oficinas empresariales. Hago cualquier tipo de trabajo relacionado con la electrónica</p>
-                <p>Valor por hora : $60.000</p>
-                <button type="submit">Cotizar Servicio</button>
-            </article>
-            <article>
-                <h3>Persona 2</h3>
-                <img src="/img/electricista2.jpg" alt="Fontanero">
-                <p>Electricista en la ciudad de Medellin, Pongo mi experiencia y conocimiento como electricista, cuento con experiencia en todo tipo de arreglos en unidades de vivienda o construcciones de escala mayor, como pueden ser oficinas empresariales. Hago cualquier tipo de trabajo relacionado con la electrónica</p>
-                <p>Valor por hora : $45.000</p>
-                <button type="submit">Cotizar Servicio</button>
-            </article>
-            <article>
-                <h3>Persona 3</h3>
-                <img src="/img/electricista3.jpg" alt="Fontanero">
-                <p>Electricista en la ciudad de Medellin, Pongo mi experiencia y conocimiento como electricista, cuento con experiencia en todo tipo de arreglos en unidades de vivienda o construcciones de escala mayor, como pueden ser oficinas empresariales. Hago cualquier tipo de trabajo relacionado con la electrónica</p>
-                <p>Valor por hora : $50.000</p>
-                <button type="submit">Cotizar Servicio</button>
-            </article>
-        </section>
-        <section class="button-add">
-            <button type="submit" class="add">AGREGAR AL CARRITO</button>
+              <% for(let i= 0; i < electricidad.length; i++){ %>   
+                <article>
+                  <h3> <%= electricidad[i].fullName %></h3>
+                  <figure>
+                    <img  src="img/<%= electricidad[i].image%> " alt="Electricista">
+                  </figure>
+                  <section class="detalle">
+                    <h5 class="valor">$  <%= electricidad[i].price%> </h5>
+                    <p class="expDetail">Experiencia: <%= electricidad[i].experiencia%> años</p>
+                    <a href="/productDetailPlomeria/:plomeria[i]" class="buttonDetail">Ver detalle</a>
+                  </section>              
+                </article>                      
+            <% } %>
         </section>
     </main>
     <%- include('./partials/footer')%>

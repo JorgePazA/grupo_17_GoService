@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "fullName": "Blondelle Fido",
+    "description": "Empleada doméstica en la ciudad de Medellin, Pongo mi experiencia y conocimiento al servicio de los deberes del hogar, cuento con experiencia en aseo general del hogar, arreglo de ropa y cocina",
+    "price": 48278,
+    "category": "aseo",
+    "image": "aseadora1.webp",
+    "experiencia": 4
+  },
+  {
+    "id": 2,
+    "fullName": "Anastasia Marsay",
+    "description": "Empleada doméstica en la ciudad de Medellin, Pongo mi experiencia y conocimiento al servicio de los deberes del hogar, cuento con experiencia en aseo general del hogar, arreglo de ropa y cocina",
+    "price": 40807,
+    "category": "aseo",
+    "image": "aseador2.jpg",
+    "experiencia": 4
+  },
+  {
+    "id": 3,
+    "fullName": "Joscelin Hearne",
+    "description": "Empleada doméstica en la ciudad de Medellin, Pongo mi experiencia y conocimiento al servicio de los deberes del hogar, cuento con experiencia en aseo general del hogar, arreglo de ropa y cocina",
+    "price": 39423,
+    "category": "aseo",
+    "image": "aseadora3.jpg",
+    "experiencia": 3
+  }
+]

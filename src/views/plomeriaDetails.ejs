@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= plomeria[i].fullName %></title>
+</head>
+<body>
+    <% for(let i= 0; i < aseo.length; i++){ %> 
+        <h3> <%= plomeria[i].fullName %></h3>
+        <figure>
+            <img  src="img/<%= plomeria[i].image%> " alt="Aseadores">
+          </figure>
+          <section class="detalle">
+              <p> <%= plomeria[i].description</p>
+            <h5 class="valor">$  <%= plomeria[i].price%> </h5>
+            <p class="expDetail">Experiencia: <%= plomeria[i].experiencia%> años</p>
+          </section>   
+          <% } %>
+</body>
+</html>
