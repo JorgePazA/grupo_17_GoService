@@ -6,7 +6,8 @@
     "price": 38495,
     "category": "electricidad",
     "image": "electricista1.jpg",
-    "experiencia": 3
+    "experiencia": 3,
+    "cedula": 12348
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "price": 50631,
     "category": "electricidad",
     "image": "electricista2.jpg",
-    "experiencia": 5
+    "experiencia": 5,
+    "cedula": 12349
   },
   {
     "id": 3,
@@ -24,6 +26,7 @@
     "price": 48901,
     "category": "electricidad",
     "image": "electricista3.jpg",
-    "experiencia": 2
+    "experiencia": 2,
+    "cedula": 123410
   }
 ]

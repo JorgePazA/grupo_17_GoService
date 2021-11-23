@@ -11,7 +11,7 @@ const carritoController = {
         res.render("productDetail.ejs");
     },
 
-    detailPlomeria: (req, res) => {
+    detailPlomeria1: (req, res) => {
         let idProduct = req.params.id;
         let result = plomeria.find(item=>item.id == idProduct);
         if (result) {
@@ -51,7 +51,10 @@ const carritoController = {
     },
     detailPlomeria: (req, res) => {
         res.render(path.resolve(__dirname, '..', 'views', 'productDetailPlomeria'),{plomeria});
-    }
+    },
+    detailPlomeria1: (req, res) => {
+        res.render(path.resolve(__dirname, '..', 'views', 'plomeriaDetails'),{plomeria});
+    },
 
 };
 

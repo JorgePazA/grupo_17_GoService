@@ -6,7 +6,8 @@
     "price": 54154,
     "category": "plomeria",
     "image": "plomero1.png",
-    "experiencia": 2
+    "experiencia": 2,
+    "cedula": 123411
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "price": 54224,
     "category": "plomeria",
     "image": "plomera2.jpg",
-    "experiencia": 3
+    "experiencia": 3,
+    "cedula": 123412
   },
   {
     "id": 3,
@@ -24,6 +26,7 @@
     "price": 45082,
     "category": "plomeria",
     "image": "plomero3.jpg",
-    "experiencia": 0
+    "experiencia": 0,
+    "cedula": 123413
   }
 ]

@@ -39,5 +39,10 @@
         "experiencia": 7,
         "cedula": 54321
     },
-    {}
+    {},
+    {
+        "id": null,
+        "category": "aseo",
+        "image": "aseadora1.webp"
+    }
 ]
