@@ -39,5 +39,24 @@
         "experiencia": 7,
         "cedula": 54321
     },
-    {}
+    {
+        "id": 5,
+        "price": null,
+        "category": "aseo"
+    },
+    {
+        "id": 6,
+        "price": null,
+        "category": "aseo"
+    },
+    {
+        "id": 7,
+        "price": null,
+        "category": "aseo"
+    },
+    {
+        "id": 8,
+        "price": null,
+        "category": "aseo"
+    }
 ]

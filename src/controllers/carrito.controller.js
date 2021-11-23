@@ -1,9 +1,9 @@
 const path = require ('path')
 const fs = require('fs')
 
-let plomeria = JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','model','basePlomeria.json')));
-let aseo = JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','model','baseAseo.json')));
-let electricidad = JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','model','baseElectricidad.json')));
+let plomeria = JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','basePlomeria.json')));
+let aseo = JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','baseAseo.json')));
+let electricidad = JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','baseElectricidad.json')));
 
 const carritoController = {
     // Metodo para buscar producto por ID y rendizar el detalle del producto para pasar a carrito
