@@ -16,19 +16,21 @@
         <%- include('./partials/banner')%>
         <h1>ELECTRICIDAD</h1>
         <section class="includes">
-              <% for(let i= 0; i < electricidad.length; i++){ %>   
-                <article>
-                  <h3> <%= electricidad[i].fullName %></h3>
-                  <figure>
-                    <img  src="img/<%= electricidad[i].image%> " alt="Electricista">
-                  </figure>
-                  <section class="detalle">
-                    <h5 class="valor">$  <%= electricidad[i].price%> </h5>
-                    <p class="expDetail">Experiencia: <%= electricidad[i].experiencia%> años</p>
-                    <a href="/productDetailPlomeria/:plomeria[i]" class="buttonDetail">Ver detalle</a>
-                  </section>              
-                </article>                      
-            <% } %>
+          <% proveedores.forEach(proveedor => { %>
+            <% if(proveedor.category == "electricidad"){%>  
+              <article>
+                <h3> <%= proveedor.fullName %></h3>
+                <figure>
+                  <img  src="img/<%= proveedor.image%> " alt="Proveedores">
+                </figure>
+                <section class="detalle">
+                  <h5 class="valor">$  <%= proveedor.price%> </h5>
+                  <p class="expDetail">Experiencia: <%= proveedor.experience%> años</p>
+                  <a class="buttonDetail" href=<%= "/productDetailAseo/" + proveedor.id %> > Ver detalle</a>
+                </section>              
+              </article> 
+            <%}%>
+          <% }) %> 
         </section>
     </main>
     <%- include('./partials/footer')%>

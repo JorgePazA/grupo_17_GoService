@@ -1,6 +1,6 @@
 const express = require('express')
 const mainController = require('../controllers/main.controller.js')
-const trabajadoresController = require('../controllers/trabajadores.controller.js')
+//const trabajadoresController = require('../controllers/trabajadores.controller.js')
 const router = express.Router()
 
 router.get('/', mainController.home)

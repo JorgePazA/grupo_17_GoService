@@ -22,9 +22,9 @@ app.use(methodOverride('_method'));
 
 //*Requerir y definir las rutas
 const rutaMain = require("./routers/main.routes");
-const rutaCarrito = require("./routers/carrito.routes");
+const rutaCarrito = require("./routers/products.routes");
 const rutaUsers = require("./routers/usuarios.routes");
-const rutaDetail = require("./routers/detail.routes");
+//const rutaDetail = require("./routers/detail.routes");
 
 
 

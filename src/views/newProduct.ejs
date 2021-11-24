@@ -14,7 +14,7 @@
         <section class="registerform">
             <h2 class="title-register">Crea un producto</h2>
 
-            <form action="/administrar/newProduct" method="POST" enctype="multipart/form-data" class="form-container-register">
+            <form action="/administrar/newProduct" method="POST" class="form-container-register">
 
                 <label for="tipoServicio">Tipo de Servicio</label>
                 <select name=tipoServicio>
@@ -22,14 +22,14 @@
                     <option value="2">Plomería</option>
                     <option value="3">Aseo</option>
                 </select>
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" min="1" placeholder="Nombre del prestador" required/>
-                <label for="descripcion" name="descripcion" id="descripcion">Descripción</label>
-                <textarea placeholder="Agrega una descripción..."></textarea>
-                <label for="precio">Precio/hora</label>
-                <input type="number" name="precio" id="number" min="1" required/>
-                <label for="experiencia">Experiencia/años</label>
-                <input type="text" name="experiencia" id="experiencia" min="1" required/>
+                <label for="fullName">Nombre</label>
+                <input type="text" name="fullName" id="fullName" min="1" placeholder="Nombre del prestador" required/>
+                <label for="description">Descripción</label>
+                <textarea placeholder="Agrega una descripción..." name="description" id="description" ></textarea>
+                <label for="price">Precio/hora</label>
+                <input type="number" name="price" id="price" min="1" required/>
+                <label for="experience">Experiencia/años</label>
+                <input type="text" name="experience" id="experience" min="1" required/>
                 <label for="cedula">Cédula</label>
                 <input type="number" name="cedula" id="cedula" min="1" required/>
                 <p>

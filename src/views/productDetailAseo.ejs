@@ -16,19 +16,25 @@
         <%- include('./partials/banner')%>
         <h1>ASEO</h1>
         <section class="includes">
-            <% for(let i= 0; i < aseo.length; i++){ %>   
+
+          <% proveedores.forEach(proveedor => { %>
+            
+            <% if(proveedor.category == "aseo"){%>
                 <article>
-                  <h3> <%= aseo[i].fullName %></h3>
+                  <h3> <%= proveedor.fullName %></h3>
                   <figure>
-                    <img  src="img/<%= aseo[i].image%> " alt="Aseadores">
+                    <img  src="img/<%= proveedor.image%> " alt="Proveedores">
                   </figure>
                   <section class="detalle">
-                    <h5 class="valor">$  <%= aseo[i].price%> </h5>
-                    <p class="expDetail">Experiencia: <%= aseo[i].experiencia%> años</p>
-                    <a href="/productDetailPlomeria/:plomeria[i]" class="buttonDetail">Ver detalle</a>
+                    <h5 class="valor">$  <%= proveedor.price%> </h5>
+                    <p class="expDetail">Experiencia: <%= proveedor.experience%> años</p>
+                    <a class="buttonDetail" href=<%= "/product-detail/" + proveedor.id %> > Ver detalle</a>
                   </section>              
-                </article>                      
-            <% } %>        
+                </article> 
+              <%}%>                     
+          <% }) %> 
+            
+            
         </section>
     </main>
     <%- include('./partials/footer')%>
