@@ -1176,4 +1176,47 @@ main .button-add .add {
     margin: 20px;
     text-align: justify;
 }
-
+/* Estilos product-detail------------------- */
+main h1{
+    padding-bottom: 0px;
+}
+main .section-pd{
+    display:flex;
+    justify-content: center;
+}
+main .articulo {
+    display: flex;
+    margin: auto;
+    max-width: 300px;
+    text-align: center;
+    background: #14213d;
+    margin: 10px 30px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    border: outset #fca311 2px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+  
+main .img-pd{
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 0;
+}
+main .img-pd img{
+    width: 100%;
+    border-radius: 10px;
+}
+main .text-pd{
+    text-align:justify;
+}
+main .articulo--top--info .buttonDetail {
+    padding: 6px;
+    background-color: #fca311;
+    color: #000000;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}

@@ -14,13 +14,13 @@
         <section class="registerform">
             <h2 class="title-register">Crea un producto</h2>
 
-            <form action="/administrar/newProduct" method="POST" class="form-container-register">
+            <form action="/administrar" method="POST" class="form-container-register" enctype="multipart/form-data">
 
-                <label for="tipoServicio">Tipo de Servicio</label>
-                <select name=tipoServicio>
-                    <option value="1">Electricidad</option>
-                    <option value="2">Plomería</option>
-                    <option value="3">Aseo</option>
+                <label for="category">Tipo de Servicio</label>
+                <select name=category>
+                    <option value="electricidad">Electricidad</option>
+                    <option value="plomeria">Plomería</option>
+                    <option value="aseo">Aseo</option>
                 </select>
                 <label for="fullName">Nombre</label>
                 <input type="text" name="fullName" id="fullName" min="1" placeholder="Nombre del prestador" required/>
@@ -30,14 +30,10 @@
                 <input type="number" name="price" id="price" min="1" required/>
                 <label for="experience">Experiencia/años</label>
                 <input type="text" name="experience" id="experience" min="1" required/>
-                <label for="cedula">Cédula</label>
-                <input type="number" name="cedula" id="cedula" min="1" required/>
-                <p>
-                    Carga Foto:
-                    <input type="file" name="fotoPrestador">
-                </p>
+                <input type="file" name="product_image" id="product_image" placeholder="Ingrese su foto">
                 <button type="submit" class="form-btn-register">Agregar entrada</button>
                 <button type="reset" class="form-btn-register">Borrar</button>
+
             </form>
         </section>
     </main>

@@ -14,17 +14,17 @@
       <h1>
         Detalle del producto
       </h1>
-      <section>
+      <section class = "section-pd">
         <article class="articulo">
-          <div class="articulo--top">
-            <img src=<%= "/img/" + proveedor.image %>>
+            <section class="img-pd">
+              <img src=<%= "/img/" + proveedor.image %>>
+            </section>
             <div class="articulo--top--info">
-              <p><b> <%= proveedor.name %> </b></p>
-              <p><b>Nombre:</b> <%= proveedor.name %></p>
-              <p><b>Descripción:</b> <%= proveedor.description %></p>
-              <p><b>Experiencia: </b> <%= proveedor.experience %> años</p>
+              <p class="text-pd"><b>Nombre:</b> <%= proveedor.fullName %></p>
+              <p class="text-pd"><b>Descripción:</b> <%= proveedor.description %></p>
+              <p class="text-pd"><b>Experiencia: </b> <%= proveedor.experience %> años</p>
+              <a class="buttonDetail" href=<%= "/productCar/" + proveedor.id %> > Ir al pago</a>
             </div>
-          </div>
         </article>
       </section>
     </main>

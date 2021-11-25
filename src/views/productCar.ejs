@@ -19,11 +19,26 @@
             <article class="carrito-superior">
                 <input type="text" class="horas" placeholder="Horas a contratar" required>
                 <div class="valor-servicio-con-iva">
-                    <p class="valor-servicio">$XX,XXX</p>
-                    <p class="iva">IVA incluido</p>
+                    <% if(proveedor == null){ %>
+                        <p class="valor-servicio"><%= "$XX,XXX" %></p>
+                    <% } else { %>
+                        <p class="valor-servicio"><%= "$" + proveedor.price%></p>
+                    <%}%>
+                    <p class="iva">Tarifa/hora</p>
                 </div>
                 <p class="titulo-arriba-carrito">Servicio:</p>
-                <p class="texto-arriba-carrito">Plomería</p>
+                <% if(proveedor == null){ %>
+                    <p class="texto-arriba-carrito"><%= "" %></p>
+                <% } else { %>
+                    <p class="texto-arriba-carrito"><%= proveedor.category%></p>
+                <%}%>
+                <p class="titulo-arriba-carrito">Goger:</p>  
+                <% if(proveedor == null){ %>
+                    <p class="texto-arriba-carrito"><%= "" %></p>
+                <% } else { %>
+                    <p class="texto-arriba-carrito"><%= proveedor.fullName %></p>
+                <%}%>
+                
                 <p class="titulo-arriba-carrito">Dirección:</p>
                 <form action="" method="POST">
                     <input class="input-direction" type="text">

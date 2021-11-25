@@ -26,17 +26,29 @@ const carritoController = {
     
         res.render("product-detail", {proveedor, toThousand})
       },
+    showCar: (req, res) => {
+        let id = parseInt(req.params.id)
+        let proveedor = productsModel.getProduct(id)
+    
+        res.render("productCar", {proveedor, toThousand})
+      },
     
       //Me renderiza en Administrar
-      list: (req, res) => {
-        res.render("administrar", {proveedores: productsDB, toThousand})
+       list: (req, res) => {
+         res.render("administrar", {proveedores: productsDB, toThousand})
+       },
+
+
+      create: (req, res) => {
+        res.render("newProduct", {proveedores: productsDB, toThousand})
       },
-
-
-    carrito: (req, res) => {
-        res.render("productCar.ejs");
-    },
-
+    
+      store: (req, res) => {
+        // res.send(req.file)
+        productsModel.addProduct(req.body, req.file.filename)
+        
+        res.redirect("administrar")
+      }
 
 };
 

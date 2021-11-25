@@ -23,9 +23,12 @@ const model = {
     addProduct: function (product, fileName) {
       let newProduct = {
         id: newID(),
-        img: fileName,
-        ...product,
-        price: parseInt(product.price)
+        fullName: product.fullName,
+        description: product.description,
+        price: parseInt(product.price),
+        category: product.category,
+        image: fileName,
+        experience: product.experience
       }
   
       productsDB.push(newProduct)

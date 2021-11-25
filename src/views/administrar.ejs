@@ -14,89 +14,125 @@
         <h2>Administrador de productos</h2>
         <a class="addProduct" href="/administrar/newProduct"><i class="fas fa-folder-plus"></i> Agregar nuevo Producto</a>
        
-        <div class="administrationTable">
-            <table class="AdminProducts-plomeria">
-                <caption class="title-caption">Servicios de Plomería</caption>
-                <thead>
+        <section>
+            <h2>Plomeria</h2>
+            <table class="table">
+              <tr>
+                <th>Nombre</th>
+                <th>Ver</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+              </tr>
+    
+              <% proveedores.forEach(proveedor => { %>
+                <% if(proveedor.category == "plomeria"){%>
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Editar</th>
-                        <th scope="col">Borrar</th>
+                        <td>
+                        <%= proveedor.fullName %>
+                        </td> 
+                        <td>
+                        <a href=<%= "/productDetailPlomeria/" + proveedor.id  %> >
+                            <i class="fas fa-eye"></i>
+                        </a>
+                        </td>
+                        <td>
+                        <a href=<%= "/productDetailPlomeria/" + proveedor.id + "/edit" %> >
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        </td>
+                        <td>
+                            <form action= <%= "/productDetailPlomeria/" + proveedor.id + "?_method=DELETE" %> method="post">
+                                <button type="submit" class="delete-button">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </form>
+                        </a>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Pepito Perez</th>
-                        <th><a class="editProduct" href="/administrar/editProduct"><i class="fas fa-user-edit"></i></a></th>
-                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
-                    </tr>
-                    <tr>
-                        <th>Themixtocles Valencia</th>
-                        <th><a class="editProduct" href="/administrar/editProduct"><i class="fas fa-user-edit"></i></a></th>
-                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
-                    </tr>
-                    <tr>
-                        <th>Casimiro Torres</th>
-                        <th><a class="editProduct" href="/administrar/editProduct"><i class="fas fa-user-edit"></i></a></th>
-                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
-                    </tr>
-                </tbody>
+                    <% } %>
+              <% }) %> 
             </table>
-            <table class="AdminProducts-electricidad">
-                <caption class="title-caption">Servicios Eléctricos</caption>
-                <thead>
+          </section>
+          <section>
+            <h2>Electricidad</h2>
+            <table class="table">
+              <tr>
+                <th>Nombre</th>
+                <th>Ver</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+              </tr>
+    
+              <% proveedores.forEach(proveedor => { %>
+                <% if(proveedor.category == "electricidad"){%>
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Editar</th>
-                        <th scope="col">Borrar</th>
+                        <td>
+                        <%= proveedor.fullName %>
+                        </td> 
+                        <td>
+                        <a href=<%= "/productDetailElectricidad/" + proveedor.id  %> >
+                            <i class="fas fa-eye"></i>
+                        </a>
+                        </td>
+                        <td>
+                        <a href=<%= "/productDetailElectricidad/" + proveedor.id + "/edit" %> >
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        </td>
+                        <td>
+                            <form action= <%= "/productDetailElectricidad/" + proveedor.id + "?_method=DELETE" %> method="post">
+                                <button type="submit" class="delete-button">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </form>
+                        </a>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Pepito Perez</th>
-                        <th><a class="editProduct" href="/administrar/editProduct"><i class="fas fa-user-edit"></i></a></th>
-                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
-                    </tr>
-                    <tr>
-                        <th>Themixtocles Valencia</th>
-                        <th><a class="editProduct" href="/administrar/editProduct"><i class="fas fa-user-edit"></i></a></th>
-                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
-                    </tr>
-                    <tr>
-                        <th>Casimiro Torres</th>
-                        <th><a class="editProduct" href="/administrar/editProduct"><i class="fas fa-user-edit"></i></a></th>
-                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
-                    </tr>
-                </tbody>
+                    <% } %>
+              <% }) %> 
+                    
             </table>
-            <table class="AdminProducts-electricidad">
-                <caption class="title-caption">Servicios de Aseo</caption>
-                <thead>
+          </section>
+          <section>
+            <h2>Limpieza</h2>
+            <table class="table">
+              <tr>
+                <th>Nombre</th>
+                <th>Ver</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+              </tr>
+    
+              <% proveedores.forEach(proveedor => { %>
+                <% if(proveedor.category == "aseo"){%>
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Editar</th>
-                        <th scope="col">Borrar</th>
+                        <td>
+                        <%= proveedor.fullName %>
+                        </td> 
+                        <td>
+                        <a href=<%= "/productDetailAseo/" + proveedor.id  %> >
+                            <i class="fas fa-eye"></i>
+                        </a>
+                        </td>
+                        <td>
+                        <a href=<%= "/productDetailAseo/" + proveedor.id + "/edit" %> >
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        </td>
+                        <td>
+                            <form action= <%= "/productDetailAseo/" + proveedor.id + "?_method=DELETE" %> method="post">
+                                <button type="submit" class="delete-button">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </form>
+                        </a>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Pepito Perez</th>
-                        <th><a class="editProduct" href="/administrar/editProduct"><i class="fas fa-user-edit"></i></a></th>
-                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
-                    </tr>
-                    <tr>
-                        <th>Themixtocles Valencia</th>
-                        <th><a class="editProduct" href="/administrar/editProduct"><i class="fas fa-user-edit"></i></a></th>
-                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
-                    </tr>
-                    <tr>
-                        <th>Casimiro Torres</th>
-                        <th><a class="editProduct" href="/administrar/editProduct"><i class="fas fa-user-edit"></i></a></th>
-                        <th><a class="editProduct" href="#"><i class="fas fa-eraser"></i></a></th>
-                    </tr>
-                </tbody>
+                    <% } %>
+              <% }) %> 
+                    
             </table>
-        </div>
+          </section>
     </main>
     <%- include('./partials/footer')%>
 </body>

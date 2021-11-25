@@ -1,110 +1,128 @@
 [
-  {
-    "id": 1,
-    "fullName": "Jervis Phillps",
-    "description": "curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec",
-    "price": 40570,
-    "category": "plomeria",
-    "image": "aseadora1.webp",
-    "experience": 6
-  },
-  {
-    "id": 2,
-    "fullName": "Harold Colleck",
-    "description": "varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non",
-    "price": 44377,
-    "category": "plomeria",
-    "image": "plomero1.png",
-    "experience": 4
-  },
-  {
-    "id": 3,
-    "fullName": "Maureene Pieter",
-    "description": "mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu",
-    "price": 40775,
-    "category": "aseo",
-    "image": "aseadora1.webp",
-    "experience": 1
-  },
-  {
-    "id": 4,
-    "fullName": "Benedetto Rydings",
-    "description": "blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue",
-    "price": 43011,
-    "category": "aseo",
-    "image": "electricista1.jpg",
-    "experience": 3
-  },
-  {
-    "id": 5,
-    "fullName": "Filmer Duckitt",
-    "description": "nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida",
-    "price": 42925,
-    "category": "aseo",
-    "image": "aseadora3.jpg",
-    "experience": 2
-  },
-  {
-    "id": 6,
-    "fullName": "Karlene Duckhouse",
-    "description": "tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in",
-    "price": 38002,
-    "category": "electricidad",
-    "image": "aseador2.jpg",
-    "experience": 1
-  },
-  {
-    "id": 7,
-    "fullName": "Nadean Chat",
-    "description": "eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat",
-    "price": 43390,
-    "category": "aseo",
-    "image": "plomero3.jpg",
-    "experience": 5
-  },
-  {
-    "id": 8,
-    "fullName": "Miltie Pim",
-    "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae",
-    "price": 49605,
-    "category": "plomeria",
-    "image": "electricista2.jpg",
-    "experience": 2
-  },
-  {
-    "id": 9,
-    "fullName": "Aveline Kitson",
-    "description": "sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
-    "price": 35524,
-    "category": "electricidad",
-    "image": "plomero3.jpg",
-    "experience": 1
-  },
-  {
-    "id": 10,
-    "fullName": "Alasdair Strutton",
-    "description": "molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis",
-    "price": 49053,
-    "category": "plomeria",
-    "image": "plomero3.jpg",
-    "experience": 2
-  },
-  {
-    "id": 11,
-    "fullName": "Sharona Athridge",
-    "description": "pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit",
-    "price": 46992,
-    "category": "plomeria",
-    "image": "aseadora3.jpg",
-    "experience": 6
-  },
-  {
-    "id": 12,
-    "fullName": "Fleurette Kobel",
-    "description": "sapien quis libero nullam sit amet turpis elementum ligula vehicula",
-    "price": 47744,
-    "category": "aseo",
-    "image": "plomero3.jpg",
-    "experience": 3
-  }
+    {
+        "id": 1,
+        "fullName": "Jervis Phillps",
+        "description": "curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec",
+        "price": 40570,
+        "category": "plomeria",
+        "image": "aseadora1.webp",
+        "experience": 6
+    },
+    {
+        "id": 2,
+        "fullName": "Harold Colleck",
+        "description": "varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non",
+        "price": 44377,
+        "category": "plomeria",
+        "image": "plomero1.png",
+        "experience": 4
+    },
+    {
+        "id": 3,
+        "fullName": "Maureene Pieter",
+        "description": "mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu",
+        "price": 40775,
+        "category": "aseo",
+        "image": "aseadora1.webp",
+        "experience": 1
+    },
+    {
+        "id": 4,
+        "fullName": "Benedetto Rydings",
+        "description": "blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue",
+        "price": 43011,
+        "category": "aseo",
+        "image": "electricista1.jpg",
+        "experience": 3
+    },
+    {
+        "id": 5,
+        "fullName": "Filmer Duckitt",
+        "description": "nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida",
+        "price": 42925,
+        "category": "aseo",
+        "image": "aseadora3.jpg",
+        "experience": 2
+    },
+    {
+        "id": 6,
+        "fullName": "Karlene Duckhouse",
+        "description": "tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in",
+        "price": 38002,
+        "category": "electricidad",
+        "image": "aseador2.jpg",
+        "experience": 1
+    },
+    {
+        "id": 7,
+        "fullName": "Nadean Chat",
+        "description": "eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat",
+        "price": 43390,
+        "category": "aseo",
+        "image": "plomero3.jpg",
+        "experience": 5
+    },
+    {
+        "id": 8,
+        "fullName": "Miltie Pim",
+        "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae",
+        "price": 49605,
+        "category": "plomeria",
+        "image": "electricista2.jpg",
+        "experience": 2
+    },
+    {
+        "id": 9,
+        "fullName": "Aveline Kitson",
+        "description": "sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
+        "price": 35524,
+        "category": "electricidad",
+        "image": "plomero3.jpg",
+        "experience": 1
+    },
+    {
+        "id": 10,
+        "fullName": "Alasdair Strutton",
+        "description": "molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis",
+        "price": 49053,
+        "category": "plomeria",
+        "image": "plomero3.jpg",
+        "experience": 2
+    },
+    {
+        "id": 11,
+        "fullName": "Sharona Athridge",
+        "description": "pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit",
+        "price": 46992,
+        "category": "plomeria",
+        "image": "aseadora3.jpg",
+        "experience": 6
+    },
+    {
+        "id": 12,
+        "fullName": "Fleurette Kobel",
+        "description": "sapien quis libero nullam sit amet turpis elementum ligula vehicula",
+        "price": 47744,
+        "category": "aseo",
+        "image": "plomero3.jpg",
+        "experience": 3
+    },
+    {
+        "id": 13,
+        "fullName": "Juan",
+        "description": "Juan Mecánico",
+        "price": 123,
+        "category": "plomeria",
+        "image": "product_image_1637807121623.jpeg",
+        "experience": "32"
+    },
+    {
+        "id": 14,
+        "fullName": "Camilo",
+        "description": "Los mejores servicios del hogar",
+        "price": 50000,
+        "category": "aseo",
+        "image": "product_image_1637807474420.jpeg",
+        "experience": "4"
+    }
 ]
