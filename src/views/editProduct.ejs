@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="/images/headIcon.ico">
     <title>Edita un producto</title>
 </head>
 <body class="body-register">
@@ -14,23 +15,19 @@
         <section class="registerform">
             <h2 class="title-register">Edita un producto</h2>
 
-            <form action="/" class="form-container-register">
+            <form class="form-container-register" method="post" enctype="multipart/form-data" action=<%="/administrar/"+ proveedor.id +"?_method=PUT"%> >
 
-                <label for="tipoServicio">Tipo de Servicio</label>
-                <select name=tipoServicio>
-                    <option value="1">Electricidad</option>
-                    <option value="2">Plomería</option>
-                    <option value="3">Aseo</option>
-                </select>
-                <label for="nombre">Cambiar nombre</label>
-                <input type="text" name="nombre" id="nombre" min="1" placeholder="Nombre del prestador" required/>
-                <label for="descripcion">Cambiar Descripción</label>
-                <textarea placeholder="Agrega una descripción..."></textarea>
-                <label for="precio">Modificar Precio/hora</label>
-                <input type="number" name="precio" id="precio" min="1" required/>
+                <label for="fullName">Cambiar nombre</label>
+                <input type="text" name="fullName" id="fullName" min="1" placeholder= "<%= proveedor.fullName %>" />
+                <label for="description">Cambiar Descripción</label>
+                <textarea placeholder= "<%= proveedor.description %>" name="description" id="description"></textarea>
+                <label for="price">Modificar Precio/hora</label>
+                <input type="number" name="price" id="price" placeholder= "<%= proveedor.price %>" min="1" />
+                <label for="experience">Modificar Experiencia</label>
+                <input type="number" name="experience" id="experience" placeholder= "<%= proveedor.experience %>" min="1" />
                 <p>
                     Carga Nueva foto:
-                    <input type="file" name="fotoPrestador">
+                    <input type="file" name="product_image" id="product_image">
                 </p>
                 <button type="submit" class="form-btn-register">Modificar Tarjeta</button>
                 <button type="reset" class="form-btn-register">Borrar</button>

@@ -44,4 +44,12 @@ router.get("/administrar/newProduct", controler.create)
 router.post("/administrar", upload.single("product_image"), controler.store)
 
 
+//Rutas para la edición de proveedor
+router.get("/administrar/editProduct/:id", controler.edit)
+router.put("/administrar/:id", upload.single("product_image"), controler.update)
+
+// Página de product-deletion
+router.delete("/administrar/:id", controler.delete)
+
+
 module.exports = router;

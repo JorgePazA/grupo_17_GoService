@@ -1,21 +1,12 @@
 [
     {
         "id": 1,
-        "fullName": "Jervis Phillps",
-        "description": "curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec",
-        "price": 40570,
+        "fullName": "Nicolas",
+        "description": "Medellin",
+        "price": 1000000,
         "category": "plomeria",
-        "image": "aseadora1.webp",
-        "experience": 6
-    },
-    {
-        "id": 2,
-        "fullName": "Harold Colleck",
-        "description": "varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non",
-        "price": 44377,
-        "category": "plomeria",
-        "image": "plomero1.png",
-        "experience": 4
+        "image": "product_image_1637848545607.jpg",
+        "experience": "5"
     },
     {
         "id": 3,
@@ -36,15 +27,6 @@
         "experience": 3
     },
     {
-        "id": 5,
-        "fullName": "Filmer Duckitt",
-        "description": "nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida",
-        "price": 42925,
-        "category": "aseo",
-        "image": "aseadora3.jpg",
-        "experience": 2
-    },
-    {
         "id": 6,
         "fullName": "Karlene Duckhouse",
         "description": "tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in",
@@ -52,24 +34,6 @@
         "category": "electricidad",
         "image": "aseador2.jpg",
         "experience": 1
-    },
-    {
-        "id": 7,
-        "fullName": "Nadean Chat",
-        "description": "eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat",
-        "price": 43390,
-        "category": "aseo",
-        "image": "plomero3.jpg",
-        "experience": 5
-    },
-    {
-        "id": 8,
-        "fullName": "Miltie Pim",
-        "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae",
-        "price": 49605,
-        "category": "plomeria",
-        "image": "electricista2.jpg",
-        "experience": 2
     },
     {
         "id": 9,
@@ -108,21 +72,12 @@
         "experience": 3
     },
     {
-        "id": 13,
-        "fullName": "Juan",
-        "description": "Juan Mecánico",
-        "price": 123,
-        "category": "plomeria",
-        "image": "product_image_1637807121623.jpeg",
-        "experience": "32"
-    },
-    {
         "id": 14,
-        "fullName": "Camilo",
+        "fullName": "Juan Camilo",
         "description": "Los mejores servicios del hogar",
         "price": 50000,
         "category": "aseo",
-        "image": "product_image_1637807474420.jpeg",
+        "image": "product_image_1637848728930.jpg",
         "experience": "4"
     }
 ]

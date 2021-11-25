@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="shortcut icon" href="/images/headIcon.ico">
     <title>GoService-Admini</title>
 </head>
 <body class="adm-body">
@@ -36,12 +37,12 @@
                         </a>
                         </td>
                         <td>
-                        <a href=<%= "/productDetailPlomeria/" + proveedor.id + "/edit" %> >
+                        <a href=<%= "/administrar/editProduct/" + proveedor.id  %> >
                             <i class="fas fa-edit"></i>
                         </a>
                         </td>
                         <td>
-                            <form action= <%= "/productDetailPlomeria/" + proveedor.id + "?_method=DELETE" %> method="post">
+                            <form action= <%= "/administrar/" + proveedor.id + "?_method=DELETE" %> method="post">
                                 <button type="submit" class="delete-button">
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
@@ -75,12 +76,12 @@
                         </a>
                         </td>
                         <td>
-                        <a href=<%= "/productDetailElectricidad/" + proveedor.id + "/edit" %> >
+                        <a href=<%= "/administrar/editProduct/" + proveedor.id  %>>
                             <i class="fas fa-edit"></i>
                         </a>
                         </td>
                         <td>
-                            <form action= <%= "/productDetailElectricidad/" + proveedor.id + "?_method=DELETE" %> method="post">
+                            <form action= <%= "/administrar/" + proveedor.id + "?_method=DELETE" %> method="post">
                                 <button type="submit" class="delete-button">
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
@@ -115,12 +116,12 @@
                         </a>
                         </td>
                         <td>
-                        <a href=<%= "/productDetailAseo/" + proveedor.id + "/edit" %> >
+                        <a href=<%= "/administrar/editProduct/" + proveedor.id  %>>
                             <i class="fas fa-edit"></i>
                         </a>
                         </td>
                         <td>
-                            <form action= <%= "/productDetailAseo/" + proveedor.id + "?_method=DELETE" %> method="post">
+                            <form action= <%= "/administrar/" + proveedor.id + "?_method=DELETE" %> method="post">
                                 <button type="submit" class="delete-button">
                                     <i class="fas fa-trash-alt"></i>
                                 </button>

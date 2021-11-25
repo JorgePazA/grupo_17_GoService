@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 
 //* Se declara puerto para uso en Heroku
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 
 //*Se define motro de templates
 app.set('view engine', 'ejs');
@@ -24,7 +24,7 @@ app.use(methodOverride('_method'));
 const rutaMain = require("./routers/main.routes");
 const rutaCarrito = require("./routers/products.routes");
 const rutaUsers = require("./routers/usuarios.routes");
-//const rutaDetail = require("./routers/detail.routes");
+
 
 
 
