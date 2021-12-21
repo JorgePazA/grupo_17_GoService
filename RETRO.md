@@ -72,11 +72,10 @@
     - Cesiones de trabajo en grupo
 
 ## START DOING
-    - Distribuir tareas equitativamente y definir tareas individuales
-    - Compartir información importante que aporte al conocimiento y lo podamos poner en práctica
+    - Fijar tiempos para los cumplimientos de las tareas pendientes
 
 ## STOP DOING
-    - Validaciones individuales
+    - No actualizar a tiempo el tablero en Jira
 
 ## LESS OF
-    - Los procesos de planeación individual
+    - No informar las dudas a tiempo
