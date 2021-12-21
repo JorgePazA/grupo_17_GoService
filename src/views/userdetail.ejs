@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="/images/headIcon.ico">
+    <title>Perfil del Usuario</title>
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <main>
+      <h1>
+        Hola <%= user.nombre %>
+      </h1>
+      <section class = "section-pd">
+        <article class="articulo">
+            <section class="img-pd">
+              <img src=<%= "/userimg/" + user.avatar %>>
+            </section>
+            <div class="articulo--top--info">
+              <p class="text-pd"><b>Nombre:</b> <%= user.nombre %></p>
+              <p class="text-pd"><b>Apellido:</b> <%= user.apellido %></p>
+              <p class="text-pd"><b>Email:</b> <%= user.email %></p>
+              <a class="buttonDetail" href=<%= "/user/edit" + user.id %> > Editar</a>
+
+              <a class="buttonDetail" href=<%= "/user/edit" + user.id %> > Editar</a>
+            </div>
+        </article>
+      </section>
+    </main>
+    <%- include("./partials/footer") %>
+  </body>
+
+</html>
+
+</html>

@@ -15,6 +15,7 @@ const writeProducts = () => {
 };
 
 const model = {
+  
   getProduct: function (id) {
     return productsDB.find((item) => item.id === id) || null;
   },

@@ -1,8 +1,26 @@
 [
-    {
-        "name": 1,
-        "cedula": "Jervis Phillps",
-        "email": "curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec",
-        "password": 40570
-    }
+ {
+  "id": 1,
+  "nombre": "Jorge",
+  "apellido": "Paz",
+  "email": "jorgepaz1993@gmail.com",
+  "contrasena": "$2a$10$VHooC4pw3y4oHMaHGqU44OsM40G4mGFsIRqP9ALlII4HyEiiwmUs6",
+  "avatar": "avatar_1640115878802.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "Nicolas",
+  "apellido": "Garcia",
+  "email": "nicolasgarciar22@gmail.com",
+  "contrasena": "$2a$10$pTisiPht85ok86l/84RAIOh73qkG.GE5glhGSSJKL/IWThvOWTtCi",
+  "avatar": "avatar_1640120590778.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "Nicolas",
+  "apellido": "G",
+  "email": "nicolasgarcia845@hotmail.com",
+  "contrasena": "$2a$10$udOQpyPlOhAjXF4XKXnvv.1QnQ9t5IQbekyXBuV4QY1mxUa4i3yu2",
+  "avatar": "avatar_1640122739532.jpg"
+ }
 ]

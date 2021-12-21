@@ -1,5 +1,6 @@
 const productsDB = require("./products.json")
+const usersDB = require("./usuarios.json")
 
 
 
-module.exports = { productsDB}
+module.exports = { productsDB, usersDB }

@@ -1,12 +1,12 @@
 [
     {
         "id": 1,
-        "fullName": "Nicolas",
-        "description": "Medellin",
-        "price": 1000000,
+        "fullName": "Nicolas Garcia",
+        "description": "Bello",
+        "price": 4520000,
         "category": "plomeria",
-        "image": "product_image_1637848545607.jpg",
-        "experience": "5"
+        "image": "product_image_1640110772742.jpeg",
+        "experience": "1"
     },
     {
         "id": 3,
@@ -79,5 +79,32 @@
         "category": "aseo",
         "image": "product_image_1637848728930.jpg",
         "experience": "4"
+    },
+    {
+        "id": 15,
+        "fullName": "Carlos",
+        "description": "Buen Plomero",
+        "price": 40000,
+        "category": "plomeria",
+        "image": "product_image_1640110285614.JPG",
+        "experience": "5"
+    },
+    {
+        "id": 16,
+        "fullName": "Jorge Paz",
+        "description": "Holiiiiii",
+        "price": 20000,
+        "category": "electricidad",
+        "image": "product_image_1640110871971.jpg",
+        "experience": "2"
+    },
+    {
+        "id": 17,
+        "fullName": "Cristancho",
+        "description": "Limpieza a tu casa",
+        "price": 10000,
+        "category": "aseo",
+        "image": "product_image_1640111186344.jpg",
+        "experience": "2"
     }
 ]

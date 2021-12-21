@@ -1,6 +1,8 @@
 const express = require("express");
+const session = require("express-session");
 const path = require("path");
 const app = express();
+
 
 //* Se declara puerto para uso en Heroku
 const port = process.env.PORT || 3000;
@@ -11,6 +13,13 @@ app.set('views', path.resolve(__dirname, './views'));
 
 //*Se define la carpeta pública
 app.use(express.static(path.join(__dirname, "../public")));
+
+
+app.use(session({
+    secret: "Shhhh, It's a secret",
+    resave: false,
+    saveUninitialized: false,
+}));
 
 //*Configurar el entorno para que éste puede recibir datos por POST
 app.use(express.urlencoded({ extended: false }));

@@ -1030,7 +1030,10 @@ main .button-add .add {
     background: #E5E5E5;
     border: solid black 1px;
     color: black;
-  } 
+  }
+.form-container-register .avatar{
+    border: none
+} 
 
 @media (min-width: 769px){
     #footer-pc{
@@ -1060,6 +1063,15 @@ main .button-add .add {
         font-size: 14px;
     }
 }
+
+/* Estilos Mensaje errores------------------------------------------------------- */
+.text-danger{
+    font-size: 12px;
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
 
 /* Estilos ADMINISTRADOR------------------------------------------------------- */
 

@@ -16,28 +16,64 @@
     <main class="main-register">
         <section class="registerform">
             <h2 class="title-register">¿No tienes cuenta? Regístrate aquí</h2>
-            <form action="/" class="form-container-register">
+            
+            <form action="/register" class="form-container-register" method ="POST" enctype="multipart/form-data">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" min="1" placeholder="Ingresa tu nombre" required/>
+                <input type="text" name="nombre" id="nombre" min="1" placeholder="Ingresa tu nombre" class= "form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.nombre : null %>"
+                />
+                <% if (locals.errors && errors.nombre) { %>
+                 <div class= "text-danger">
+                     <%= errors.nombre.msg  %> 
+                 </div>
+                <% } %>
 
-                <label for="tipoid">Tipo de identificación</label>
-                <select name=tipoid>
-                    <option value="1">Cédula de ciudadania</option>
-                    <option value="2">Pasaporte</option>
-                    <option value="3">Cédula de extranjeria</option>
-                </select>
-
-                <label for="Noid">identificación</label>
-                <input type="text" name="noid" id="noid" min="1" placeholder="Ingresa tu número de identificación" required/>
-
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" min="1" placeholder="Ingresa tu apellido" class="form-control <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" 
+                value="<%= locals.oldData ? oldData.apellido : null %>"
+                />
+                <% if (locals.errors && errors.apellido) { %>
+                    <div class= "text-danger">
+                        <%= errors.apellido.msg  %> 
+                    </div>
+                   <% } %>
+               
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" min="1" placeholder="Ingresa tu email" required/>
+                <input type="email" name="email" id="email" min="1" placeholder="Ingresa tu email" class= "form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+                value="<%= locals.oldData ? oldData.email : null %>"
+                />
+                <% if (locals.errors && errors.email) { %>
+                    <div class= "text-danger">
+                        <%= errors.email.msg  %> 
+                    </div>
+                   <% } %>
 
-                <label for="contraseña">Contraseña</label>
-                <input type="password" name="contrasena" id="contrasena" placeholder="Crea una contraseña" required />
+                <label for="contrasena">Contraseña</label>
+                <input type="password" name="contrasena" id="contrasena" placeholder="Crea una contraseña" class= "form-control <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"
+                />
+                <% if (locals.errors && errors.contrasena) { %>
+                    <div class= "text-danger">
+                        <%= errors.contrasena.msg  %> 
+                    </div>
+                   <% } %>
         
                 <label for="contraseña-val">Confirmar contraseña</label>
-                <input type="password"name="contrasena-val"id="contrasena-val" placeholder="Confirma tu contraseña" required/>
+                <input type="password" name="contrasenaVal"id="contrasena-val" placeholder="Confirma tu contraseña" class= "form-control <%= locals.errors && errors.contrasenaVal ? 'is-invalid' : null %>" 
+                />
+                <% if (locals.errors && errors.contrasenaVal) { %>
+                    <div class= "text-danger">
+                        <%= errors.contrasenaVal.msg  %> 
+                    </div>
+                   <% } %>
+
+                <label for="avatar">Sube tu foto</label>
+                <input class = "avatar" type="file" name="avatar" id="avatar" placeholder="Ingresa tu foto">
+                <% if (locals.errors && errors.avatar) { %>
+                    <div class= "text-danger">
+                        <%= errors.avatar.msg  %> 
+                    </div>
+                   <% } %>
+
 
                 <button type="submit" class="form-btn-register">¡Regístrate gratis!</button>
                 <button type="reset" class="form-btn-register">Borrar</button>
