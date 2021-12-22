@@ -50,7 +50,8 @@ const userModel = {
         apellido: userData.apellido,
         email: userData.email,
         contrasena: userData.contrasena,
-        avatar: userData.avatar
+        avatar: userData.avatar,
+        rol: 1
     }
     allUsers.push(newUser)
     fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '))
