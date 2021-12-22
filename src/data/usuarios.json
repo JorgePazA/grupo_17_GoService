@@ -22,5 +22,13 @@
   "email": "nicolasgarcia845@hotmail.com",
   "contrasena": "$2a$10$udOQpyPlOhAjXF4XKXnvv.1QnQ9t5IQbekyXBuV4QY1mxUa4i3yu2",
   "avatar": "avatar_1640122739532.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Juan",
+  "apellido": "Camilo",
+  "email": "juan@camilo.com",
+  "contrasena": "$2a$10$iUvu3632OG0KZov5P3USYeBYLiUySkhyBAZFQK3s84SAu96fqFiCm",
+  "avatar": "avatar_1640131607337.jpg"
  }
 ]

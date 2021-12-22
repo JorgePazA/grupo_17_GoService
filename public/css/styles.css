@@ -368,6 +368,12 @@ h1{
     .right-navbar .carro i {
         font-size: 20px;
     }
+    .right-navbar .perfil i {
+        font-size: 20px;
+    }
+    .right-navbar .logout i {
+        font-size: 20px;
+    }
     .main-nav-bar{
         display: flex;
         justify-content: flex-end;
