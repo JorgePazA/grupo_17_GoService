@@ -6,22 +6,34 @@
             <a href=""><i class="fas fa-bars"></i></a>
         </div>
         <nav class="main-nav-bar">
-            <div class=izq>
-                <ul class="left-navbar">
-                    <li><a href="/comofunciona">Cómo Funciona</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/administrar">Administrador <i class="fas fa-caret-down"></i></a></li>
-                </ul>
-            </div>
-            <div class="der">
-                <ul class="right-navbar">
-                    <li><a href="/register">Registro <i class="fas fa-id-card"></i></a></li>
-                    <li><a href="/login">Inicio sesión <i class="fas fa-sign-in-alt"></i></a></li>
-                    <li class="carro"><a href="/productCar"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li class="perfil"><a href="/userdetail"><i class="fas fa-user"></i></a></li>
-                    <li class="logout"><a href="/"><i class="fas fa-sign-out-alt"></i></a></li>
-                </ul>
-            </div>
+            <% if (locals.isLogged) { %>
+                <div class=izq>
+                    <ul class="left-navbar">
+                        <li><a href="/comofunciona">Cómo Funciona</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/administrar">Administrador <i class="fas fa-caret-down"></i></a></li>
+                    </ul>
+                </div>
+                <div class="der">
+                    <ul class="right-navbar">
+                        <li class="carro"><a href="/productCar"><i class="fas fa-shopping-cart"></i></a></li>
+                        <li class="perfil"><a href="/userdetail"><i class="fas fa-user"></i></a></li>
+                        <li class="logout"><a href="/"><i class="fas fa-sign-out-alt"></i></a></li>
+                    </ul>
+                </div>
+            <% } else { %>
+                <div class=izq>
+                    <ul class="left-navbar">
+                        <li><a href="/comofunciona">Cómo Funciona</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/administrar">Administrador <i class="fas fa-caret-down"></i></a></li>
+                    </ul>
+                </div>
+                <div class="der">
+                    <ul class="right-navbar">
+                        <li><a href="/register">Registro <i class="fas fa-id-card"></i></a></li>
+                        <li><a href="/login">Inicio sesión <i class="fas fa-sign-in-alt"></i></a></li>
+                <% } %>
         </nav>
     </div>
     <div class="abajo">

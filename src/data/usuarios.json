@@ -30,5 +30,13 @@
   "email": "juan@camilo.com",
   "contrasena": "$2a$10$iUvu3632OG0KZov5P3USYeBYLiUySkhyBAZFQK3s84SAu96fqFiCm",
   "avatar": "avatar_1640131607337.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "Daniel",
+  "apellido": "Grisales",
+  "email": "daniel@grisales.com",
+  "contrasena": "$2a$10$DoMkOueGW/wovzYXs.xSzui9hpYMywZKo997TjzPnmMCF.kkX01v6",
+  "avatar": "avatar_1640134379808.jpg"
  }
 ]

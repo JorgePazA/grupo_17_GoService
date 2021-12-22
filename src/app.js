@@ -3,6 +3,11 @@ const session = require("express-session");
 const path = require("path");
 const app = express();
 
+//* Llámamos los middlewares de aplicación
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+
+
+
 
 //* Se declara puerto para uso en Heroku
 const port = process.env.PORT || 3000;
@@ -20,6 +25,9 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+
+//* Usamos los middlewares de aplicación
+app.use(userLoggedMiddleware)
 
 //*Configurar el entorno para que éste puede recibir datos por POST
 app.use(express.urlencoded({ extended: false }));
