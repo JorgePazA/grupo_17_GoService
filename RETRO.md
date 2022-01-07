@@ -79,3 +79,24 @@
 
 ## LESS OF
     - No informar las dudas a tiempo
+
+------------------------------------------------------------------------
+## SPRINT 6
+
+## KEEP DOING
+    - Comunicación abierta, contar siempre con el canal de comunicación.
+    - Sesiones de trabajo en vivo
+    - Conservar el ambiente de trabajo
+
+## MORE OF
+    - Cesiones de trabajo en grupo
+    - Reuniones rápidas para resolver dudas
+
+## START DOING
+    - Evaluar el estado de los entregables días antes de su presentación
+
+## STOP DOING
+    - No utilizar adecuadamente el tablero del Sprint
+
+## LESS OF
+    - No informar las dudas a tiempo
