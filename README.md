@@ -1,4 +1,5 @@
 # grupo_17_GoService
+https://goservicegr17.herokuapp.com/
 
 El comercio electrónico está revolucionado la manera cómo compramos y nos relacionamos con las marcas gracias a sus beneficios como el ahorro de tiempo, acceso a promociones exclusivas y pagos automáticos. Por su  parte las empresas encuentran en él una alternativa muy efectiva para lograr una mayor fidelización de sus usuarios. 
 
