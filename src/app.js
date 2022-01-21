@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const session = require("express-session");
 const path = require("path");
@@ -10,7 +11,7 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 
 //* Se declara puerto para uso en Heroku
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 //*Se define motro de templates
 app.set('view engine', 'ejs');
