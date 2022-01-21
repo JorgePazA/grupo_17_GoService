@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/app.js",
     "dev": "NODE_ENV=dev & nodemon src/app.js",
-    "modeluser": "node ./src/model/userModel.js"
+    "modeluser": "node ./src/model/userModel.js",
+    "modelgoger": "node ./src/model/gogerModel.js"
   },
   "repository": {
     "type": "git",
