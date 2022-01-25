@@ -13,16 +13,16 @@
     <%- include("./partials/header") %>
     <main>
       <h1>
-        Hola <%= user.nombre %>
+        Hola <%= user.name %>
       </h1>
       <section class = "section-pd">
         <article class="articulo">
             <section class="img-pd">
-              <img src=<%= "/userimg/" + user.avatar %>>
+              <img src="/userimg/<%= user.avatar %>">
             </section>
             <div class="articulo--top--info">
-              <p class="text-pd"><b>Nombre:</b> <%= user.nombre %></p>
-              <p class="text-pd"><b>Apellido:</b> <%= user.apellido %></p>
+              <p class="text-pd"><b>Nombre:</b> <%= user.name %></p>
+              <p class="text-pd"><b>Apellido:</b> <%= user.lastName %></p>
               <p class="text-pd"><b>Email:</b> <%= user.email %></p>
               <a class="buttonDetail" href=<%= "/user/edit" + user.id %> > Editar</a>
 

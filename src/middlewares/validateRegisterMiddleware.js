@@ -9,26 +9,26 @@ const { body } = require('express-validator')
 
 const validations = [
     body("nombre").notEmpty().withMessage("Tienes que escribir un nombre"),
-    body("apellido").notEmpty().withMessage("Tienes que escribir un apellido"),
+    body("lastName").notEmpty().withMessage("Tienes que escribir un apellido"),
     body("email").notEmpty().withMessage("Tienes que escribir un email").bail()
     .isEmail().withMessage('Debes escribir un formato de correo válido'),
-    body("contrasena").notEmpty().withMessage("Tienes que escribir una contraseña"),
-    body("contrasenaVal").notEmpty().withMessage("Tienes que confirmar tu contraseña"),
-    body("avatar").custom((value,{req}) =>{
-        let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+    body("password").notEmpty().withMessage("Tienes que escribir una contraseña"),
+    body("passwordVal").notEmpty().withMessage("Tienes que confirmar tu contraseña")
+    // body("avatar").custom((value,{req}) =>{
+        // let file = req.file;
+        // let acceptedExtensions = ['.jpg', '.png', '.gif'];
         
 
-        if (!file){
-            throw new Error('Tienes que subir una imagen');
-        }else{
-            let fileExtension = path.extname(file.originalname);
-            if(!acceptedExtensions.includes(fileExtension)){
-                throw new Error(`Formato invalido, extensiones permitidas: ${acceptedExtensions.join(',')}`);
-            }
-        }
-        return true;
-    })
+        // if (!file){
+        //     throw new Error('Tienes que subir una imagen');
+        // }else{
+        //     let fileExtension = path.extname(file.originalname);
+        //     if(!acceptedExtensions.includes(fileExtension)){
+        //         throw new Error(`Formato invalido, extensiones permitidas: ${acceptedExtensions.join(',')}`);
+        //     }
+        // }
+        // return true;
+    // })
 ]
 
 module.exports = validations

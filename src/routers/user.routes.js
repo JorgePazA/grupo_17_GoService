@@ -1,5 +1,5 @@
 const express = require("express");
-const usuariosController = require("../controllers/usuarios.controller");
+const usuariosController = require("../controllers/userController");
 const router = express.Router();
 const path = require("path");
 
@@ -16,7 +16,7 @@ router.get("/login", guestMiddleware, usuariosController.login);
 router.post("/login", validationsLogin, usuariosController.loginProcess);
 // Ruta para ceración de usuario
 router.get("/register", guestMiddleware, usuariosController.register);
-router.post("/register", upload.single('avatar'), validations, usuariosController.processRegister);
+router.post("/register", usuariosController.processRegister);
 
 
 
@@ -33,4 +33,4 @@ router.get('/userdetail', authMiddleware, usuariosController.userDetail)
 router.get('/logout',usuariosController.logout)
 
 
-// module.exports = router;
+module.exports = router;

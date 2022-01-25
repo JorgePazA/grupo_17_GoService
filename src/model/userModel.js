@@ -9,6 +9,7 @@ const userModel = {
             console.log(`Ocurrió un error ${error.message}`)
         }
     },
+    // obtener un usuario mediante id
     getOne: async (id) => {
         try {
             const result = await db.users.findByPk(id)
@@ -17,12 +18,21 @@ const userModel = {
             console.log(`Ocurrió un error ${error.message}`)
         }
     },
+    //buscar un usuario por su email
+    findUserByEmail: async (email) => {
+        try {
+          const result = await db.users.findOne({ where: { email: email }})
+          return result
+        } catch (error) {
+          console.error(error)
+        }
+    },
     create: async (userData) => {
         try {
             const result = await db.users.create(userData)
             return result
         } catch (error) {
-            console.log(`Ocurrió un error ${error.message}`)
+            console.log(error)
         }
     },
     update: async (userData, id) => {
@@ -69,5 +79,7 @@ const userModel = {
 //     rol: 1
 // })
 // userModel.getAll()
+
+// userModel.findUserByEmail('juan@gmail.com')
 
 module.exports = userModel

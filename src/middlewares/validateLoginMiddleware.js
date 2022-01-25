@@ -10,7 +10,7 @@ const { body } = require('express-validator')
 const validationsLogin = [
     body("email").notEmpty().withMessage("Tienes que ingresar tu email").bail()
     .isEmail().withMessage('Debes escribir un formato de correo válido'),
-    body("contrasena").notEmpty().withMessage("Tienes que escribir tu contraseña"),
+    body("password").notEmpty().withMessage("Tienes que escribir tu contraseña"),
 ]
 
 module.exports = validationsLogin

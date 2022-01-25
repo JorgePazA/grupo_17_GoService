@@ -33,12 +33,12 @@
 
                     <div class="password">
                         <p id="p-login" class="linkpassrecuperation"><a href="#">¿Has olvidado tu contraseña?</a></p>
-                        <label for="contrasena" class="lbpass">Contraseña</label>
+                        <label for="password" class="lbpass">Contraseña</label>
                     </div> 
-                    <input type="password" name="contrasena" id="contrasena" placeholder="Ingresa Tu contraseña" class = "form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"/>
-                    <% if (locals.errors && errors.contrasena) { %>
+                    <input type="password" name="password" id="password" placeholder="Ingresa Tu contraseña" class = "form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"/>
+                    <% if (locals.errors && errors.password) { %>
                         <div class= "text-danger">
-                            <%= errors.contrasena.msg  %> 
+                            <%= errors.password.msg  %> 
                         </div>
                        <% } %>
                     <button type="submit" class="form-btn">Iniciar sesión</button>
