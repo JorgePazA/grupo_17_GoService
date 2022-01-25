@@ -1,28 +1,77 @@
-const db = require('../database/models')
+const db = require('../database/models');
+const { Op } = require("sequelize");
+
+// class Goger {
+//     constructor ({fullName, description, price, image, experience}) {
+//         this.fullName = fullName
+//         this.description = description
+//         this.price = price
+//         this.image = image
+//         this.experience = experience
+//     }
+// }
+
 
 const gogerModel = {
     getAll: async () => {
         try {
-            const result = await db.gogers.findAll()
-            console.log(result)
+            const result = await db.gogers.findAll({
+                include: [{association: "category"}]
+            })
+            return(result)
+        } catch (error) {
+            console.log(`Ocurrió un error ${error.message}`)
+        }
+    },
+    getPlomeria: async () => {
+        try {
+            const result = await db.gogers.findAll({
+                include : ['category'],
+                where: { categories_id: 1}
+                })
+            return (result)
+        } catch (error) {
+            console.log(`Ocurrió un error ${error.message}`)
+        }
+    },
+    getElectricidad: async () => {
+        try {
+            const result = await db.gogers.findAll({
+                include : ['category'],
+                where: { categories_id: 2}
+                })
+            return (result)
+        } catch (error) {
+            console.log(`Ocurrió un error ${error.message}`)
+        }
+    },
+    getAseo: async () => {
+        try {
+            const result = await db.gogers.findAll({
+                include : ['category'],
+                where: { categories_id: 3}
+                })
+            return (result)
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
     },
     getOne: async (id) => {
         try {
-            const result = await db.gogers.findByPk(id)
-            console.log(result)
+            const result = await db.gogers.findByPk(id, {
+                include: [{association: "category"}]
+            })
+            return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
     },
-    create: async (gogerData) => {
+    addProduct: async (gogerData, fileName) => {
         try {
             const result = await db.gogers.create(gogerData)
-            console.log(result)
+            return result
         } catch (error) {
-            console.log(`Ocurrió un error ${error.message}`)
+            console.log(error)
         }
     },
     update: async (gogerData, id) => {
@@ -40,7 +89,7 @@ const gogerModel = {
                     {
                         where: { id: id }
                     })
-            console.log(result)
+                    return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
@@ -52,13 +101,14 @@ const gogerModel = {
                     {
                         where: { id: id }
                     })
-                    console.log(result)
+                    return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
-            // .destroy({ where: { id: userId }, force: true }) // force: true es para asegurar que se ejecute la acción     
     }
 }
+
+
 
 // gogerModel.create({
 //     fullName: 'Prueba Gogers',
@@ -70,4 +120,6 @@ const gogerModel = {
 // })
 // gogerModel.getAll()
 
-module.exports = gogerModel
+ module.exports = gogerModel
+
+// gogerModel.getAseo()

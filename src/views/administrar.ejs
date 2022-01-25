@@ -26,7 +26,7 @@
               </tr>
     
               <% proveedores.forEach(proveedor => { %>
-                <% if(proveedor.category == "plomeria"){%>
+                <% if(proveedor.category.name == "Plomeria"){%>
                     <tr>
                         <td>
                         <%= proveedor.fullName %>
@@ -65,7 +65,7 @@
               </tr>
     
               <% proveedores.forEach(proveedor => { %>
-                <% if(proveedor.category == "electricidad"){%>
+                <% if(proveedor.category.name == "Electricidad"){%>
                     <tr>
                         <td>
                         <%= proveedor.fullName %>
@@ -105,7 +105,7 @@
               </tr>
     
               <% proveedores.forEach(proveedor => { %>
-                <% if(proveedor.category == "aseo"){%>
+                <% if(proveedor.category.name == "Aseo"){%>
                     <tr>
                         <td>
                         <%= proveedor.fullName %>

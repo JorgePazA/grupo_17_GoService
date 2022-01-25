@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="shortcut icon" href="/images/headIcon.ico">
-    <title>Crear nuevo Producto</title>
+    <title>Crear nuevo Goger</title>
 </head>
 <body class="body-register">
     <%- include('./partials/header')%>
@@ -17,11 +17,11 @@
 
             <form action="/administrar" method="POST" class="form-container-register" enctype="multipart/form-data">
 
-                <label for="category">Tipo de Servicio</label>
-                <select name=category>
-                    <option value="electricidad">Electricidad</option>
-                    <option value="plomeria">Plomería</option>
-                    <option value="aseo">Aseo</option>
+                <label for="categories_id">Tipo de Servicio</label>
+                <select name=categories_id>
+                    <% allCategories.forEach(category => { %>
+                        <option value="<%= category.id %>"><%= category.name %></option>
+                    <% }) %> 
                 </select>
                 <label for="fullName">Nombre</label>
                 <input type="text" name="fullName" id="fullName" min="1" placeholder="Nombre del prestador" required/>

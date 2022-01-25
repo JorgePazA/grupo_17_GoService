@@ -40,7 +40,7 @@ app.use(methodOverride('_method'));
 
 //*Requerir y definir las rutas
 const rutaMain = require("./routers/main.routes");
-const rutaCarrito = require("./routers/products.routes");
+const rutaCarrito = require("./routers/goger.routes");
 const rutaUsers = require("./routers/usuarios.routes");
 
 

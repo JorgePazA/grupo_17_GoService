@@ -4,7 +4,7 @@ const userModel = {
     getAll: async () => {
         try {
             const result = await db.users.findAll()
-            console.log(result)
+            return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
@@ -12,7 +12,7 @@ const userModel = {
     getOne: async (id) => {
         try {
             const result = await db.users.findByPk(id)
-            console.log(result)
+            return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
@@ -20,7 +20,7 @@ const userModel = {
     create: async (userData) => {
         try {
             const result = await db.users.create(userData)
-            console.log(result)
+            return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
@@ -40,7 +40,7 @@ const userModel = {
                     {
                         where: { id: id }
                     })
-            console.log(result)
+                return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
@@ -52,7 +52,7 @@ const userModel = {
                     {
                         where: { id: id }
                     })
-                    console.log(result)
+                    return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }

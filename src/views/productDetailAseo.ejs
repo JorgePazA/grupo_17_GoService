@@ -18,9 +18,7 @@
         <h1>ASEO</h1>
         <section class="includes">
 
-          <% proveedores.forEach(proveedor => { %>
-            
-            <% if(proveedor.category == "aseo"){%>
+          <% gogersAseo.forEach(proveedor => { %>
                 <article>
                   <h3> <%= proveedor.fullName %></h3>
                   <figure>
@@ -31,8 +29,7 @@
                     <p class="expDetail">Experiencia: <%= proveedor.experience%> años</p>
                     <a class="buttonDetail" href=<%= "/productDetailAseo/" + proveedor.id %> > Ver detalle</a>
                   </section>              
-                </article> 
-              <%}%>                     
+                </article>     
           <% }) %> 
             
             

@@ -17,8 +17,8 @@
         <%- include('./partials/banner')%>
         <h1>ELECTRICIDAD</h1>
         <section class="includes">
-          <% proveedores.forEach(proveedor => { %>
-            <% if(proveedor.category == "electricidad"){%>  
+
+          <% gogersElectricidad.forEach(proveedor => { %>  
               <article>
                 <h3> <%= proveedor.fullName %></h3>
                 <figure>
@@ -30,7 +30,6 @@
                   <a class="buttonDetail" href=<%= "/productDetailElectricidad/" + proveedor.id %> > Ver detalle</a>
                 </section>              
               </article> 
-            <%}%>
           <% }) %> 
         </section>
     </main>
