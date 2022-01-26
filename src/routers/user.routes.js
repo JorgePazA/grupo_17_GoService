@@ -20,10 +20,10 @@ router.post("/register", upload.single('avatar'), validations, usuariosControlle
 
 
 
-
-// router.get("/profile/:id", usuariosController.userDetail)
-// router.put("/profile/:id", upload.single("product_image"), usuariosController.update)
-// router.delete("/login", upload.single("product_image"), usuariosController.delete)
+//Rutas para la edición de usuarios
+router.get("/userdetail/editUser/:id", usuariosController.editUser)
+router.put("/userdetail/:id", upload.single("avatar"), usuariosController.update)
+router.delete("/userdetail/:id", usuariosController.delete)
 
 
 // Ruta para  de usuario

@@ -18,14 +18,18 @@ const userController = {
             user: req.session.userLogged
         });
     },
+    editUser: async (req, res) => {
+        let id = parseInt(req.params.id)
+        let user = await userModel.getOne(id)
+        res.status(200).render("editUser",{user});
+    },
     //proceso de login de un usuario
     loginProcess: async (req, res) => {
 
         try {
             let userToLogin = await userModel.findUserByEmail(req.body.email);
                 if(userToLogin){
-                    // let isOkayThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
-                    let isOkayThePassword = req.body.password
+                    let isOkayThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
                     if(isOkayThePassword){
                         delete userToLogin.password
                         req.session.userLogged = userToLogin;
@@ -90,6 +94,29 @@ const userController = {
             console.log(error)
         }
     },
+    update: async (req, res) => {
+        try {
+          let editedUser = {
+            ... req.body,
+            avatar : req.file.filename,
+            password: bcryptjs.hashSync(req.body.password, 10)
+          };
+          await userModel.updateUser(editedUser, req.params.id)
+          res.redirect("/userdetail");
+        } catch (error){
+          console.log(error)
+        }
+      },
+    // eliminar cuenta
+    delete: async (req, res) => {
+        try{
+          await userModel.destroyUser(req.params.id);
+          res.redirect("/login")
+        }
+        catch(error) {
+          console.log(error);
+        }
+      },
     // cerrar sesión
     logout: (req, res) => {
         req.session.destroy();

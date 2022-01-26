@@ -42,7 +42,7 @@ const userModel = {
             console.log(error)
         }
     },
-    update: async (user, id) => {
+    updateUser: async (user, id) => {
         try {
             const result = await db.users
                 .update(
@@ -52,7 +52,7 @@ const userModel = {
                         email: user.email,
                         password: user.password,
                         avatar: user.avatar,
-                        rol: user.rol
+                        rol: 1
                     },
                     {
                         where: { id: id }
@@ -62,7 +62,7 @@ const userModel = {
             console.log(`Ocurrió un error ${error.message}`)
         }
     },
-    destroy: async (id) => {
+    destroyUser: async (id) => {
         try {
             const result = await db.users
                 .destroy(
