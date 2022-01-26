@@ -20,7 +20,7 @@
             <form action="/register" class="form-container-register" method ="POST" enctype="multipart/form-data">
                 <label for="name">Nombre</label>
                 <input type="text" name="name" id="name" min="1" placeholder="Ingresa tu nombre" class= "form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
-                value="<%= locals.oldData ? oldData.name : null %>" required
+                value="<%= locals.oldData ? oldData.name : null %>"
                 />
                 <% if (locals.errors && errors.name) { %>
                  <div class= "text-danger">
@@ -30,7 +30,7 @@
 
                 <label for="lastName">Apellido</label>
                 <input type="text" name="lastName" id="lastName" min="1" placeholder="Ingresa tu apellido" class="form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %>" 
-                value="<%= locals.oldData ? oldData.lastName : null %>" required
+                value="<%= locals.oldData ? oldData.lastName : null %>" 
                 />
                 <% if (locals.errors && errors.lastName) { %>
                     <div class= "text-danger">
@@ -40,26 +40,16 @@
                
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" min="1" placeholder="Ingresa tu email" class= "form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
-                value="<%= locals.oldData ? oldData.email : null %>" required
+                value="<%= locals.oldData ? oldData.email : null %>"
                 />
                 <% if (locals.errors && errors.email) { %>
                     <div class= "text-danger">
                         <%= errors.email.msg  %> 
                     </div>
                    <% } %>
-                
-                <label for="rol">rol</label>
-                <input type="number" name="rol" id="rol" min="1" placeholder="Ingresa tu rol" class= "form-control <%= locals.errors && errors.rol ? 'is-invalid' : null %>" 
-                value="<%= locals.oldData ? oldData.rol : null %>" required
-                />
-                <% if (locals.errors && errors.rol) { %>
-                    <div class= "text-danger">
-                        <%= errors.rol.msg  %> 
-                    </div>
-                   <% } %>
 
                 <label for="password">Contraseña</label>
-                <input type="password" name="password" id="password" placeholder="Crea una contraseña" class= "form-control <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" required
+                <input type="password" name="password" id="password" placeholder="Crea una contraseña" class= "form-control <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" 
                 />
                 <% if (locals.errors && errors.password) { %>
                     <div class= "text-danger">
@@ -68,7 +58,7 @@
                    <% } %>
         
                 <label for="passwordVal">Confirmar contraseña</label>
-                <input type="password" name="passwordVal"id="passwordVal" placeholder="Confirma tu contraseña" class= "form-control <%= locals.errors && errors.passwordVal ? 'is-invalid' : null %>" required
+                <input type="password" name="passwordVal"id="passwordVal" placeholder="Confirma tu contraseña" class= "form-control <%= locals.errors && errors.passwordVal ? 'is-invalid' : null %>" 
                 />
                 <% if (locals.errors && errors.passwordVal) { %>
                     <div class= "text-danger">

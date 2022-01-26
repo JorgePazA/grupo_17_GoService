@@ -49,7 +49,6 @@ const userController = {
         } catch (error) {
             console.log (error)
         }
-        
     },
     // renderiza la página de registro
     register: (req, res) => {
@@ -57,7 +56,6 @@ const userController = {
     },
     // guarda un nuevo usuario en la base de datos
     processRegister: async (req, res) => {
-
         try {
             const resultValidation = validationResult(req);
             if (resultValidation.errors.length > 0){
@@ -65,8 +63,7 @@ const userController = {
                     errors:resultValidation.mapped(),
                     oldData: req.body
                 });
-            }
-    
+            }    
             let userInDB = await userModel.findUserByEmail(req.body.email);
     
             if(userInDB){
@@ -79,27 +76,25 @@ const userController = {
                     oldData: req.body
                 });
             }
+            let avatar = req.file ? req.file.filename : "default.jpg"
             let userToCreate = {
-                 ...req.body
-                //  password: bcryptjs.hashSync(req.body.password, 10),
-                //  image: req.file.filename
+                 ...req.body,
+                 avatar: avatar,
+                 rol: 1,
+                 password: bcryptjs.hashSync(req.body.password, 10)
              }
-    
             await userModel.create(userToCreate)
-            return res.redirect("/login");
+            return res.status(201).redirect("/login");
 
         } catch (error) {
             console.log(error)
         }
-
     },
-
+    // cerrar sesión
     logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');
     }
-
-    
 };
 
 module.exports = userController;

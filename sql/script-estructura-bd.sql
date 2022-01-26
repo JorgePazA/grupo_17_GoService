@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `GoService`.`users` (
   `name` VARCHAR(45) NOT NULL,
   `lastName` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
   `avatar` VARCHAR(255) NULL DEFAULT NULL,
   `rol` INT NOT NULL,
   PRIMARY KEY (`id`))

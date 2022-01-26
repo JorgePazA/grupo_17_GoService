@@ -4,15 +4,10 @@ const Category = db.categories
 
 const path = require("path");
 
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+// const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const carritoController = {
-  // Me renderiza los proveedores en las vistas de los servicios
-  // detailAseo: (req, res) => {
-  //   res.render(path.resolve(__dirname, "..", "views", "productDetailAseo"), {
-  //     proveedores: productsDB,
-  //   });
-  // },
+
 
   detailAseo: async (req, res) => {
     let gogersAseo = await gogerModel.getAseo()
@@ -30,18 +25,6 @@ const carritoController = {
     
   },
 
-  // detailElectricidad: (req, res) => {
-  //   res.render(
-  //     path.resolve(__dirname, "..", "views", "productDetailElectricidad"),
-  //     { proveedores: productsDB }
-  //   );
-  // },
-  // detailPlomeria: (req, res) => {
-  //   res.render(
-  //     path.resolve(__dirname, "..", "views", "productDetailPlomeria"),
-  //     { proveedores: productsDB }
-  //   );
-  // },
   //Me renderiza por ID en vista product-detail
   detail: async (req, res) => {
     let id = parseInt(req.params.id);
@@ -70,42 +53,54 @@ const carritoController = {
         return res.render(path.resolve(__dirname, '..', 'views',  'newProduct'), {allCategories})})
     .catch(error => res.send(error))
   },
-
+// Crea el producto en la base de datos
   store: async (req, res) => {
-    let product = req.body
-    let fileName = req.file.filename || "default.png"
-
+    
     try {
-        await gogerModel.addProduct(product, fileName)
+      let image = req.file ? req.file.filename  : "default.jpg"
+      let product = {
+        image: image,
+        ...req.body
+      }
+        await gogerModel.addProduct(product)
         res.status(201).redirect("administrar")
     } catch (error) {
         console.log(error)
     }
   },
-
-  edit: (req, res) => {
-    let id = parseInt(req.params.id);
-    let proveedor = productsModel.getProduct(id);
-
-    res.render("editProduct", { proveedor, toThousand });
+//renderiza la página de edición
+  edit: async (req, res) => {
+    try {
+      let id = parseInt(req.params.id);
+      let proveedor = await gogerModel.getOne(id);
+  
+      res.status(200).render("editProduct", { proveedor });
+    } catch (error) {
+      console.log (error)
+    }
   },
-
-  update: (req, res) => {
-    let id = parseInt(req.params.id);
-    let proveedor = req.body;
-    let fileName = req.file.filename || null;
-
-    productsModel.editProduct(id, proveedor, fileName);
-
-    res.redirect("/administrar");
+// Actualiza un Goger
+  update: async (req, res) => {
+    try {
+      let editedProduct = {
+        image : req.file.filename,
+        ... req.body,
+      };
+      await gogerModel.updateGoger(editedProduct, req.params.id)
+      res.redirect("/administrar");
+    } catch (error){
+      console.log(error)
+    }
   },
-
-  delete: (req, res) => {
-    let id = parseInt(req.params.id);
-
-    productsModel.deleteProduct(id);
-
-    res.redirect("/administrar");
+// Borra un Goger
+  delete: async (req, res) => {
+    try{
+      await gogerModel.destroyGoger(req.params.id);
+      res.redirect("/administrar")
+    }
+    catch(error) {
+      console.log(error);
+    }
   },
 };
 
