@@ -18,14 +18,18 @@ const userController = {
             user: req.session.userLogged
         });
     },
+    editUser: async (req, res) => {
+        let id = parseInt(req.params.id)
+        let user = await userModel.getOne(id)
+        res.status(200).render("editUser",{user});
+    },
     //proceso de login de un usuario
     loginProcess: async (req, res) => {
 
         try {
             let userToLogin = await userModel.findUserByEmail(req.body.email);
                 if(userToLogin){
-                    // let isOkayThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
-                    let isOkayThePassword = req.body.password
+                    let isOkayThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
                     if(isOkayThePassword){
                         delete userToLogin.password
                         req.session.userLogged = userToLogin;
@@ -49,7 +53,6 @@ const userController = {
         } catch (error) {
             console.log (error)
         }
-        
     },
     // renderiza la página de registro
     register: (req, res) => {
@@ -57,7 +60,6 @@ const userController = {
     },
     // guarda un nuevo usuario en la base de datos
     processRegister: async (req, res) => {
-
         try {
             const resultValidation = validationResult(req);
             if (resultValidation.errors.length > 0){
@@ -65,8 +67,7 @@ const userController = {
                     errors:resultValidation.mapped(),
                     oldData: req.body
                 });
-            }
-    
+            }    
             let userInDB = await userModel.findUserByEmail(req.body.email);
     
             if(userInDB){
@@ -79,27 +80,48 @@ const userController = {
                     oldData: req.body
                 });
             }
+            let avatar = req.file ? req.file.filename : "default.jpg"
             let userToCreate = {
-                 ...req.body
-                //  password: bcryptjs.hashSync(req.body.password, 10),
-                //  image: req.file.filename
+                 ...req.body,
+                 avatar: avatar,
+                 rol: 1,
+                 password: bcryptjs.hashSync(req.body.password, 10)
              }
-    
             await userModel.create(userToCreate)
-            return res.redirect("/login");
+            return res.status(201).redirect("/login");
 
         } catch (error) {
             console.log(error)
         }
-
     },
-
+    update: async (req, res) => {
+        try {
+          let editedUser = {
+            ... req.body,
+            avatar : req.file.filename,
+            password: bcryptjs.hashSync(req.body.password, 10)
+          };
+          await userModel.updateUser(editedUser, req.params.id)
+          res.redirect("/userdetail");
+        } catch (error){
+          console.log(error)
+        }
+      },
+    // eliminar cuenta
+    delete: async (req, res) => {
+        try{
+          await userModel.destroyUser(req.params.id);
+          res.redirect("/login")
+        }
+        catch(error) {
+          console.log(error);
+        }
+      },
+    // cerrar sesión
     logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');
     }
-
-    
 };
 
 module.exports = userController;

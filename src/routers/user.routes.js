@@ -16,14 +16,14 @@ router.get("/login", guestMiddleware, usuariosController.login);
 router.post("/login", validationsLogin, usuariosController.loginProcess);
 // Ruta para ceración de usuario
 router.get("/register", guestMiddleware, usuariosController.register);
-router.post("/register", usuariosController.processRegister);
+router.post("/register", upload.single('avatar'), validations, usuariosController.processRegister);
 
 
 
-
-// router.get("/profile/:id", usuariosController.detailUser)
-// router.put("/profile/:id", upload.single("product_image"), usuariosController.update)
-// router.delete("/login", upload.single("product_image"), usuariosController.delete)
+//Rutas para la edición de usuarios
+router.get("/userdetail/editUser/:id", usuariosController.editUser)
+router.put("/userdetail/:id", upload.single("avatar"), usuariosController.update)
+router.delete("/userdetail/:id", usuariosController.delete)
 
 
 // Ruta para  de usuario

@@ -1,15 +1,6 @@
 const db = require('../database/models');
 const { Op } = require("sequelize");
 
-// class Goger {
-//     constructor ({fullName, description, price, image, experience}) {
-//         this.fullName = fullName
-//         this.description = description
-//         this.price = price
-//         this.image = image
-//         this.experience = experience
-//     }
-// }
 
 
 const gogerModel = {
@@ -66,15 +57,15 @@ const gogerModel = {
             console.log(`Ocurrió un error ${error.message}`)
         }
     },
-    addProduct: async (gogerData, fileName) => {
+    addProduct: async (gogerData) => {
         try {
-            const result = await db.gogers.create(gogerData)
+            const result = await db.gogers.create({...gogerData})
             return result
         } catch (error) {
             console.log(error)
         }
     },
-    update: async (gogerData, id) => {
+    updateGoger: async (gogerData, id) => {
         try {
             const result = await db.gogers
                 .update(
@@ -94,7 +85,8 @@ const gogerModel = {
             console.log(`Ocurrió un error ${error.message}`)
         }
     },
-    destroy: async (id) => {
+
+    destroyGoger: async (id) => {
         try {
             const result = await db.gogers
                 .destroy(
@@ -108,9 +100,7 @@ const gogerModel = {
     }
 }
 
-
-
-// gogerModel.create({
+// gogerModel.destroyGoger({
 //     fullName: 'Prueba Gogers',
 //     description: 'Esta es una prueba para crear un goger',
 //     price: 30000,
@@ -118,8 +108,9 @@ const gogerModel = {
 //     experience: 3,
 //     categories_id: 1
 // })
+// gogerModel.destroyGoger(14)
 // gogerModel.getAll()
 
  module.exports = gogerModel
 
-// gogerModel.getAseo()
+// gogerModel.getAseo()ñ

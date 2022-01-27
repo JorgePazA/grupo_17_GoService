@@ -27,25 +27,32 @@ const userModel = {
           console.error(error)
         }
     },
-    create: async (userData) => {
+    create: async (user) => {
         try {
-            const result = await db.users.create(userData)
-            return result
+            const result = await db.users.create({
+                name: user.name,
+                lastName: user.lastName,
+                email: user.email,
+                password: user.password,
+                avatar: user.avatar,
+                rol: user.rol
+            })
+            console.log(result)
         } catch (error) {
             console.log(error)
         }
     },
-    update: async (userData, id) => {
+    updateUser: async (user, id) => {
         try {
             const result = await db.users
                 .update(
                     {
-                        name: userData.name,
-                        lastName: userData.lastName,
-                        email: userData.email,
-                        password: userData.password,
-                        avatar: userData.avatar,
-                        rol: userData.rol
+                        name: user.name,
+                        lastName: user.lastName,
+                        email: user.email,
+                        password: user.password,
+                        avatar: user.avatar,
+                        rol: 1
                     },
                     {
                         where: { id: id }
@@ -55,7 +62,7 @@ const userModel = {
             console.log(`Ocurrió un error ${error.message}`)
         }
     },
-    destroy: async (id) => {
+    destroyUser: async (id) => {
         try {
             const result = await db.users
                 .destroy(
@@ -66,7 +73,6 @@ const userModel = {
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
-            // .destroy({ where: { id: userId }, force: true }) // force: true es para asegurar que se ejecute la acción     
     }
 }
 
