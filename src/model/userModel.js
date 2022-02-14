@@ -21,10 +21,10 @@ const userModel = {
     //buscar un usuario por su email
     findUserByEmail: async (email) => {
         try {
-          const result = await db.users.findOne({ where: { email: email }})
-          return result
+            const result = await db.users.findOne({ where: { email: email } })
+            return result
         } catch (error) {
-          console.error(error)
+            console.error(error)
         }
     },
     create: async (user) => {
@@ -57,7 +57,7 @@ const userModel = {
                     {
                         where: { id: id }
                     })
-                return result
+            return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
@@ -69,7 +69,7 @@ const userModel = {
                     {
                         where: { id: id }
                     })
-                    return result
+            return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }

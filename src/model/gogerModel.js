@@ -7,42 +7,23 @@ const gogerModel = {
     getAll: async () => {
         try {
             const result = await db.gogers.findAll({
-                include: [{association: "category"}]
+                include: [{ association: "category" }]
             })
-            return(result)
-        } catch (error) {
-            console.log(`Ocurrió un error ${error.message}`)
-        }
-    },
-    getPlomeria: async () => {
-        try {
-            const result = await db.gogers.findAll({
-                include : ['category'],
-                where: { categories_id: 1}
-                })
             return (result)
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
     },
-    getElectricidad: async () => {
+    // Permite encontrar las categorías de Gogers (Aseo, Electricidad y Limpieza) mediante un parámetro
+    getGoger: async (categories_id) => {
         try {
-            const result = await db.gogers.findAll({
-                include : ['category'],
-                where: { categories_id: 2}
+            if (categories_id) {
+                const result = await db.gogers.findAll({
+                    include: ['category'],
+                    where: { categories_id }
                 })
-            return (result)
-        } catch (error) {
-            console.log(`Ocurrió un error ${error.message}`)
-        }
-    },
-    getAseo: async () => {
-        try {
-            const result = await db.gogers.findAll({
-                include : ['category'],
-                where: { categories_id: 3}
-                })
-            return (result)
+                return (result)
+            }
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
@@ -50,7 +31,7 @@ const gogerModel = {
     getOne: async (id) => {
         try {
             const result = await db.gogers.findByPk(id, {
-                include: [{association: "category"}]
+                include: [{ association: "category" }]
             })
             return result
         } catch (error) {
@@ -59,7 +40,7 @@ const gogerModel = {
     },
     addProduct: async (gogerData) => {
         try {
-            const result = await db.gogers.create({...gogerData})
+            const result = await db.gogers.create({ ...gogerData })
             return result
         } catch (error) {
             console.log(error)
@@ -80,7 +61,7 @@ const gogerModel = {
                     {
                         where: { id: id }
                     })
-                    return result
+            return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
@@ -93,7 +74,7 @@ const gogerModel = {
                     {
                         where: { id: id }
                     })
-                    return result
+            return result
         } catch (error) {
             console.log(`Ocurrió un error ${error.message}`)
         }
@@ -111,6 +92,5 @@ const gogerModel = {
 // gogerModel.destroyGoger(14)
 // gogerModel.getAll()
 
- module.exports = gogerModel
+module.exports = gogerModel
 
-// gogerModel.getAseo()ñ

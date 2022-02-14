@@ -8,28 +8,26 @@ const path = require("path");
 
 const carritoController = {
 
-
   detailAseo: async (req, res) => {
-    let gogersAseo = await gogerModel.getAseo()
-    res.status(200).render("productDetailAseo", {gogersAseo})
-    
+    let gogersAseo = await gogerModel.getGoger(3)
+    res.status(200).render("productDetailAseo", { gogersAseo })
+
   },
   detailElectricidad: async (req, res) => {
-    let gogersElectricidad = await gogerModel.getElectricidad()
-    res.status(200).render("productDetailElectricidad", {gogersElectricidad})
-    
+    let gogersElectricidad = await gogerModel.getGoger(2)
+    res.status(200).render("productDetailElectricidad", { gogersElectricidad })
+
   },
   detailPlomeria: async (req, res) => {
-    let gogersPlomeria = await gogerModel.getPlomeria()
-    res.status(200).render("productDetailPlomeria", {gogersPlomeria})
-    
+    let gogersPlomeria = await gogerModel.getGoger(1)
+    res.status(200).render("productDetailPlomeria", { gogersPlomeria })
   },
 
   //Me renderiza por ID en vista product-detail
   detail: async (req, res) => {
     let id = parseInt(req.params.id);
     let proveedor = await gogerModel.getOne(id);
-    res.status(200).render("product-detail", {proveedor})
+    res.status(200).render("product-detail", { proveedor })
   },
   showCar: async (req, res) => {
     let id = parseInt(req.params.id);
@@ -46,59 +44,60 @@ const carritoController = {
 
   create: (req, res) => {
     let promCategories = Category.findAll();
-    
+
     Promise
-    .all([promCategories])
-    .then(([allCategories]) => {
-        return res.render(path.resolve(__dirname, '..', 'views',  'newProduct'), {allCategories})})
-    .catch(error => res.send(error))
+      .all([promCategories])
+      .then(([allCategories]) => {
+        return res.render(path.resolve(__dirname, '..', 'views', 'newProduct'), { allCategories })
+      })
+      .catch(error => res.send(error))
   },
-// Crea el producto en la base de datos
+  // Crea el producto en la base de datos
   store: async (req, res) => {
-    
+
     try {
-      let image = req.file ? req.file.filename  : "default.jpg"
+      let image = req.file ? req.file.filename : "default.jpg"
       let product = {
         image: image,
         ...req.body
       }
-        await gogerModel.addProduct(product)
-        res.status(201).redirect("administrar")
+      await gogerModel.addProduct(product)
+      res.status(201).redirect("administrar")
     } catch (error) {
-        console.log(error)
+      console.log(error)
     }
   },
-//renderiza la página de edición
+  //renderiza la página de edición
   edit: async (req, res) => {
     try {
       let id = parseInt(req.params.id);
       let proveedor = await gogerModel.getOne(id);
-  
+
       res.status(200).render("editProduct", { proveedor });
     } catch (error) {
-      console.log (error)
-    }
-  },
-// Actualiza un Goger
-  update: async (req, res) => {
-    try {
-      let editedProduct = {
-        image : req.file.filename,
-        ... req.body,
-      };
-      await gogerModel.updateGoger(editedProduct, req.params.id)
-      res.redirect("/administrar");
-    } catch (error){
       console.log(error)
     }
   },
-// Borra un Goger
+  // Actualiza un Goger
+  update: async (req, res) => {
+    try {
+      let editedProduct = {
+        image: req.file.filename,
+        ...req.body,
+      };
+      await gogerModel.updateGoger(editedProduct, req.params.id)
+      res.redirect("/administrar");
+    } catch (error) {
+      console.log(error)
+    }
+  },
+  // Borra un Goger
   delete: async (req, res) => {
-    try{
+    try {
       await gogerModel.destroyGoger(req.params.id);
       res.redirect("/administrar")
     }
-    catch(error) {
+    catch (error) {
       console.log(error);
     }
   },
