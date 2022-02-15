@@ -19,18 +19,45 @@
 
                 <label for="categories_id">Tipo de Servicio</label>
                 <select name=categories_id>
-                    <% allCategories.forEach(category => { %>
+                    <% promCategories.forEach(category => { %>
                         <option value="<%= category.id %>"><%= category.name %></option>
-                    <% }) %> 
+                    <% }) %>
                 </select>
                 <label for="fullName">Nombre</label>
-                <input type="text" name="fullName" id="fullName" min="1" placeholder="Nombre del prestador" required/>
+                <input type="text" name="fullName" id="fullName" min="1" placeholder="Nombre del prestador" class= "form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.fullName : null %>"
+                />
+                <% if (locals.errors && errors.fullName) { %>
+                    <div class= "text-danger">
+                        <%= errors.fullName.msg  %> 
+                    </div>
+                   <% } %>
                 <label for="description">Descripción</label>
-                <textarea placeholder="Agrega una descripción..." name="description" id="description" ></textarea>
+                <textarea placeholder="Agrega una descripción..." name="description" id="description" class= "form-control <%= locals.errors && errors.description ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.description : null %>"></textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class= "text-danger-description">
+                            <%= errors.description.msg  %> 
+                        </div>
+                       <% } %>
                 <label for="price">Precio/hora</label>
-                <input type="number" name="price" id="price" min="1" required/>
+                <input type="number" name="price" id="price" min="1" class= "form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.price : null %>"
+                />
+                <% if (locals.errors && errors.price) { %>
+                    <div class= "text-danger">
+                        <%= errors.price.msg  %> 
+                    </div>
+                   <% } %>
                 <label for="experience">Experiencia/años</label>
-                <input type="number" name="experience" id="experience" min="1" required/>
+                <input type="number" name="experience" id="experience" min="1" class= "form-control <%= locals.errors && errors.experience ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.experience : null %>"
+                />
+                <% if (locals.errors && errors.experience) { %>
+                    <div class= "text-danger">
+                        <%= errors.experience.msg  %> 
+                    </div>
+                   <% } %>
                 <input type="file" name="product_image" id="product_image" placeholder="Ingrese su foto">
                 <button type="submit" class="form-btn-register">Agregar entrada</button>
                 <button type="reset" class="form-btn-register">Borrar</button>

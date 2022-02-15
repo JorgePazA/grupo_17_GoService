@@ -1,6 +1,7 @@
 const { gogerModel } = require("../model");
 const db = require('../database/models')
 const Category = db.categories
+const { validationResult } = require('express-validator');
 
 const path = require("path");
 
@@ -42,20 +43,33 @@ const carritoController = {
     res.status(200).render("administrar", { proveedores });
   },
 
-  create: (req, res) => {
-    let promCategories = Category.findAll();
+  create: async (req, res) => {
+    try {
+      let promCategories = await Category.findAll();
+      res.status(200).render("newProduct", { promCategories });
+    } catch (error) {
+      console.log(error)
+    }
+    // let promCategories = Category.findAll();
 
-    Promise
-      .all([promCategories])
-      .then(([allCategories]) => {
-        return res.render(path.resolve(__dirname, '..', 'views', 'newProduct'), { allCategories })
-      })
-      .catch(error => res.send(error))
+    // Promise
+    //   .all([promCategories])
+    //   .then(([allCategories]) => {
+    //     return res.render(path.resolve(__dirname, '..', 'views', 'newProduct'), { allCategories })
+    //   })
+    //   .catch(error => res.send(error))
   },
   // Crea el producto en la base de datos
   store: async (req, res) => {
 
     try {
+      const resultValidation = validationResult(req)
+      if (resultValidation.errors.length > 0) {
+        return res.render('newProduct', {
+          errors: resultValidation.mapped(),
+          oldData: req.body
+        });
+      }
       let image = req.file ? req.file.filename : "default.jpg"
       let product = {
         image: image,

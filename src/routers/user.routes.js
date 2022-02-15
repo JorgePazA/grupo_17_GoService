@@ -14,7 +14,7 @@ const authMiddleware = require("../middlewares/authMiddleware")
 router.get("/login", guestMiddleware, usuariosController.login);
 // Procesar el login
 router.post("/login", validationsLogin, usuariosController.loginProcess);
-// Ruta para ceración de usuario
+// Ruta para creación de usuario
 router.get("/register", guestMiddleware, usuariosController.register);
 router.post("/register", upload.single('avatar'), validations, usuariosController.processRegister);
 
@@ -30,7 +30,7 @@ router.delete("/userdetail/:id", usuariosController.delete)
 router.get('/userdetail', authMiddleware, usuariosController.userDetail)
 
 // Ruta Logout
-router.get('/logout',usuariosController.logout)
+router.get('/logout', usuariosController.logout)
 
 
 module.exports = router;

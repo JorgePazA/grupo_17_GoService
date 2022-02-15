@@ -2,6 +2,7 @@ const express = require('express')
 const controler = require('../controllers/gogerController.js')
 const router = express.Router()
 const path = require("path")
+const validationsGoger = require('../middlewares/validateRegisterGogerMiddleware')
 
 //Definiendo la carpeta en la que se guardarán los archivos subidos por el usuario
 const multer = require("multer")
@@ -12,12 +13,12 @@ let storage = multer.diskStorage({
   },
 
   filename: (req, file, cb) => {
-    let imageName = file.fieldname + "_" + Date.now() + path.extname(file.originalname) 
+    let imageName = file.fieldname + "_" + Date.now() + path.extname(file.originalname)
     cb(null, imageName)
   }
 })
 
-let upload = multer({storage: storage})
+let upload = multer({ storage: storage })
 
 
 
@@ -41,7 +42,7 @@ router.get("/administrar", controler.list)
 
 // //Ruta para la creación de proveedor
 router.get("/administrar/newProduct", controler.create)
-router.post("/administrar", upload.single("product_image"), controler.store)
+router.post("/administrar", upload.single("product_image"), validationsGoger, controler.store)
 
 
 // //Rutas para la edición de proveedor
