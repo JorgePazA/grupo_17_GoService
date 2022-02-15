@@ -46,10 +46,15 @@ const carritoController = {
   create: async (req, res) => {
     try {
       let promCategories = await Category.findAll();
-      res.status(200).render("newProduct", { promCategories });
-    } catch (error) {
+      //res.status(200).render("newProduct", { promCategories });
+      Promise
+        .all([promCategories])
+        .then(([allCategories]) => {
+        return res.render(path.resolve(__dirname, '..', 'views', 'newProduct'), { allCategories })
+     } 
+     catch (error) {
       console.log(error)
-    }
+      }
     // let promCategories = Category.findAll();
 
     // Promise
