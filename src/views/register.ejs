@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="shortcut icon" href="/images/headIcon.ico">
+    <script src="/js/userValidation.js"></script>
     <title>Regístrate aquí</title>
 </head>
 
@@ -17,6 +18,9 @@
         <section class="registerform">
             <h2 class="title-register">¿No tienes cuenta? Regístrate aquí</h2>
             
+            <div class="errors">
+                <ul></ul>
+            </div>
             <form action="/register" class="form-container-register" method ="POST" enctype="multipart/form-data">
                 <label for="name">Nombre</label>
                 <input type="text" name="name" id="name" min="1" placeholder="Ingresa tu nombre" class= "form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
