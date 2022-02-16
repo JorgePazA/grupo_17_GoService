@@ -1033,7 +1033,7 @@ main .button-add .add {
   margin-top: 15px;
   width: 90px;
 }
-.form-btn-register {
+.form-btn-register, .form-btn-register-borrar {
   margin-top: 15px;
   padding: 5px;
   border: none;
@@ -1043,6 +1043,9 @@ main .button-add .add {
   transition: all 0.3s ease;
   height: 35px;
 }
+.form-btn-register-borrar{
+  margin-bottom: 15px;
+}
 .form-btn-register:hover {
   background: #e5e5e5;
   border: solid black 1px;
@@ -1050,6 +1053,10 @@ main .button-add .add {
 }
 .form-container-register .avatar {
   border: none;
+}
+.form-container-register .inputfile{
+  border: none;
+  margin-top: 3px;
 }
 
 @media (min-width: 769px) {
@@ -1073,7 +1080,7 @@ main .button-add .add {
   .registerform {
     width: 45%;
   }
-  .form-btn-register {
+  .form-btn-register, .form-btn-register-borrar {
     background: #fca311;
   }
   .title-register {

@@ -42,43 +42,40 @@ const carritoController = {
     let proveedores = await gogerModel.getAll()
     res.status(200).render("administrar", { proveedores });
   },
-
+// Me renderiza la páagina de crear Goger
   create: async (req, res) => {
     try {
-      let promCategories = await Category.findAll();
-      res.status(200).render("newProduct", { promCategories });
+      const categories = await Category.findAll();
+      res.status(200).render("newProduct", { categories });
     } catch (error) {
       console.log(error)
     }
-    // let promCategories = Category.findAll();
-
-    // Promise
-    //   .all([promCategories])
-    //   .then(([allCategories]) => {
-    //     return res.render(path.resolve(__dirname, '..', 'views', 'newProduct'), { allCategories })
-    //   })
-    //   .catch(error => res.send(error))
   },
   // Crea el producto en la base de datos
-  store: async (req, res) => {
+  store: async function (req, res) {
 
     try {
+      const categories = await Category.findAll()
       const resultValidation = validationResult(req)
-      if (resultValidation.errors.length > 0) {
-        return res.render('newProduct', {
+
+      if (resultValidation.isEmpty()){
+        let image = req.file ? req.file.filename  : "default.jpg"
+        let product = {
+          image: image,
+          ...req.body
+        }
+        await gogerModel.addProduct(product)
+        res.redirect("administrar")
+      } else {
+        console.log(resultValidation.mapped())
+        res.render("newProduct", {
           errors: resultValidation.mapped(),
-          oldData: req.body
-        });
+          oldData: req.body,
+          categories
+          });
       }
-      let image = req.file ? req.file.filename : "default.jpg"
-      let product = {
-        image: image,
-        ...req.body
-      }
-      await gogerModel.addProduct(product)
-      res.status(201).redirect("administrar")
     } catch (error) {
-      console.log(error)
+        console.log(error)
     }
   },
   //renderiza la página de edición
@@ -94,16 +91,44 @@ const carritoController = {
   },
   // Actualiza un Goger
   update: async (req, res) => {
+
     try {
-      let editedProduct = {
-        image: req.file.filename,
-        ...req.body,
-      };
-      await gogerModel.updateGoger(editedProduct, req.params.id)
-      res.redirect("/administrar");
+      const resultValidation = validationResult(req)
+      let id = parseInt(req.params.id);
+      let proveedor = await gogerModel.getOne(id);
+
+      if (resultValidation.isEmpty()){
+        let image = req.file ? req.file.filename  : "default.jpg"
+        let editedProduct = {
+          image: image,
+          ...req.body
+        }
+        await gogerModel.updateGoger(editedProduct, req.params.id)
+        res.redirect("/administrar");
+      } else {
+        console.log(resultValidation.mapped())
+        res.render("editProduct", {
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+          proveedor
+          });
+      }
     } catch (error) {
-      console.log(error)
+        console.log(error)
     }
+
+
+
+    // try {
+    //   let editedProduct = {
+    //     image: req.file.filename,
+    //     ...req.body,
+    //   };
+    //   await gogerModel.updateGoger(editedProduct, req.params.id)
+    //   res.redirect("/administrar");
+    // } catch (error) {
+    //   console.log(error)
+    // }
   },
   // Borra un Goger
   delete: async (req, res) => {

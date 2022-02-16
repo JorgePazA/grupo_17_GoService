@@ -18,11 +18,44 @@
             <form class="form-container-register" method="post" enctype="multipart/form-data" action=<%="/userdetail/"+ user.id +"?_method=PUT"%> >
 
                 <label for="name">Cambiar nombre</label>
-                <input type="text" name="name" id="name" min="1" placeholder= "<%= user.name %>" />
+                <input type="text" name="name" id="name" min="1" value= "<%= user.name %>" class= "form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.name : null %>"
+                />
+                <p class="feedback">
+                    <% if (locals.errors && errors.name) { %>
+                        <div class= "text-danger">
+                            <%= errors.name.msg  %> 
+                        </div>
+                       <% } %>
+                </p>
                 <label for="lastName">Cambiar apellido</label>
-                <input placeholder= "<%= user.lastName %>" name="lastName" id="lastName"/>
+                <input value= "<%= user.lastName %>" name="lastName" id="lastName" class= "form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %>"
+                />
+                <p class="feedback">
+                    <% if (locals.errors && errors.lastName) { %>
+                        <div class= "text-danger">
+                            <%= errors.lastName.msg  %> 
+                        </div>
+                       <% } %>
+                </p>
                 <label for="password">Modificar contraseña</label>
-                <input type="password" name="password" id="password" min="1" />
+                <input type="password" name="password" id="password" min="1" class= "form-control <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"
+                />
+                <p class="feedback">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class= "text-danger">
+                            <%= errors.password.msg  %> 
+                        </div>
+                       <% } %>
+                </p>
+                <label for="passwordVal">Confirmar contraseña</label>
+                <input type="password" name="passwordVal"id="passwordVal" placeholder="Confirma tu contraseña" class= "form-control <%= locals.errors && errors.passwordVal ? 'is-invalid' : null %>" 
+                />
+                <% if (locals.errors && errors.passwordVal) { %>
+                    <div class= "text-danger">
+                        <%= errors.passwordVal.msg  %> 
+                    </div>
+                   <% } %>
                 <p>
                     Carga Nueva foto:
                     <input type="file" name="avatar" id="avatar">

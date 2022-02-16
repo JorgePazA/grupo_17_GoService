@@ -21,9 +21,6 @@ let storage = multer.diskStorage({
 let upload = multer({ storage: storage })
 
 
-
-
-
 router.get('/productCar', controler.showCar)
 router.get('/productCar/:id', controler.showCar)
 
@@ -41,13 +38,12 @@ router.get("/productDetailPlomeria/:id", controler.detail)
 router.get("/administrar", controler.list)
 
 // //Ruta para la creación de proveedor
-router.get("/administrar/newProduct", controler.create)
-router.post("/administrar", upload.single("product_image"), validationsGoger, controler.store)
-
+router.get("/newProduct", controler.create)
+router.post("/newProduct", upload.single("image"), validationsGoger, controler.store)
 
 // //Rutas para la edición de proveedor
 router.get("/administrar/editProduct/:id", controler.edit)
-router.put("/administrar/:id", upload.single("product_image"), controler.update)
+router.put("/administrar/:id", upload.single("image"), validationsGoger, controler.update)
 
 // // Página de product-deletion
 router.delete("/administrar/:id", controler.delete)

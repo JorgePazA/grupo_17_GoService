@@ -15,8 +15,9 @@ const validations = [
     body("email").notEmpty().withMessage("Tienes que escribir un email").bail()
         .isEmail().withMessage('Debes escribir un formato de correo válido'),
     body("password").notEmpty().withMessage("Tienes que escribir una contraseña").bail()
-        .isLength(8).withMessage("La contraseña debe tener al menos 8 caracteres"),
-    body("passwordVal").notEmpty().withMessage("Tienes que confirmar tu contraseña"),
+        .isStrongPassword({ minSymbols: 0 }).withMessage("La contraseña debe tener al menos 8 caracteres, dentro de los cuales debe existir al menos un número, una letra mayúscula y una minúscula"),
+    body("passwordVal").notEmpty().withMessage("Tienes que confirmar tu contraseña").bail()
+        .custom((value, {req}) => value === req.body.password).withMessage("Las contraseñas deben coincidir"),
     body("avatar").custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif'];

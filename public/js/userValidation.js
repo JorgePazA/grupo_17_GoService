@@ -1,52 +1,111 @@
 window.addEventListener("load", () => {
-
-    let form = document.querySelector("form.form-container-register");
     
-    form.addEventListener("submit", (e) => {
-        
-        let errors = [];
-        
-        let name = document.querySelector("input#name");
-        let lastName = document.querySelector("input#lastName");
-        let email = document.querySelector("input#email");
-        let password = document.querySelector("input#password")
-        let passwordVal = document.querySelector("input#passwordVal");
-        let avatar = document.querySelector("input#avatar");
-
+    const form = document.querySelector(".form-container-register");
     
-            if(!name.value){
-                errors.push("Ingresa tu nombre")
-            }else if(name.value.length < 2){
-                errors.push("Tu nombre debe contener almenos 2 caracteres")
-            }
+    function emailValido(email){
+        let emailReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+        let valido = emailReg.test(email)
+        if (!valido) {
+          return true
+        }
+    }  
+    
+    const allowedExtensions = ['jpeg', 'jpg', 'png', 'gif'];
 
-            if(!lastName.value){
-                errors.push("Ingresa tu apellido")
-            }else if(lastName.value.length < 2){
-                errors.push("Tu apellido debe contener almenos 2 caracteres")
-            }
+  
 
-            if(!password.value){
-                errors.push("Ingresa una contraseña")
-            }else if(password.value.length < 8){
-                errors.push("Tu contraseña debe tener almenos 8 caracteres")
-            }
+    let nameInput = form.name;
+    let lastNameInput = form.lastName;
+    let emailInput = form.email;
+    let passwordInput = form.password;
+    let passwordValInput = form.passwordVal;
+    let avatarInput = form.avatar;
 
-            if(passwordVal.value != password.value){
-                errors.push("Las contraseñas no coinciden")
-            }
+        const validName = () => {
+            let name = nameInput.value
+            if (name == "") return "Por favor ingrese un nombre"
+            if (name.length < 2) return "Debe tener al menos 2 caracteres"
+            return null
+        }
 
-            if(errors.length > 0) {
-                e.preventDefault();
-                let ulErrors = document.querySelector("div.errors")
-                for (let i = 0; i < errors.length; i++) {
-                    ulErrors.innerHTML += "<li>" + errors[i] + "</li>"
-                }
-            }
+        const validLastName = () => {
+            let lastName = lastNameInput.value
+            if (lastName == "") return "Por favor ingresa tu apellido"
+            if (lastName.length < 2) return "Debe tener al menos 2 caracteres"
+            return null
+          }
 
-        })
+        const validEmail = () => {
+            let email = emailInput.value
+            if (!email) return "Por favor ingresa tu correo"
+            if (!emailValido(email)) return "El correo debe ser valido"
+            return null
+        }
+
+        const validPassword = () => {
+            let password = passwordInput.value
+            if (!password) return "Por favor ingresa una contraseña"
+            if (password.length < 8) return "Debe tener al menos 8 caracteres"
+            return null
+          }
+
+        const validConfirmPassword = () => {
+            let password = passwordInput.value
+            let confirm = passwordValInput.value
+            if (password !== confirm) return "Contraseñas no coinciden"
+            return null
+          }
+
+        const validAvatar = () => {
+            let extension = avatarInput.value.split('.').pop().toLowerCase()
+            return allowedExtensions.includes(extension);
+          }
 
 
 
+        const sendFeedback = (element, message) => {
+            const feedbackEl = element.nextElementSibling
+            if (feedbackEl.innerText === message) return
+            feedbackEl.innerText = message
+          }
+          
+          nameInput.addEventListener("input", e => {
+            sendFeedback(nameInput, validName())
+          })
+
+          lastNameInput.addEventListener("input", e => {
+            sendFeedback(lastNameInput, validLastName())
+          })
+
+          emailInput.addEventListener("input", e => {
+            sendFeedback(emailInput, validemail())
+          })
+
+          passwordInput.addEventListener("input", e => {
+            sendFeedback(passwordInput, validPassword())
+            sendFeedback(passwordConfirmInput, validConfirmPassword())
+          })
+
+          passwordValInput.addEventListener("input", e => {
+            sendFeedback(passwordInput, validPassword())
+            sendFeedback(passwordValInput, validConfirmPassword())
+          })
+
+        //   avatarInput.addEventListener("input", e => {
+        //     if(!validAvatar()){
+        //       feedbackEl.innerText="Tu imagen debe ser de las siguientes extensiones: jpeg, jpg, png o gif" 
+        //     }
+
+
+          form.addEventListener("submit", e => {
+            e.preventDefault()
+            if (!validName() && !validLastName() && !validEmail() && !validPassword())
+              return form.submit()
+          
+            sendFeedback(nameInput, validName())
+            sendFeedback(lastNameInput, validLastName())
+            sendFeedback(emailInput, validEmail())
+            sendFeedback(passwordInput, validPassword())
+          })
 
 })

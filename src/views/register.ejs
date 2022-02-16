@@ -8,7 +8,6 @@
     <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="shortcut icon" href="/images/headIcon.ico">
-    <script src="/js/userValidation.js"></script>
     <title>Regístrate aquí</title>
 </head>
 
@@ -26,40 +25,49 @@
                 <input type="text" name="name" id="name" min="1" placeholder="Ingresa tu nombre" class= "form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
                 value="<%= locals.oldData ? oldData.name : null %>"
                 />
-                <% if (locals.errors && errors.name) { %>
-                 <div class= "text-danger">
-                     <%= errors.name.msg  %> 
-                 </div>
-                <% } %>
+                <p class="feedback">
+                    <% if (locals.errors && errors.name) { %>
+                        <div class= "text-danger">
+                            <%= errors.name.msg  %> 
+                        </div>
+                       <% } %>
+                </p>
 
                 <label for="lastName">Apellido</label>
                 <input type="text" name="lastName" id="lastName" min="1" placeholder="Ingresa tu apellido" class="form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %>" 
                 value="<%= locals.oldData ? oldData.lastName : null %>" 
                 />
-                <% if (locals.errors && errors.lastName) { %>
-                    <div class= "text-danger">
-                        <%= errors.lastName.msg  %> 
-                    </div>
-                   <% } %>
+                <p class="feedback">
+                    <% if (locals.errors && errors.lastName) { %>
+                        <div class= "text-danger">
+                            <%= errors.lastName.msg  %> 
+                        </div>
+                       <% } %>
+                </p>
                
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" min="1" placeholder="Ingresa tu email" class= "form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
                 value="<%= locals.oldData ? oldData.email : null %>"
                 />
-                <% if (locals.errors && errors.email) { %>
-                    <div class= "text-danger">
-                        <%= errors.email.msg  %> 
-                    </div>
-                   <% } %>
+                <p class="feedback">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class= "text-danger">
+                            <%= errors.email.msg  %> 
+                        </div>
+                       <% } %>
+                </p>
 
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" placeholder="Crea una contraseña" class= "form-control <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" 
                 />
-                <% if (locals.errors && errors.password) { %>
-                    <div class= "text-danger">
-                        <%= errors.password.msg  %> 
-                    </div>
-                   <% } %>
+                <p class="feedback">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class= "text-danger">
+                            <%= errors.password.msg  %> 
+                        </div>
+                       <% } %>
+                </p>
+
         
                 <label for="passwordVal">Confirmar contraseña</label>
                 <input type="password" name="passwordVal"id="passwordVal" placeholder="Confirma tu contraseña" class= "form-control <%= locals.errors && errors.passwordVal ? 'is-invalid' : null %>" 
@@ -88,6 +96,7 @@
           </section>
     </main>
     <%- include('./partials/footer')%>
+    <script src="/js/userValidation.js"></script>
 </body>
 
 </html>

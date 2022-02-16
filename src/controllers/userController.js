@@ -96,13 +96,27 @@ const userController = {
     },
     update: async (req, res) => {
         try {
-          let editedUser = {
-            ... req.body,
-            avatar : req.file.filename,
-            password: bcryptjs.hashSync(req.body.password, 10)
-          };
-          await userModel.updateUser(editedUser, req.params.id)
-          res.redirect("/userdetail");
+        const resultValidation = validationResult(req)
+        let id = parseInt(req.params.id)
+        let user = await userModel.getOne(id)
+
+        if (resultValidation.isEmpty()){
+            let editedUser = {
+                ... req.body,
+                avatar : req.file.filename,
+                password: bcryptjs.hashSync(req.body.password, 10)
+              };
+              await userModel.updateUser(editedUser, req.params.id)
+              res.redirect("/userdetail"); 
+        } else {
+        console.log(resultValidation.mapped())
+        res.render("editUser", {
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+          user
+          });
+        }
+          
         } catch (error){
           console.log(error)
         }
