@@ -3,10 +3,7 @@ const path = require('path')
 // Requerimos express validator
 const { check } = require('express-validator')
 
-
-
 // Validaciones
-
 const validationsGoger = [
     // check("category").notEmpty().withMessage("Tienes que elegir una categoría"),
     check("fullName").notEmpty().withMessage("Tienes que escribir un nombre").bail()
@@ -22,7 +19,7 @@ const validationsGoger = [
         if (file) {
             let fileExtension = path.extname(file.originalname);
             if (!acceptedExtensions.includes(fileExtension)) {
-                throw new Error(`Formato invalido, extensiones permitidas: ${acceptedExtensions.join(',')}`);
+                throw new Error(`Formato inválido, extensiones permitidas: ${acceptedExtensions.join(',')}`);
             }
         }
         return true;

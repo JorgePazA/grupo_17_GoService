@@ -2,21 +2,12 @@ window.addEventListener("load", () => {
     
     const form = document.querySelector(".form-container-register");
     
-    function emailValido(email){
-        let emailReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-        let valido = emailReg.test(email)
-        if (!valido) {
-          return true
-        }
-    }  
-    
     const allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
 
   
 
     let nameInput = form.name;
     let lastNameInput = form.lastName;
-    let emailInput = form.email;
     let passwordInput = form.password;
     let passwordValInput = form.passwordVal;
     let avatarInput = form.avatar;
@@ -34,13 +25,6 @@ window.addEventListener("load", () => {
             if (lastName.length < 2) return "Debe tener al menos 2 caracteres"
             return null
           }
-
-        const validEmail = () => {
-            let email = emailInput.value
-            if (!email) return "Por favor ingresa tu correo"
-            if (emailValido(email)) return "El correo debe ser valido"
-            return null
-        }
 
         const validPassword = () => {
             let password = passwordInput.value
@@ -76,10 +60,6 @@ window.addEventListener("load", () => {
             sendFeedback(lastNameInput, validLastName())
           })
 
-          emailInput.addEventListener("input", e => {
-            sendFeedback(emailInput, validEmail())
-          })
-
           passwordInput.addEventListener("input", e => {
             sendFeedback(passwordInput, validPassword())
             sendFeedback(passwordConfirmInput, validConfirmPassword())
@@ -102,7 +82,6 @@ window.addEventListener("load", () => {
           
             sendFeedback(nameInput, validName())
             sendFeedback(lastNameInput, validLastName())
-            sendFeedback(emailInput, validEmail())
             sendFeedback(passwordInput, validPassword())
             sendFeedback(passwordValInput, validConfirmPassword())
             sendFeedback(avatarInput, validAvatar())

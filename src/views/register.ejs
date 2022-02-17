@@ -59,7 +59,7 @@
                 </p>
 
                 <label for="password">Contraseña</label>
-                <input type="password" name="password" id="password" placeholder="Crea una contraseña" class= "form-control <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" 
+                <input type="password" name="password" id="password" placeholder="Crea una contraseña" class= "form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" 
                 />
                 <p class="feedback">
                     <% if (locals.errors && errors.password) { %>
@@ -73,12 +73,13 @@
                 <label for="passwordVal">Confirmar contraseña</label>
                 <input type="password" name="passwordVal"id="passwordVal" placeholder="Confirma tu contraseña" class= "form-control <%= locals.errors && errors.passwordVal ? 'is-invalid' : null %>" 
                 />
+                <p class="feedback">
                 <% if (locals.errors && errors.passwordVal) { %>
                     <div class= "text-danger">
                         <%= errors.passwordVal.msg  %> 
                     </div>
                    <% } %>
-
+                </p>
                 <label for="avatar">Sube tu foto</label>
                 <input class = "avatar" type="file" name="avatar" id="avatar" placeholder="Ingresa tu foto">
                 <p class="feedback">

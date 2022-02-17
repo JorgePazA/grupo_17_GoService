@@ -3,8 +3,6 @@ const path = require('path')
 // Requerimos express validator
 const { body } = require('express-validator')
 
-
-  
 // Validaciones
 
 const validationsLogin = [

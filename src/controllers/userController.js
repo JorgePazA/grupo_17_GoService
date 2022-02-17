@@ -5,8 +5,6 @@ const user = db.users
 const {validationResult} = require('express-validator');
 const bcryptjs = require("bcryptjs");
 
-const path = require("path");
-
 const userController = {
     // renderizar la página de login
     login: (req, res) => {

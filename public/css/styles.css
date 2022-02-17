@@ -622,6 +622,7 @@ p#copy {
   border-radius: 5px;
   width: 78vw;
   background: #555d6d9c;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 .main-right-login .login-section .login-container label,
@@ -952,6 +953,7 @@ main .includes .buttonDetail {
   border-radius: 25px;
   font-size: 14px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 main .button-add {
@@ -1013,7 +1015,6 @@ main .button-add .add {
 .form-container-register input,
 .form-container-register select {
   border: solid 1px rgb(185, 185, 185);
-  margin-bottom: 8px;
   border-radius: 5px;
   height: 30px;
   padding-left: 5px;
@@ -1090,9 +1091,6 @@ main .button-add .add {
 
 /* Estilos Mensaje errores------------------------------------------------------- */
 .text-danger {
-  font-size: 12px;
-  color: red;
-  margin-top: -10px;
   margin-bottom: 5px;
 }
 .text-danger-description {
@@ -1261,4 +1259,17 @@ main .articulo--top--info .buttonDetail {
   border-radius: 25px;
   font-size: 14px;
   font-weight: bold;
+  margin-top: 10px;
 }
+
+form .feedback, .text-danger {
+  color: #e90f0f;
+  padding: 2px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+label {
+  margin-top: 8px;
+}
+

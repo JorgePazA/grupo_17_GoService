@@ -1,8 +1,6 @@
 const db = require('../database/models');
 const { Op } = require("sequelize");
 
-
-
 const gogerModel = {
     getAll: async () => {
         try {
@@ -66,7 +64,6 @@ const gogerModel = {
             console.log(`Ocurrió un error ${error.message}`)
         }
     },
-
     destroyGoger: async (id) => {
         try {
             const result = await db.gogers
@@ -80,17 +77,6 @@ const gogerModel = {
         }
     }
 }
-
-// gogerModel.destroyGoger({
-//     fullName: 'Prueba Gogers',
-//     description: 'Esta es una prueba para crear un goger',
-//     price: 30000,
-//     image: 'eawlñkkdaslekñl',
-//     experience: 3,
-//     categories_id: 1
-// })
-// gogerModel.destroyGoger(14)
-// gogerModel.getAll()
 
 module.exports = gogerModel
 

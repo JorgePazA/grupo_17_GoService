@@ -1,21 +1,18 @@
 window.addEventListener("load", () => {
-    
-    const form = document.querySelector(".form-container-register");
-    
-    // function emailValido(email){
-    //     let emailReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    //     let valido = emailReg.test(email)
-    //     if (!valido) {
-    //       return true
-    //     }
-    // }   
 
+    // Se lee document del formulario
+    const form = document.querySelector(".form-container-register");
+       
+    const allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+    // Se crean variables leyendo parametros del document
     let nameInput = form.fullName;
     let descriptionArea = form.description;
     let priceInput = form.price;
     let experienceInput = form.experience;
     let imageInput = form.inputfile;
 
+        // Funciones de validación
         const validName = () => {
             let name = nameInput.value
             if (name == "") return "Por favor ingrese un nombre"
@@ -43,9 +40,10 @@ window.addEventListener("load", () => {
             return null
           }
 
-          const validImage = () => {
-            let extension = avatarInput.value.split('.').pop().toLowerCase()
-            return allowedExtensions.includes(extension);
+          const validAvatar = () => {
+            let extension = imageInput.value.split('.').pop().toLowerCase()
+            if(!(allowedExtensions.includes(extension))) return "Tu imagen debe ser de las siguientes extensiones: jpeg, jpg, png o gif" 
+            return null
           }
 
 
@@ -54,6 +52,7 @@ window.addEventListener("load", () => {
             if (feedbackEl.innerText === message) return
             feedbackEl.innerText = message
           }
+          
           
           nameInput.addEventListener("input", e => {
             sendFeedback(nameInput, validName())
@@ -71,16 +70,21 @@ window.addEventListener("load", () => {
             sendFeedback(experienceInput, validExperience())
           })
 
+          imageInput.addEventListener("input", e => {
+            sendFeedback(imageInput, validAvatar())
+          })
 
+          // Pusheo de mensaje de feedback
           form.addEventListener("submit", e => {
             e.preventDefault()
-            if (!validName() && !validDescription() && !validPrice() && !validExperience())
+            if (!validName() && !validDescription() && !validPrice() && !validExperience() && !validAvAbstractRange())
               return form.submit()
           
             sendFeedback(nameInput, validName())
             sendFeedback(descriptionArea, validDescription())
             sendFeedback(priceInput, validPrice())
             sendFeedback(experienceInput, validExperience())
+            sendFeedback(imageInput, validAvatar())
           })
 
 })

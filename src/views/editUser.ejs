@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="shortcut icon" href="/images/headIcon.ico">
+    <script defer src="/js/userEditValidation.js"></script>
     <title>Edita tu perfil</title>
 </head>
 <body class="body-register">
@@ -39,7 +40,7 @@
                        <% } %>
                 </p>
                 <label for="password">Modificar contraseña</label>
-                <input type="password" name="password" id="password" min="1" class= "form-control <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"
+                <input type="password" name="password" id="password" min="1" class= "form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                 />
                 <p class="feedback">
                     <% if (locals.errors && errors.password) { %>
@@ -51,15 +52,16 @@
                 <label for="passwordVal">Confirmar contraseña</label>
                 <input type="password" name="passwordVal"id="passwordVal" placeholder="Confirma tu contraseña" class= "form-control <%= locals.errors && errors.passwordVal ? 'is-invalid' : null %>" 
                 />
+                <p class="feedback">
                 <% if (locals.errors && errors.passwordVal) { %>
                     <div class= "text-danger">
                         <%= errors.passwordVal.msg  %> 
                     </div>
                    <% } %>
-                <p>
-                    Carga Nueva foto:
-                    <input type="file" name="avatar" id="avatar">
                 </p>
+                
+                <label for="image">Carga Nueva foto</label>
+                <input type="file" name="avatar" id="avatar" class="inputfile">
                 <button type="submit" class="form-btn-register">Modificar</button>
                 <button type="reset" class="form-btn-register">Borrar</button>
             </form>

@@ -3,10 +3,6 @@ const db = require('../database/models')
 const Category = db.categories
 const { validationResult } = require('express-validator');
 
-const path = require("path");
-
-// const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
 const carritoController = {
 
   detailAseo: async (req, res) => {
@@ -116,19 +112,6 @@ const carritoController = {
     } catch (error) {
         console.log(error)
     }
-
-
-
-    // try {
-    //   let editedProduct = {
-    //     image: req.file.filename,
-    //     ...req.body,
-    //   };
-    //   await gogerModel.updateGoger(editedProduct, req.params.id)
-    //   res.redirect("/administrar");
-    // } catch (error) {
-    //   console.log(error)
-    // }
   },
   // Borra un Goger
   delete: async (req, res) => {

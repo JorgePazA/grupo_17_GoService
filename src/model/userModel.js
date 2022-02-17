@@ -76,16 +76,4 @@ const userModel = {
     }
 }
 
-// userModel.create({
-//     name: 'Prueba',
-//     lastName: 'Users',
-//     email: 'prueba@gmail.com',
-//     password: '1234',
-//     avatar: 'dsadasdasdaswwq',
-//     rol: 1
-// })
-// userModel.getAll()
-
-// userModel.findUserByEmail('juan@gmail.com')
-
 module.exports = userModel

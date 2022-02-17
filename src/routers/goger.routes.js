@@ -20,7 +20,6 @@ let storage = multer.diskStorage({
 
 let upload = multer({ storage: storage })
 
-
 router.get('/productCar', controler.showCar)
 router.get('/productCar/:id', controler.showCar)
 

@@ -1,15 +1,27 @@
 window.addEventListener("load", () => {
+  
+  // Se lee document del formulario
   const form = document.querySelector(".login-container");
 
   const emailInput = form.email;
   const passwordInput = form.password;
 
+  // Funcion validación de correo
+  function emailValido(email){
+    let emailReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    let valido = emailReg.test(email)
+    if (!valido) {
+      return true
+    }
+  }
+
+  // Funciones de validación
   const validEmail = () => {
-    let email = emailInput.value;
-    if (!email) return "Por favor ingresa tu dirección de correo electrónico";
-    if (!validator.isEmail(email)) return "Email inválido";
-    return null;
-  };
+    let email = emailInput.value
+    if (!email) return "Por favor ingresa tu correo"
+    if (emailValido(email)) return "El correo debe ser valido"
+    return null
+  }
 
   const validPassword = () => {
     let password = passwordInput.value;
@@ -32,6 +44,7 @@ window.addEventListener("load", () => {
     sendFeedback(passwordInput, validPassword());
   });
 
+  // Pusheo de mensaje de feedback
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (!validEmail() && !validPassword()) return form.submit();

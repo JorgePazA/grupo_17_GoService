@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="shortcut icon" href="/images/headIcon.ico">
+    <script defer src="/js/gogerValidation.js"></script>
     <title>Edita un producto</title>
 </head>
 <body class="body-register">
@@ -21,37 +22,45 @@
                 <input type="text" name="fullName" id="fullName" min="1" value= "<%= proveedor.fullName %>" class= "form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
                 value="<%= locals.oldData ? oldData.fullName : null %>"
                 />
+                <p class="feedback">
                 <% if (locals.errors && errors.fullName) { %>
                     <div class= "text-danger">
                         <%= errors.fullName.msg  %> 
                     </div>
                    <% } %>
+                </p>
                 <label for="description">Cambiar Descripción</label>
                 <textarea value= "<%= proveedor.description %>" name="description" id="description" class= "form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
                     ></textarea>
+                    <p class="feedback">
                     <% if (locals.errors && errors.description) { %>
                         <div class= "text-danger-description">
                             <%= errors.description.msg  %> 
                         </div>
                        <% } %>
+                    </p>
                 <label for="price">Modificar Precio/hora</label>
                 <input type="number" name="price" id="price" value= "<%= proveedor.price %>" min="1" class= "form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
                 value="<%= locals.oldData ? oldData.price : null %>"
                 />
+                <p class="feedback">
                 <% if (locals.errors && errors.price) { %>
                     <div class= "text-danger">
                         <%= errors.price.msg  %> 
                     </div>
                    <% } %>
+                </p>
                 <label for="experience">Modificar Experiencia</label>
                 <input type="number" name="experience" id="experience" value= "<%= proveedor.experience %>" min="1" class= "form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
                 value="<%= locals.oldData ? oldData.experience : null %>"
                 />
+                <p class="feedback">
                 <% if (locals.errors && errors.experience) { %>
                     <div class= "text-danger">
                         <%= errors.experience.msg  %> 
                     </div>
                    <% } %>
+                </p>
                 <label for="image">Carga Nueva foto</label>
                 <input type="file" name="image" id="image" class="inputfile">
                 <button type="submit" class="form-btn-register">Modificar Tarjeta</button>
