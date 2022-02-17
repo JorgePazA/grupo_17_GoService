@@ -24,11 +24,13 @@
                 <form action="/login" class="login-container" method="POST">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Ingresa tu email" class = "form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"/>
-                        <% if(locals.errors && errors.email) { %>
-                            <div class="text-danger">
-                                <%= errors.email.msg %>
+                    <p class="feedback">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class= "text-danger">
+                                <%= errors.email.msg  %> 
                             </div>
-                       <% } %> 
+                           <% } %>
+                    </p>
 
 
                     <div class="password">
@@ -36,16 +38,19 @@
                         <label for="password" class="lbpass">Contraseña</label>
                     </div> 
                     <input type="password" name="password" id="password" placeholder="Ingresa Tu contraseña" class = "form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"/>
-                    <% if (locals.errors && errors.password) { %>
-                        <div class= "text-danger">
-                            <%= errors.password.msg  %> 
-                        </div>
-                       <% } %>
+                    <p class="feedback">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class= "text-danger">
+                                <%= errors.password.msg  %> 
+                            </div>
+                           <% } %>
+                    </p>
                     <button type="submit" class="form-btn">Iniciar sesión</button>
                 </form>
             </div>
             <p class="foot">¿Todavia no tienes una cuenta?<a class="linkregister" href="/register"> Crea una ahora</a></p>
         </div>
     </main>
+    <script src="/js/loginValidation.js"></script>
 </body>
 </html>

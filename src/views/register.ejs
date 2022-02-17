@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/b16efeb3be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="shortcut icon" href="/images/headIcon.ico">
+    <script defer src="/js/userValidation.js"></script>
     <title>Regístrate aquí</title>
 </head>
 
@@ -80,11 +81,13 @@
 
                 <label for="avatar">Sube tu foto</label>
                 <input class = "avatar" type="file" name="avatar" id="avatar" placeholder="Ingresa tu foto">
-                <% if (locals.errors && errors.avatar) { %>
-                    <div class= "text-danger">
-                        <%= errors.avatar.msg  %> 
-                    </div>
-                   <% } %>
+                <p class="feedback">
+                    <% if (locals.errors && errors.avatar) { %>
+                        <div class= "text-danger">
+                            <%= errors.avatar.msg  %> 
+                        </div>
+                       <% } %>
+                </p>
 
 
                 <button type="submit" class="form-btn-register">¡Regístrate gratis!</button>
@@ -96,7 +99,7 @@
           </section>
     </main>
     <%- include('./partials/footer')%>
-    <script src="/js/userValidation.js"></script>
+    
 </body>
 
 </html>

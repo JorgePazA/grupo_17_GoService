@@ -38,7 +38,7 @@ window.addEventListener("load", () => {
         const validEmail = () => {
             let email = emailInput.value
             if (!email) return "Por favor ingresa tu correo"
-            if (!emailValido(email)) return "El correo debe ser valido"
+            if (emailValido(email)) return "El correo debe ser valido"
             return null
         }
 
@@ -58,8 +58,10 @@ window.addEventListener("load", () => {
 
         const validAvatar = () => {
             let extension = avatarInput.value.split('.').pop().toLowerCase()
-            return allowedExtensions.includes(extension);
-          }
+            if(!(allowedExtensions.includes(extension))) return "Tu imagen debe ser de las siguientes extensiones: jpeg, jpg, png o gif" 
+            return null
+        }
+
 
 
 
@@ -78,7 +80,7 @@ window.addEventListener("load", () => {
           })
 
           emailInput.addEventListener("input", e => {
-            sendFeedback(emailInput, validemail())
+            sendFeedback(emailInput, validEmail())
           })
 
           passwordInput.addEventListener("input", e => {
@@ -91,15 +93,14 @@ window.addEventListener("load", () => {
             sendFeedback(passwordValInput, validConfirmPassword())
           })
 
-        //   avatarInput.addEventListener("input", e => {
-        //     if(!validAvatar()){
-        //       feedbackEl.innerText="Tu imagen debe ser de las siguientes extensiones: jpeg, jpg, png o gif" 
-        //     }
+          avatarInput.addEventListener("input", e => {
+            sendFeedback(avatarInput, validAvatar())
+          })
 
 
           form.addEventListener("submit", e => {
             e.preventDefault()
-            if (!validName() && !validLastName() && !validEmail() && !validPassword())
+            if (!validName() && !validLastName() && !validEmail() && !validPassword() && !validConfirmPassword() && !validAvatar())
               return form.submit()
           
             sendFeedback(nameInput, validName())
@@ -109,3 +110,4 @@ window.addEventListener("load", () => {
           })
 
 })
+
