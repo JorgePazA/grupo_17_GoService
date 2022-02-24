@@ -62,7 +62,7 @@ window.addEventListener("load", () => {
 
           passwordInput.addEventListener("input", e => {
             sendFeedback(passwordInput, validPassword())
-            sendFeedback(passwordConfirmInput, validConfirmPassword())
+            sendFeedback(passwordValInput, validConfirmPassword())
           })
 
           passwordValInput.addEventListener("input", e => {
@@ -77,7 +77,7 @@ window.addEventListener("load", () => {
 
           form.addEventListener("submit", e => {
             e.preventDefault()
-            if (!validName() && !validLastName() && !validEmail() && !validPassword() && !validConfirmPassword() && !validAvatar())
+            if (!validName() && !validLastName() && !validPassword() && !validConfirmPassword() && !validAvatar())
               return form.submit()
           
             sendFeedback(nameInput, validName())

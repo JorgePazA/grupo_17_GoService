@@ -62,6 +62,13 @@
                 
                 <label for="image">Carga Nueva foto</label>
                 <input type="file" name="avatar" id="avatar" class="inputfile">
+                <p class="feedback">
+                    <% if (locals.errors && errors.avatar) { %>
+                        <div class= "text-danger">
+                            <%= errors.avatar.msg  %> 
+                        </div>
+                       <% } %>
+                </p>
                 <button type="submit" class="form-btn-register">Modificar</button>
                 <button type="reset" class="form-btn-register">Borrar</button>
             </form>
