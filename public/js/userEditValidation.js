@@ -42,7 +42,9 @@ window.addEventListener("load", () => {
 
         const validAvatar = () => {
             let extension = avatarInput.value.split('.').pop().toLowerCase()
-            if(!(allowedExtensions.includes(extension))) return "Tu imagen debe ser de las siguientes extensiones: jpeg, jpg, png o gif" 
+            if(!(allowedExtensions.includes(extension)) && avatarInput.value) { 
+              return "Tu imagen debe ser de las siguientes extensiones: jpeg, jpg, png o gif" 
+            }
             return null
         }
 

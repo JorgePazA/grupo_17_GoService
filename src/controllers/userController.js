@@ -4,6 +4,7 @@ const user = db.users
 
 const {validationResult} = require('express-validator');
 const bcryptjs = require("bcryptjs");
+// const users = require("../database/models/users");
 
 const userController = {
     // renderizar la página de login
@@ -99,9 +100,10 @@ const userController = {
         let user = await userModel.getOne(id)
 
         if (resultValidation.isEmpty()){
+            let image = req.file ? req.file.filename  : "default.jpg";
             let editedUser = {
                 ... req.body,
-                avatar : req.file.filename,
+                avatar : image,
                 password: bcryptjs.hashSync(req.body.password, 10)
               };
               await userModel.updateUser(editedUser, req.params.id)
@@ -133,7 +135,7 @@ const userController = {
     logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');
-    }
+    },
 };
 
 module.exports = userController;

@@ -42,6 +42,7 @@ app.use(methodOverride('_method'));
 const rutaMain = require("./routers/main.routes");
 const rutaCarrito = require("./routers/goger.routes");
 const rutaUsers = require("./routers/user.routes");
+const apiRoutes = require("./routers/api.routes");
 
 
 
@@ -49,5 +50,6 @@ const rutaUsers = require("./routers/user.routes");
 app.use(rutaMain);
 app.use(rutaCarrito);
 app.use(rutaUsers);
+app.use(apiRoutes);
 
 app.listen(port, () => console.log(`server is listening on ${port}`));

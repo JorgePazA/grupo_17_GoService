@@ -1,5 +1,6 @@
 const express = require("express");
 const usuariosController = require("../controllers/userController");
+//const usersApi = require("../api/usersApi");
 const router = express.Router();
 const path = require("path");
 
@@ -26,6 +27,8 @@ router.delete("/userdetail/:id", usuariosController.delete)
 
 // Ruta para  de usuario
 router.get('/userdetail', authMiddleware, usuariosController.userDetail)
+
+//router.get('/api/users', usersApi.list)
 
 // Ruta Logout
 router.get('/logout', usuariosController.logout)
