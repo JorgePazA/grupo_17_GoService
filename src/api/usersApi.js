@@ -15,8 +15,20 @@ const usersApi = {
         };
         users.push(usuario);
       });
+
+      // Trae al ultimo usuario creado
+
+      let lastUserPos = dbUsers[dbUsers.length - 1];
+            let fullNameLast = lastUserPos.name + " " + lastUserPos.lastName
+            let lastUser = {
+                id: lastUserPos.id,
+                name: fullNameLast,
+                email: lastUserPos.email,
+                image: "https://goservicegr17.herokuapp.com" + "/userimg/" + lastUserPos.avatar
+            };
       return res.status(200).json({
         total: users.length,
+        latest: lastUser,
         users: users,
         status: 200,
       });
@@ -33,7 +45,7 @@ const usersApi = {
         id: dbUsers.id,
         name: fullName,
         email: dbUsers.email,
-        avatar: "https://goservicegr17.herokuapp.com" + "/images/users/" + dbUsers.avatar,
+        avatar: "https://goservicegr17.herokuapp.com" + "/userimg/" + dbUsers.avatar,
       };
       return res.status(200).json({
         users: usuario,
