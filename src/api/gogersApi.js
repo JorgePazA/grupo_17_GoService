@@ -23,6 +23,7 @@ products: async (req, res) => {
             idLast: lastGogerPos.id,
             nameLast: lastGogerPos.fullName,
             descriptionLast: lastGogerPos.description,
+            experienceLast: lastGogerPos.experience,
             imageLast: "https://goservicegr17.herokuapp.com" + "/img/" + lastGogerPos.image,
             detailLast: "https://goservicegr17.herokuapp.com" + "/api/gogers/" + lastGogerPos.id
         };
