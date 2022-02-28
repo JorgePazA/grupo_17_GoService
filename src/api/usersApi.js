@@ -5,13 +5,13 @@ const usersApi = {
     try {
       let dbUsers = await userModel.getAll();
       let users = [];
-      const host = req.header.host;
       dbUsers.map((item) => {
+        let fullName = item.name + " " + item.lastName
         let usuario = {
           id: item.id,
-          name: item.name,
+          name: fullName,
           email: item.email,
-          detail: "http://" + host + "/api/users/" + item.id,
+          detail: "https://goservicegr17.herokuapp.com" + "/api/users/" + item.id,
         };
         users.push(usuario);
       });
@@ -28,12 +28,12 @@ const usersApi = {
   oneUser: async (req, res) => {
     try {
       let dbUsers = await userModel.getOne(req.params.id);
-      const host = req.header.host;
+      let fullName = dbUsers.name + " " + dbUsers.lastName
       let usuario = {
         id: dbUsers.id,
-        name: dbUsers.name,
+        name: fullName,
         email: dbUsers.email,
-        avatar: "http://" + host + "/images/users/" + dbUsers.avatar,
+        avatar: "https://goservicegr17.herokuapp.com" + "/images/users/" + dbUsers.avatar,
       };
       return res.status(200).json({
         users: usuario,

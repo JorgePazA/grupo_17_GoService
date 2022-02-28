@@ -13,7 +13,7 @@ products: async (req, res) => {
                 id: item.id,
                 name: item.fullName,
                 description: item.description,
-                detail: "http://" + host + "/api/goger/" + item.id
+                detail: "https://goservicegr17.herokuapp.com" + "/api/goger/" + item.id
             }
             gogers.push(goger);
         })
@@ -35,13 +35,12 @@ products: async (req, res) => {
 oneUser: async (req, res) => {
     try{
         let dbGogers = await gogerModel.getOne(req.params.id);
-        const host = req.header.host;
         let goger = {
                 id: dbGogers.id,
                 name: dbGogers.fullName,
                 description: dbGogers.description,
                 price: dbGogers.price,
-                image: "http://" + host + "/images/users/" + dbGogers.image,
+                image: "https://goservicegr17.herokuapp.com" + "/images/users/" + "dbGogers.image",
                 experience: dbGogers.experience
             }
         return res.status(200).json({
