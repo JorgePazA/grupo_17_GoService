@@ -21,10 +21,10 @@ const usersApi = {
       let lastUserPos = dbUsers[dbUsers.length - 1];
             let fullNameLast = lastUserPos.name + " " + lastUserPos.lastName
             let lastUser = {
-                id: lastUserPos.id,
-                name: fullNameLast,
-                email: lastUserPos.email,
-                image: "https://goservicegr17.herokuapp.com" + "/userimg/" + lastUserPos.avatar
+                idLast: lastUserPos.id,
+                nameLast: fullNameLast,
+                emailLast: lastUserPos.email,
+                imageLast: "https://goservicegr17.herokuapp.com" + "/userimg/" + lastUserPos.avatar
             };
       return res.status(200).json({
         total: users.length,
