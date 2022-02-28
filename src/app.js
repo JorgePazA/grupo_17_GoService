@@ -3,6 +3,7 @@ const express = require("express");
 const session = require("express-session");
 const path = require("path");
 const app = express();
+const cors = require('cors');
 
 //* Llámamos los middlewares de aplicación
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
@@ -37,6 +38,15 @@ app.use(express.json());
 //* Configurar la librería requerida para usar los métodos PUT y DELETE
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
+
+
+app.use(
+    cors({
+        origin: 'https://localhost:3000',
+        methods: 'GET'
+    })
+);
+
 
 //*Requerir y definir las rutas
 const rutaMain = require("./routers/main.routes");
