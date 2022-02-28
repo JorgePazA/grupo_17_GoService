@@ -18,7 +18,7 @@ products: async (req, res) => {
             gogers.push(goger);
         })
 
-        let lastGogerPos = dbGogers[dbGogers-length -1];
+        let lastGogerPos = dbGogers[dbGogers.length -1];
         let lastGoger = {
             id: lastGogerPos.id,
             name: lastGogerPos.fullName,
