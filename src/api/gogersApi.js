@@ -34,16 +34,18 @@ products: async (req, res) => {
 
 oneUser: async (req, res) => {
     try{
-        let dbUsers = await userModel.getOne(req.params.id);
+        let dbGogers = await gogerModel.getOne(req.params.id);
         const host = req.header.host;
-        let usuario = {
-                id: dbUsers.id,
-                name: dbUsers.name,
-                email: dbUsers.email,
-                avatar: "http://" + host + "/images/users/" + dbUsers.avatar
+        let goger = {
+                id: dbGogers.id,
+                name: dbGogers.fullName,
+                description: dbGogers.description,
+                price: dbGogers.price,
+                image: "http://" + host + "/images/users/" + dbGogers.image,
+                experience: dbGogers.experience
             }
         return res.status(200).json({
-            users: usuario,
+            goger: goger,
             status: 200    
         })
 
