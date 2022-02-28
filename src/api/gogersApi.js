@@ -20,11 +20,11 @@ products: async (req, res) => {
 
         let lastGogerPos = dbGogers[dbGogers.length -1];
         let lastGoger = {
-            id: lastGogerPos.id,
-            name: lastGogerPos.fullName,
-            description:lastGogerPos.description,
-            image: "https://goservicegr17.herokuapp.com" + "/img/" + lastGogerPos.image,
-            detail: "https://goservicegr17.herokuapp.com" + "/api/gogers/" + lastGogerPos.id
+            idLast: lastGogerPos.id,
+            nameLast: lastGogerPos.fullName,
+            descriptionLast: lastGogerPos.description,
+            imageLast: "https://goservicegr17.herokuapp.com" + "/img/" + lastGogerPos.image,
+            detailLast: "https://goservicegr17.herokuapp.com" + "/api/gogers/" + lastGogerPos.id
         };
         return res.status(200).json({
             total: gogers.length,
