@@ -80,8 +80,11 @@
                     </div>
                    <% } %>
                 </p>
-                <label for="avatar">Sube tu foto</label>
-                <input class = "avatar" type="file" name="avatar" id="avatar" placeholder="Ingresa tu foto">
+                <label for="avatar">Sube tu foto </label>
+                <div class="seleccionar-archivo">
+                    <p id="texto-seleccionar">Seleccionar archivo</p>
+                    <input class = "avatar" type="file" name="avatar" id="avatar" placeholder="Ingresa tu foto">
+                </div>
                 <p class="feedback">
                     <% if (locals.errors && errors.avatar) { %>
                         <div class= "text-danger">
@@ -95,12 +98,11 @@
                 <button type="reset" class="form-btn-register">Borrar</button>
             </form>
             <h2 class="title-register">Al crear una cuenta aceptas los términos y condiciones de las
-                políticas de manejo de datos personales de GoServise
+                políticas de manejo de datos personales de GoService
             </h2>
           </section>
     </main>
     <%- include('./partials/footer')%>
-    
 </body>
 
 </html>

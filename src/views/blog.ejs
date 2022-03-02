@@ -16,13 +16,44 @@
     <%- include('./partials/header')%>
     <main class="mainBlog">
         <section>
-            <h1>Este es el blog de GoService</h1>
+            <h1>GoBlog</h1>
         </section>
-        <section>
-            <p>
-                ¡Aquí encontrarás información de valor relacionada con los cuidados del hogar y mucho más!
+        <section class="infoblog">
+            <h3>Hoy es:</h3>
+            <div id="current_date"></p>
+                <script>
+                document.getElementById("current_date").innerHTML = Date();
+                </script>  
+            </div>              
+        </section>
+        <articule>
+            <h1>Somos referentes de formalización laboral en Colombia</h1>
+            <p>En GoService trabajamos por la formalizaciónn y dignificación del trabajo en Colombia.
+                a lo largo de nuestra trayectoria, nos hemos posicionado como una empresa de alto impacto
+                social gracias al esfuerzo que hacemos por ofrecer empleos de calidad.</br></br>
+                Somos una plataforma que conecta a técnicos en 3 categorías, y creciendo, de reparación, 
+                mantenimiento y limpieza con personas que necesiten hacer diferentes oficios en su hogar
+                u oficina con el fin de brindarle mejores oportunidades a nuestros técnicos y un mejor 
+                servicio a nuestros clientes. 
             </p>
-        </section>
+
+        </articule>
+
+        <articule>
+            <h1>Preguntas frecuentes</h1>
+            <p>En GoService trabajamos por la formalizaciónn y dignificación del trabajo en Colombia.
+                a lo largo de nuestra trayectoria, nos hemos posicionado como una empresa de alto impacto
+                social gracias al esfuerzo que hacemos por ofrecer empleos de calidad.
+                Somos una plataforma que conecta a técnicos en más de 27 categorías de reparación y 
+                mantenimiento con personas que necesiten hacer reparaciones o mantenimientos en su hogar
+                u oficina con el fin de brindarle mejores oportunidades a nuestros técnicos y un mejor 
+                servicio a nuestros clientes. 
+            </p>
+
+        </articule>
+
+
+
     </main>
 
     <%- include('./partials/footer')%>

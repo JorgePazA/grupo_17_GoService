@@ -49,7 +49,11 @@
                 <div class="total-carrito">
                     <p class="total-a-pagar">Total a pagar:</p>
                     <div class="valor-servicio-con-iva-abajo">
-                        <p class="valor-servicio">$XX,XXX</p>
+                        <% if(proveedor == null){ %>
+                            <p class="valor-servicio"><%= "$XX,XXX" %></p>
+                        <% } else { %>
+                            <p class="valor-servicio"><%= "$" + proveedor.price%></p>
+                        <%}%>
                         <p class="iva">IVA incluido</p>
                     </div>
                 </div>

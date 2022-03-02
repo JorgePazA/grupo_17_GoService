@@ -25,8 +25,8 @@
               <p class="text-pd"><b>Apellido:</b> <%= user.lastName %></p>
               <p class="text-pd"><b>Email:</b> <%= user.email %></p>
               <a class="buttonDetail" href=<%= "/userdetail/editUser/" + user.id %> > Editar</a>
-              <form action= <%= "/userdetail/" + user.id + "?_method=DELETE" %> method="post">
-                <button type="submit" class="buttonDetail"> Eliminar cuenta</button>
+              <!-- <form action= <%= "/userdetail/" + user.id + "?_method=DELETE" %> method="post">
+                <button type="submit" class="buttonDetail"> Eliminar cuenta</button> -->
             </div>
         </article>
       </section>

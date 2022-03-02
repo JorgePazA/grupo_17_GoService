@@ -61,7 +61,10 @@
                 </p>
                 
                 <label for="image">Carga Nueva foto</label>
-                <input type="file" name="avatar" id="avatar" class="inputfile">
+                <div class="seleccionar-archivo">
+                    <p id="texto-seleccionar">Seleccionar archivo</p>
+                    <input class = "avatar" type="file" name="avatar" id="avatar" placeholder="Ingresa tu foto">
+                </div>
                 <p class="feedback">
                     <% if (locals.errors && errors.avatar) { %>
                         <div class= "text-danger">

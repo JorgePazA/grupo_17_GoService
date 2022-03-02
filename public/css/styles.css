@@ -103,19 +103,10 @@ header .abajo .carrito i {
 }
 .banner {
   display: flex;
-  height: 113px;
   background: #14213d;
-  border: solid 3px black;
+  border: solid 2px #000000;
 }
-.banner-izq {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: solid 3px black;
-  width: 40px;
-  font-size: 25px;
-}
+
 .banner-center {
   flex-grow: 1;
   overflow: hidden;
@@ -125,15 +116,7 @@ header .abajo .carrito i {
   width: 100%;
   height: 100%;
 }
-.banner-der {
-  font-size: 25px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-left: solid 3px black;
-  width: 40px;
-}
+
 /* Main--------------------------------------------------------------------------- */
 main {
   min-height: calc(100vh - 27px - 90px);
@@ -163,7 +146,13 @@ main section article p {
   border-radius: 5px;
   background-color: #fca311;
   box-shadow: 5px 5px 20px -6px rgba(20, 33, 61, 0.76);
+  transition: .8s ease all;
 }
+
+.lista article i:hover {
+  transform: rotate(90deg);
+}
+
 .lista article {
   margin: 15px;
 }
@@ -459,6 +448,7 @@ p#copy {
     display: flex;
     flex-direction: column;
     border: 1px #c5c5c5 solid;
+    border-radius: 5px;
     width: 350px;
     height: 200px;
     margin: 20px 30px;
@@ -921,6 +911,7 @@ main .includes article {
   margin: 10px 30px;
   padding: 20px 0;
   border: outset #fca311 2px;
+  border-radius: 10px;
 }
 
 main .includes article h3 {
@@ -1078,6 +1069,39 @@ main .button-add .add {
     display: block;
     display: flex;
   }
+  .lo-que-dicen {
+    display: block;
+    color: #14213d;;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 10px;;
+  }
+.seleccionar-archivo input{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+p#texto-seleccionar{
+  padding-top: 4px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  font-weight: 100;
+}
+.seleccionar-archivo{
+  height: 25px;
+  width: 150px;
+  position: relative;
+  background-color: #14213d;
+  border-radius: 5px;
+}
+
+
   .registerform {
     width: 45%;
   }
@@ -1103,18 +1127,24 @@ main .button-add .add {
 /* Estilos ADMINISTRADOR------------------------------------------------------- */
 
 .mainAdmin {
-  background: #fca311;
+  background: white;
+  padding: 10px
+}
+.mainAdmin h2{
+  text-align: center;
 }
 table {
   width: 100%;
   margin-bottom: 10px;
+  color: #fca311;
 }
 th,
 td {
   width: 25%;
   text-align: center;
-  border: 3px solid #14213d;
-  background-color: #c5c5c5;
+  border: 1px solid #fca311;
+  background-color: #14213d;
+  height: 30px;
 }
 .title-caption {
   font-weight: bold;
@@ -1123,6 +1153,11 @@ td {
 .adm-body {
   background: #fca311;
 }
+a.addProduct{
+  color: #14213d;
+  font-size: 16px;
+}
+
 
 /* Estilos Cómo Funciona ---------------------------------*/
 .mainComoFunciona h1 {
@@ -1242,7 +1277,7 @@ main .img-pd {
   display: block;
   max-width: 100%;
   margin: auto;
-  margin-top: 0;
+  margin-top: 15px;
 }
 main .img-pd img {
   width: 100%;
@@ -1273,3 +1308,8 @@ label {
   margin-top: 8px;
 }
 
+/* Estilos del blog------------------- */
+
+.infoblog {
+  text-align: center;
+}

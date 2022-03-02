@@ -30,7 +30,7 @@ const gogersApi = {
                 detailLast: "https://goservicegr17.herokuapp.com" + "/api/gogers/" + lastGogerPos.id
             };
 
-            let gogerCategoryPlomeria = await gogerModel.getGoger(1);
+        let gogerCategoryPlomeria = await gogerModel.getGoger(1);
         let categoryPlomeria = [];
 
         gogerCategoryPlomeria.map((item) => {

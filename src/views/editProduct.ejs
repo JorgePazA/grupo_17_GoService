@@ -62,7 +62,10 @@
                    <% } %>
                 </p>
                 <label for="image">Carga Nueva foto</label>
-                <input type="file" name="image" id="image" class="inputfile">
+                <div class="seleccionar-archivo">
+                    <p id="texto-seleccionar">Seleccionar archivo</p>
+                    <input class = "inputfile" type="file" name="image" id="image" placeholder="Ingresa tu foto">
+                </div>
                 <button type="submit" class="form-btn-register">Modificar Tarjeta</button>
                 <button type="reset" class="form-btn-register">Borrar</button>
             </form>
