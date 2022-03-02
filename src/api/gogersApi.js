@@ -13,6 +13,7 @@ const gogersApi = {
                     id: item.id,
                     name: item.fullName,
                     description: item.description,
+                    category: item.category.name,
                     detail: "https://goservicegr17.herokuapp.com" + "/api/gogers/" + item.id,
                     image: "https://goservicegr17.herokuapp.com" + "/img/" + item.image,
                 }
@@ -28,11 +29,44 @@ const gogersApi = {
                 imageLast: "https://goservicegr17.herokuapp.com" + "/img/" + lastGogerPos.image,
                 detailLast: "https://goservicegr17.herokuapp.com" + "/api/gogers/" + lastGogerPos.id
             };
+
+            let gogerCategoryPlomeria = await gogerModel.getGoger(1);
+        let categoryPlomeria = [];
+
+        gogerCategoryPlomeria.map((item) => {
+            let plomeria = {
+                id: item.id,
+            }
+            categoryPlomeria.push(plomeria)
+        });
+
+        let gogerCategoryElectricidad = await gogerModel.getGoger(2);
+        let categoryElectricidad = [];
+
+        gogerCategoryElectricidad.map((item) => {
+            let electricidad = {
+                id: item.id,
+            }
+            categoryElectricidad.push(electricidad)
+        });
+
+        let gogerCategoryAseo = await gogerModel.getGoger(3);
+        let categoryAseo = [];
+
+        gogerCategoryAseo.map((item) => {
+            let aseo = {
+                id: item.id,
+            }
+            categoryAseo.push(aseo)
+        })
+
             return res.status(200).json({
                 total: gogers.length,
-                // categories: {
-                //     aseo: ,
-                // },
+                totalCategories: {
+                    plomeria: categoryPlomeria.length,
+                    electricidad: categoryElectricidad.length,
+                    aseo: categoryAseo.length,
+                },
                 latest: lastGoger,
                 gogers: gogers,
                 status: 200
@@ -49,6 +83,7 @@ const gogersApi = {
                 id: dbGogers.id,
                 name: dbGogers.fullName,
                 description: dbGogers.description,
+                category: dbGogers.category.name,
                 price: dbGogers.price,
                 image: "https://goservicegr17.herokuapp.com" + "/img/" + dbGogers.image,
                 experience: dbGogers.experience
@@ -63,5 +98,4 @@ const gogersApi = {
         }
     }
 }
-
 module.exports = gogersApi;
