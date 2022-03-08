@@ -119,3 +119,20 @@
     - Reuniones rápidas para resolver dudas 
 ## LESS OF
     - Trabajo en conjunto, dividir tareas
+
+## SPRINT 8
+
+## KEEP DOING
+    - Seguir aprendiendo
+## MORE OF
+    - Comunicación abierta, contar siempre con el canal de comunicación.
+    - Sesiones de trabajo en vivo
+    - Conservar el ambiente de trabajo
+## START DOING
+    - utilizar adecuadamente el tablero del Sprint
+    - Evaluar el estado de los entregables días antes de su presentación
+## STOP DOING
+    - Cesiones de trabajo en grupo
+    - Reuniones rápidas para resolver dudas 
+## LESS OF
+    - Trabajo en conjunto, dividir tareas
